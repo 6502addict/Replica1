@@ -1,5 +1,11 @@
 The VHDL files are under the GPL3  license
 
+most of the VHDL files are my own creation except:
+CPU65XX core from Peter Wendrich (pwsoft@syntiac.com).
+        check the full license at the head of rtl/cpu/cpu65xx.vhd
+6800 core from John E. Kent
+     check the full license at the head of rtl/cpu/cpu68.vhd
+
 the Original Replica 1 was a machine built by Vince Briel
 to be compatible with Apple 1 Software
 
