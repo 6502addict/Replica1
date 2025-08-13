@@ -1,0 +1,53 @@
+The VHDL files are under the GPL3  license
+
+the Original Replica 1 was a machine built by Vince Briel
+to be compatible with Apple 1 Software
+
+Wozmon and the ACI firmware were originally written by Steve Wozniak.
+Applesoft BASIC was written by Microsoft and Apple.
+
+Files written by Jeff Tranter are released under the following license:
+Copyright (C) 2025 by Jeff Tranter <tranter@pobox.com>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Documentation written by Jeff Tranter is licensed under a Creative Commons
+Attribution 4.0 International License.
+See https://creativecommons.org/licenses/by/4.0/
+
+
+license for the wozmon 6800  (included int WOZMON68.vhd)
+* This is a rewrite of the Apple 1 monitor to run on an MC6800
+* microprocessor, rather than the MCS6502 microprocessor that
+* was standard.  This source code will assemble with the
+* AS Macro Assembler; with minor changes it should assemble
+* with any MC6800 assembler.
+*
+* Copyright 2011 Eric Smith <eric@brouhaha.com>
+*
+* This program is free software; you can redistribute and/or modify it
+* under the terms of the GNU General Public License version 3 as
+* published by the Free Software Foundation.
+*
+* This program is distributed in the hope that it will be useful, but
+* WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
+*
+* The text of the license may be found online at:
+*     http://www.brouhaha.com/~eric/software/GPLv3
+* or:
+*     http://www.gnu.org/licenses/gpl-3.0.txt
+
+
+Most of the files in the software directory
+are my own libraries or AI generated games
+also in GPL-3
+
+
+
+
