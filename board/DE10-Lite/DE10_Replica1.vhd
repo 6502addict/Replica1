@@ -103,7 +103,7 @@ component Replica1_CORE is
 		 HAS_ACI         : boolean  := false;     -- add the aci (incomplete)
 		 HAS_MSPI        : boolean  := false;     -- add master spi  C200
 		 HAS_TIMER       : boolean  := false;     -- add basic timer
-		 HAS_BASIC       : boolean  := true       -- true basic installed, false only wozmon
+		 HAS_BASIC       : boolean  := false      -- true basic installed, false only wozmon
 	);
   port (
   		main_clk       : in     std_logic;
@@ -273,12 +273,12 @@ begin
 	ap1: Replica1_CORE               generic map(BOARD          =>  "DE10_Lite",
 										  				      CPU_TYPE       =>  "6502",   -- 6502 or 6800
 														      CPU_SPEED      =>  "1Mhz",   -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
-														      RAM_SIZE_KB    =>  32,       -- 8 to 48Kb 
+														      RAM_SIZE_KB    =>  48,       -- 8 to 48Kb 
 														      BAUD_RATE      =>  115200,   -- uart speed 1200 to 115200
 												  		      HAS_ACI        =>  false,    -- add the aci (incomplete)
 		                                          HAS_MSPI       =>  true,     -- add master spi  C200
-		                                          HAS_TIMER      =>  true,     -- add basic timer
-														      HAS_BASIC      =>  true)     -- true basic installed, false only wozmon
+		                                          HAS_TIMER      =>  true,     -- add basic timer C210
+ 														      HAS_BASIC      =>  true)     -- true basic installed, false only wozmon
 									            port map(main_clk       =>  main_clk,
 											               serial_clk     =>  serial_clk,
 													   	   reset_n        =>  reset_n,
@@ -289,7 +289,7 @@ begin
 														      bus_data       =>  data_bus,
 														      uart_rx        =>  ARDUINO_IO(0),
 														      uart_tx        =>  ARDUINO_IO(1),
-														      spi_cs         =>  ARDUINO_IO(10),  -- SD Card Data 3          CS
+														      spi_cs         =>  ARDUINO_IO(4),   -- SD Card Data 3          CS
 														      spi_sck        =>  ARDUINO_IO(13),  -- SD Card Clock           SCLK
 														      spi_mosi       =>  ARDUINO_IO(11),  -- SD Card Command Signal  MOSI
 														      spi_miso       =>  ARDUINO_IO(12),  -- SD Card Data            MISO

@@ -12,7 +12,7 @@ entity Replica1_CORE is
 		HAS_ACI         : boolean :=  false;         -- add the aci (incomplete)
 		HAS_MSPI        : boolean :=  false;         -- add master spi  C200
 		HAS_TIMER       : boolean :=  false;         -- add basic timer
-  	   HAS_BASIC       : boolean :=  true           -- true basic installed, false only wozmon		
+  	   HAS_BASIC       : boolean :=  false          -- true basic installed, false only wozmon		
   );
   port (
 		main_clk        : in     std_logic;
@@ -404,7 +404,7 @@ end generate gen_timer;
 											
    aci_cs_n     <= '0' when vma = '1' and address_bus(15 downto 9)   = x"C" & "000"      else '1';   -- IF WOZACI
    mspi_cs_n    <= '0' when vma = '1' and address_bus(15 downto 4)   = x"C20"            else '1';   -- IF MASTER SPI CONTROLLER
-   timer_cs_n   <= '0' when vma = '1' and address_bus(15 downto 2)   = x"C21"            else '1';   -- IF TIMER
+   timer_cs_n   <= '0' when vma = '1' and address_bus(15 downto 4)   = x"C21"            else '1';   -- IF TIMER
 	pia_cs_n     <= '0' when vma = '1' and address_bus(15 downto 4)   = x"D01"            else '1';   -- REPLICA CONSOLE PIA
 	
 	data_bus <= cpu_data      when rw          = '0' else
