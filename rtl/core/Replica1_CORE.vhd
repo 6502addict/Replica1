@@ -20,9 +20,11 @@ entity Replica1_CORE is
 		reset_n         : in     std_logic;
 		cpu_reset_n     : in     std_logic;
 		bus_phi2        : out    std_logic;
-		bus_rw          : out    std_logic;
 		bus_address     : out    std_logic_vector(15 downto 0);
 		bus_data        : out    std_logic_vector(7  downto 0);
+		bus_rw          : out    std_logic;
+		ext_ram_cs_n    : out    std_logic;		
+		ext_ram_data    : in     std_logic_vector(7  downto 0);
 		uart_rx         : in     std_logic;
 		uart_tx         : out    std_logic;
 		spi_cs          : out    std_logic;
@@ -133,19 +135,19 @@ end component;
 
 -- RAM MODULES
 
-component RAM_DE10 is
-    generic (
-        RAM_SIZE_KB : integer := 32  -- 8, 16, 24, 32, 40, or 48
-    );
-    port (
-        clock:      in std_logic;
-        cs_n:       in std_logic;
-        we_n:       in std_logic;
-        address:    in std_logic_vector(15 downto 0);
-        data_in:    in std_logic_vector(7 downto 0);
-        data_out:   out std_logic_vector(7 downto 0)
-    );
-end component;
+--component RAM_DE10 is
+--    generic (
+--        RAM_SIZE_KB : integer := 32  -- 8, 16, 24, 32, 40, or 48
+--    );
+--    port (
+--        clock:      in std_logic;
+--        cs_n:       in std_logic;
+--        we_n:       in std_logic;
+--        address:    in std_logic_vector(15 downto 0);
+--        data_in:    in std_logic_vector(7 downto 0);
+--        data_out:   out std_logic_vector(7 downto 0)
+--    );
+--end component;
 
 -- END RAM MODULES
 
@@ -265,13 +267,12 @@ begin
 --	assert false
 --		report "RAM_LIMIT calculated as: " & integer'image(RAM_LIMIT) & " bytes (" & integer'image(RAM_SIZE_KB) & "KB configured)";
 
---	hexadisplay(7 downto 0)  <= data_bus;
---	hexadisplay(23 downto 8) <= address_bus;
-	bus_address              <= address_bus;
-	bus_data                 <= data_bus;
-	bus_phi2                 <= phi2;
-	bus_rw                   <= rw;
-
+	bus_address    <= address_bus;
+	bus_data       <= data_bus;
+	bus_phi2       <= phi2;
+	bus_rw         <= rw;
+	ext_ram_cs_n   <= ram_cs_n;
+	ram_data       <= ext_ram_data;
 						
 -- Apple 1 CPU can be either CPU65XX for the 6502 or  CPU68 for the 6800
 
@@ -346,17 +347,17 @@ gen_aci:  if HAS_ACI and CPU_TYPE = "6502" generate
 											  tape_in         => aci_in,
 											  tape_out        => aci_out);
 end generate gen_aci;											  
-
-
-de10_gen_ram: if BOARD = "DE10_Lite" generate
-	ram: RAM_DE10       generic map (RAM_SIZE_KB   => RAM_SIZE_KB)
-								  port map(clock           => phi2,
-					   	              cs_n            => ram_cs_n,
-											  we_n            => rw,
-											  address         => address_bus,
-											  data_in         => data_bus,
-							              data_out        => ram_data);
-end generate de10_gen_ram;
+--
+--
+--de10_gen_ram: if BOARD = "DE10_Lite" generate
+--	ram: RAM_DE10       generic map (RAM_SIZE_KB   => RAM_SIZE_KB)
+--								  port map(clock           => phi2,
+--					   	              cs_n            => ram_cs_n,
+--											  we_n            => rw,
+--											  address         => address_bus,
+--											  data_in         => data_bus,
+--							              data_out        => ram_data);
+--end generate de10_gen_ram;
 
 										 
 	pia: PIA_UART       generic map(CLK_FREQ_HZ     => 1843200, 
