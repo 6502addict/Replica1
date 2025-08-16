@@ -20,7 +20,7 @@ This project recreates the Apple 1 computer using modern FPGA technology while m
 
 ## Target Hardware
 
-- **FPGA Board**: Intel DE10-Lite (MAX 10)
+- **FPGA Board**: Intel DE10-Lite (MAX 10)  or Altera DE1 board (Cyclone 2)
 - **Display**: 7-segment displays for address/data bus monitoring
 - **Console**: UART terminal interface (requires FTDI USB-to-Serial cable)
 - **Storage**: SD card via Arduino-compatible shield
@@ -48,10 +48,16 @@ This project recreates the Apple 1 computer using modern FPGA technology while m
    cd Replica1
    ```
 
-2. **Open in Quartus Prime**:
+2a. **For DE10-Lite Open in Quartus Prime**:
    - Launch Quartus Prime
    - Navigate to `boards/DE10-Lite/`
    - Open the project file `DE10_Replica1.qpf`
+   - All VHDL files and IP cores are properly included
+
+2b. **For DE1 Open in Quartus 13**:
+   - Launch Quartus Prime
+   - Navigate to `boards/DE1/`
+   - Open the project file `DE1_Replica1.qpf`
    - All VHDL files and IP cores are properly included
 
 3. **Compile the project**:
