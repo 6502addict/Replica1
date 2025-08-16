@@ -432,6 +432,7 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VHDL_FILE hexto7seg.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu68.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu65xx.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/peripherals/pia/pia_uart.vhd
@@ -449,7 +450,6 @@ set_global_assignment -name VHDL_FILE ../../rtl/utils/fractional_clock_divider.v
 set_global_assignment -name VHDL_FILE ../../rtl/utils/clock_divider.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/utils/prog_clock_divider.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/utils/nor_gate.vhd
-set_global_assignment -name VHDL_FILE ../../rtl/utils/hexto7seg.vhd
 set_global_assignment -name VHDL_FILE "../../rtl/utils/spi-master.vhd"
 set_global_assignment -name VHDL_FILE ../../rtl/utils/nand3_gate.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/utils/debug_clock_button.vhd

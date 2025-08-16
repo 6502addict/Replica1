@@ -3,70 +3,111 @@
 -- and adapt the configuration to your needs 
 --------------------------------------------------------------------------
 
-
 library IEEE;
 	use IEEE.std_logic_1164.all;
    use ieee.numeric_std.all; 
-	
-entity DE10_Replica1 is
+
+entity DE1_Replica1 is
   port (
-		ADC_CLK_10      :	in	    std_logic;
-	
-		MAX10_CLK1_50   :	in     std_logic;
-		MAX10_CLK2_50   :	in     std_logic;
-
-		DRAM_ADDR       :	out    std_logic_vector(12 downto 0);
-		DRAM_BA         :	out    std_logic_vector(1 downto 0);
-		DRAM_CAS_N      :	out    std_logic;
-		DRAM_CKE        :	out    std_logic;
-		DRAM_CLK        :	out    std_logic;
-		DRAM_CS_N       :	out    std_logic;
-		DRAM_DQ         :	inout  std_logic_vector(15 downto 0);
-		DRAM_LDQM       :	out    std_logic;
-		DRAM_RAS_N      :	out	 std_logic;
-		DRAM_UDQM       :	out    std_logic;
-		DRAM_WE_N       :	out	 std_logic;
-
-		HEX0				 :	out    std_logic_vector(7 downto 0);
-		HEX1				 :	out    std_logic_vector(7 downto 0);
-		HEX2				 :	out    std_logic_vector(7 downto 0);
-		HEX3				 :	out    std_logic_vector(7 downto 0);
-		HEX4				 :	out    std_logic_vector(7 downto 0);
-		HEX5				 :	out    std_logic_vector(7 downto 0);
-
-		KEY				 :	in		 std_logic_vector(1 downto 0);
-
-		LEDR				 :	out	 std_logic_vector(9 downto 0);
-
-		SW					 :	in		 std_logic_vector(9 downto 0);
-		
-		VGA_B				 :	out	 std_logic_vector(3 downto 0);
-		VGA_G				 :	out    std_logic_vector(3 downto 0);
-		VGA_HS			 :	out	 std_logic;
-		VGA_R				 : out	 std_logic_vector(3 downto 0);
-		VGA_VS			 :	out	 std_logic;
-		
-		GSENSOR_CS_N	 :	out	 std_logic;
-		GSENSOR_INT		 :	in		 std_logic_vector(2 downto 1);
-		GSENSOR_SCLK	 : out    std_logic;
-		GSENSOR_SDI		 :	inout  std_logic;
-		GSENSOR_SDO	 	 :	inout  std_logic;
-
-		ARDUINO_IO		 : inout  std_logic_vector(15 downto 0);
-		ARDUINO_RESET_N : inout  std_logic;
-
-		GPIO            :	inout  std_logic_vector(35 downto 0)
-  );
+		--	Clock Input
+		CLOCK_24      : in   std_logic_vector(1 downto 0);		-- 24 MHz
+		CLOCK_27      : in   std_logic_vector(1 downto 0);   	--	27 MHz
+		CLOCK_50  	  : in   std_logic;		                  --	50 MHz
+		EXT_CLOCK     : in   std_logic;                       --	External Clock
+		--	Push Button		
+		KEY           : in   std_logic_vector(3 downto 0);    --	Pushbutton[3:0]
+		-- DPDT Switch	
+		SW            : in   std_logic_vector(9 downto 0);  	-- Toggle Switch[9:0]
+		--	7-SEG Dispaly	
+		HEX0 			  : out  std_logic_vector(6 downto 0);		--	Seven Segment Digit 0
+		HEX1			  : out  std_logic_vector(6 downto 0);		--	Seven Segment Digit 1
+		HEX2			  : out  std_logic_vector(6 downto 0);		--	Seven Segment Digit 2
+		HEX3			  : out  std_logic_vector(6 downto 0);		--	Seven Segment Digit 3
+		-- LED	
+		LEDG          : out   std_logic_vector(7 downto 0);	--	LED Green[7:0]
+		LEDR          : out   std_logic_vector(9 downto 0);	--	LED Red[9:0]
+		--	UART	
+		UART_TXD 	  : out   std_logic; 					      --	UART Transmitter
+		UART_RXD 	  : in    std_logic;  					      -- UART Receiver
+		--	SDRAM Interface
+		DRAM_DQ       : inout std_logic_vector(15 downto 0);  -- SDRAM Data bus 16 Bits
+		DRAM_ADDR 	  : out   std_logic_vector(11 downto 0);  -- SDRAM Address bus 12 Bits
+		DRAM_LDQM     : out   std_logic;	  						   --	SDRAM Low-byte Data Mask 
+		DRAM_UDQM     : out   std_logic;                      --	SDRAM High-byte Data Mask
+		DRAM_WE_N     : out   std_logic;						      --	SDRAM Write Enable
+		DRAM_CAS_N    : out   std_logic;						      --	SDRAM Column Address Strobe
+		DRAM_RAS_N    : out   std_logic;						      -- SDRAM Row Address Strobe
+		DRAM_CS_N     : out   std_logic;						      -- SDRAM Chip Select
+		DRAM_BA       : out   std_logic_vector(1 downto 0);   -- SDRAM Bank Address 0
+		DRAM_CLK      : out   std_logic;						      -- SDRAM Clock
+		DRAM_CKE 	  : out   std_logic;					         -- SDRAM Clock Enable
+		--	Flash Interface
+--		FL_DQ         : inout std_logic_vector(7 downto 0);	--	FLASH Data bus 8 Bits
+--		FL_ADDR		  : out   std_logic_vector(21 downto 0);  -- FLASH Address bus 22 Bits
+--		FL_WE_N		  : out   std_logic;  							-- FLASH Write Enable
+--		FL_RST_N      : out   std_logic;      				      --	FLASH Reset
+--		FL_OE_N       : out   std_logic;						      --	FLASH Output Enable
+--		FL_CE_N       : out   std_logic;				    	 	   --	FLASH Chip Enable
+		--	SRAM Interface
+		SRAM_DQ       : inout std_logic_vector(15 downto 0);  --	SRAM Data bus 16 Bits
+		SRAM_ADDR     : out   std_logic_vector(17 downto 0);  --	SRAM Address bus 18 Bits
+		SRAM_UB_N     : out   std_logic; 						   --	SRAM High-byte Data Mask 
+		SRAM_LB_N	  : out   std_logic;                      --	SRAM Low-byte Data Mask 
+		SRAM_WE_N     : out	 std_logic;								--	SRAM Write Enable
+		SRAM_CE_N	  : out	 std_logic;								--	SRAM Chip Enable
+		SRAM_OE_N	  : out	 std_logic;								--	SRAM Output Enable
+		-- SD_Card Interface	
+		SD_DAT		  : in    std_logic;								--	SD Card Data            MISO
+		SD_DAT3       : out   std_logic;			   				-- SD Card Data 3          CS
+		SD_CMD		  : out   std_logic;								--	SD Card Command Signal  MOSI
+		SD_CLK		  : out   std_logic;		   					--	SD Card Clock           SCLK
+		-- USB JTAG link
+--		TDI			  : in    std_logic;  							-- CPLD -> FPGA (data in)
+--		TCK           : in    std_logic;  							-- CPLD -> FPGA (clk)
+--		TCS           : in    std_logic;  							-- CPLD -> FPGA (CS)
+--	   TDO           : out   std_logic;  							-- FPGA -> CPLD (data out)
+		-- I2C
+--		I2C_SDAT      : inout std_logic; 							--	I2C Data
+--		I2C_SCLK      : out   std_logic;								--	I2C Clock
+		-- PS2
+--		PS2_DAT       : inout std_logic; 						   -- PS2 Data
+--		PS2_CLK       : inout std_logic;						 		-- PS2 Clock
+		-- VGA
+		VGA_HS        : out   std_logic;							   --	VGA H_SYNC
+		VGA_VS        : out   std_logic;							   --	VGA V_SYNC
+		VGA_R         : out   std_logic_vector(3 downto 0);   --	VGA Red[3:0]
+		VGA_G         : out   std_logic_vector(3 downto 0);	--	VGA Green[3:0]
+		VGA_B         : out   std_logic_vector(3 downto 0);   --	VGA Blue[3:0]
+		--	Audio CODEC
+--		AUD_ADCLRCK   : inout std_logic;								--	Audio CODEC ADC LR Clock
+--		AUD_ADCDAT    : in    std_logic;								--	Audio CODEC ADC Data
+--		AUD_DACLRCK   : inout std_logic;								--	Audio CODEC DAC LR Clock
+--		AUD_DACDAT    : out   std_logic;								--	Audio CODEC DAC Data
+--		AUD_BCLK      : inout std_logic;								--	Audio CODEC Bit-Stream Clock
+--		AUD_XCK       : out   std_logic;								--	Audio CODEC Chip Clock
+		--	GPIO
+		GPIO_0        : inout std_logic_vector(35 downto 0); 	--	GPIO Connection 0
+		GPIO_1		  : inout std_logic_vector(35 downto 0)	--	GPIO Connection 1
+	);
 end entity;	
 
-architecture top of DE10_Replica1 is
+architecture top of DE1_Replica1 is
 
 component hexto7seg is
   port (
 	   hex           : in   std_logic_vector(3 downto 0);
-		seg           : out  std_logic_vector(7 downto 0)
+		seg           : out  std_logic_vector(6 downto 0)
 	);
 end component;	
+
+component hclk is
+	port (
+		areset		: in  std_logic  := '0';
+		inclk0		: in  std_logic  := '0';
+		c0	  	      : out std_logic;
+		locked		: out std_logic 
+	);
+end component;
 
 component main_clock is
 	port (
@@ -76,7 +117,7 @@ component main_clock is
 		c1	  	      : out std_logic;
 		locked		: out std_logic 
 	);
-end component;
+end component;														  
 
 component clock_divider is
     generic (divider : integer := 4);
@@ -98,20 +139,6 @@ component fractional_clock_divider is
         clk_out  : out std_logic   
     );
 end component;
-	
-component RAM_DE10 is
-    generic (
-        RAM_SIZE_KB : integer := 32  -- 8, 16, 24, 32, 40, or 48
-    );
-    port (
-        clock:      in std_logic;
-        cs_n:       in std_logic;
-        we_n:       in std_logic;
-        address:    in std_logic_vector(15 downto 0);
-        data_in:    in std_logic_vector(7 downto 0);
-        data_out:   out std_logic_vector(7 downto 0)
-    );
-end component;	
 
 component Replica1_CORE is
   generic (
@@ -175,6 +202,28 @@ component simple_clock_switch is
     );
 end component;
 
+component RAM_DE1 is
+    generic (
+        RAM_SIZE_KB : integer := 32  -- 8, 16, 24, 32, 40, or 48
+    );
+    port (
+        clock     : in    std_logic;
+        cs_n      : in    std_logic;
+        we_n      : in    std_logic;
+        address   : in    std_logic_vector(15 downto 0);
+        data_in   : in    std_logic_vector(7 downto 0);
+        data_out  : out   std_logic_vector(7 downto 0);
+        -- SRAM interface
+        SRAM_DQ   : inout std_logic_vector(15 downto 0);  -- SRAM Data bus 16 Bits
+        SRAM_ADDR : out   std_logic_vector(17 downto 0);  -- SRAM Address bus 18 Bits
+        SRAM_UB_N : out   std_logic;                      -- SRAM High-byte Data Mask 
+        SRAM_LB_N : out   std_logic;                      -- SRAM Low-byte Data Mask 
+        SRAM_WE_N : out   std_logic;                      -- SRAM Write Enable
+        SRAM_CE_N : out   std_logic;                      -- SRAM Chip Enable
+        SRAM_OE_N : out   std_logic                       -- SRAM Output Enable
+    );
+end component;
+
 --------------------------------------------------------------------------
 -- Board Configuration Parameters 
 --------------------------------------------------------------------------
@@ -187,7 +236,6 @@ constant HAS_ACI        : boolean  := true;
 constant HAS_MSPI       : boolean  := true;
 constant HAS_TIMER      : boolean  := true;
 constant HAS_BASIC      : boolean  := true;
-
 
 signal  address_bus    : std_logic_vector(15 downto 0);
 signal  data_bus       : std_logic_vector(7 downto 0);
@@ -216,16 +264,38 @@ signal  spi_cs         : std_logic;
 signal  spi_sck        : std_logic;
 signal  spi_mosi       : std_logic;
 signal  spi_miso       : std_logic;
-	
-begin
-	-- on the DE10 Lite the 7 seg display show the current address and data 
-	h0 : hexto7seg port map  (hex => data_bus(3  downto 0),     seg => HEX0); 
-	h1 : hexto7seg port map  (hex => data_bus(7  downto 4),     seg => HEX1); 
-	h2 : hexto7seg port map  (hex => address_bus(3 downto 0),   seg => HEX2); 
-	h3 : hexto7seg port map  (hex => address_bus(7 downto 4),   seg => HEX3); 
-	h4 : hexto7seg port map  (hex => address_bus(11 downto 8),  seg => HEX4); 
-	h5 : hexto7seg port map  (hex => address_bus(15 downto 12), seg => HEX5); 
 
+
+component sram is
+  port (
+--    8 bits bus interface 
+      address       : in    std_logic_vector(18 downto 0);
+		data_in       : in    std_logic_vector(7  downto 0);
+		data_out      : out   std_logic_vector(7  downto 0);
+		cs_n          : in    std_logic;
+		rw            : in    std_logic;
+--    16 bits sram interface   		
+ 	   SRAM_DQ       : inout std_logic_vector(15 downto 0);  --	SRAM Data bus 16 Bits
+		SRAM_ADDR     : out   std_logic_vector(17 downto 0);  --	SRAM Address bus 18 Bits
+		SRAM_UB_N     : out   std_logic; 						   --	SRAM High-byte Data Mask 
+		SRAM_LB_N	  : out   std_logic;                      --	SRAM Low-byte Data Mask 
+		SRAM_WE_N     : out	 std_logic;								--	SRAM Write Enable
+		SRAM_CE_N	  : out	 std_logic;								--	SRAM Chip Enable
+		SRAM_OE_N	  : out	 std_logic								--	SRAM Output Enable
+	);
+end component;	
+	
+begin	
+	-- on the DE10 Lite the 7 seg display show the current address
+	h0 : hexto7seg port map  (hex => address_bus(3 downto 0),   seg => HEX0); 
+	h1 : hexto7seg port map  (hex => address_bus(7 downto 4),   seg => HEX1); 
+	h2 : hexto7seg port map  (hex => address_bus(11 downto 8),  seg => HEX2); 
+	h3 : hexto7seg port map  (hex => address_bus(15 downto 12), seg => HEX3); 
+	
+	-- the data are displayed on the green leds
+	LEDG <= data_bus;
+	LEDR <= SW;
+	
 	-- reset_n is mapped to KEY 0 of the DE10 Lite
 	-- reset_n is used to reset low level layers of the fpga modules
 	reset_n <= KEY(0);
@@ -237,7 +307,7 @@ begin
 	
 	-- MAIN clock  note on 6502 core main clock is at least twice phi2
 	mclk: main_clock                port map(areset		     => not reset_n,
-		                                      inclk0		     => MAX10_CLK1_50,
+		                                      inclk0		     => CLOCK_50,
 		                                      c0	  	        => clock_30mhz,
 		                                      c1	  	        => open,
 		                                      locked	  	     => main_locked);
@@ -252,27 +322,27 @@ begin
 																 
 	clk1hz: clock_divider             generic map(divider        => 50_000_000/2)
 	 									  	       port map(reset          => '1',
-																 clk_in         => MAX10_CLK1_50,
+																 clk_in         => CLOCK_50,
 														       clk_out        => clock_1hz);
 
 	clk1mhz: clock_divider            generic map(divider        => 50_000_000/2_000_000)
 	 									  	       port map(reset          => '1',
-																 clk_in         => MAX10_CLK1_50,
+																 clk_in         => CLOCK_50,
 														       clk_out        => clock_1mhz);
 
 	clk2mhz: clock_divider            generic map(divider        => 50_000_000/4_000_000)
 	 									  	       port map(reset          => '1',
-																 clk_in         => MAX10_CLK1_50,
+																 clk_in         => CLOCK_50,
 														       clk_out        => clock_2mhz);
 															
 	clk5mhz: clock_divider             generic map(divider       => 50_000_000/10_000_000)
 													  port map(reset         => '1',
-													           clk_in        => MAX10_CLK1_50,
+													           clk_in        => CLOCK_50,
 														        clk_out       => clock_5mhz);
 
 	clk10mhz: clock_divider            generic map(divider       => 60_000_000/20_000_000)
 	 									  	        port map(reset         => '1',
-														        clk_in        => clock_30mhz,
+														        clk_in        => CLOCK_50,
 												   		     clk_out       => clock_10mhz);
 
 	clk15mhz: clock_divider            generic map(divider       => 60_000_000/30_000_000)
@@ -304,19 +374,19 @@ begin
 	-- UART baud rate clock  1.8432Mhz base serial clock
 	uclk: fractional_clock_divider   generic map(CLK_FREQ_HZ    => 50_000_000,
 										 	    	  		   FREQUENCY_HZ   => 1_843_200)
-	 									  	      port map(clk_in         => MAX10_CLK1_50,
+	 									  	      port map(clk_in         => CLOCK_50,
 												   		   reset_n        => reset_n,
 														      clk_out        => serial_clk);
 															 
-	ap1: Replica1_CORE               generic map(BOARD          =>  BOARD,
-										  				      CPU_TYPE       =>  CPU_TYPE,    -- 6502 or 6800
-														      CPU_SPEED      =>  CPU_SPEED,   -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
-														      RAM_SIZE_KB    =>  RAM_SIZE_KB, -- 8 to 48Kb 
-														      BAUD_RATE      =>  BAUD_RATE,   -- uart speed 1200 to 115200
-												  		      HAS_ACI        =>  HAS_ACI,     -- add the aci (incomplete)
-		                                          HAS_MSPI       =>  HAS_MSPI,    -- add master spi  C200
-		                                          HAS_TIMER      =>  HAS_TIMER,   -- add basic timer C210
- 														      HAS_BASIC      =>  HAS_BASIC)   -- true basic installed, false only wozmon
+	ap1: Replica1_CORE               generic map(BOARD          =>  "DE10_Lite",
+										  				      CPU_TYPE       =>  "6502",   -- 6502 or 6800
+														      CPU_SPEED      =>  "1Mhz",   -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
+														      RAM_SIZE_KB    =>  48,       -- 8 to 48Kb 
+														      BAUD_RATE      =>  115200,   -- uart speed 1200 to 115200
+												  		      HAS_ACI        =>  false,    -- add the aci (incomplete)
+		                                          HAS_MSPI       =>  true,     -- add master spi  C200
+		                                          HAS_TIMER      =>  true,     -- add basic timer C210
+ 														      HAS_BASIC      =>  true)     -- true basic installed, false only wozmon
 									            port map(main_clk       =>  main_clk,
 											               serial_clk     =>  serial_clk,
 													   	   reset_n        =>  reset_n,
@@ -327,27 +397,32 @@ begin
 														      bus_rw         =>  rw,
 																ext_ram_cs_n   =>  ram_cs_n,
 																ext_ram_data   =>  ram_data,
-														      uart_rx        =>  ARDUINO_IO(0),
-														      uart_tx        =>  ARDUINO_IO(1),
-														      spi_cs         =>  ARDUINO_IO(4),   -- SD Card Data 3          CS
-														      spi_sck        =>  ARDUINO_IO(13),  -- SD Card Clock           SCLK
-														      spi_mosi       =>  ARDUINO_IO(11),  -- SD Card Command Signal  MOSI
-														      spi_miso       =>  ARDUINO_IO(12),  -- SD Card Data            MISO
-														      tape_out       =>  ARDUINO_IO(3),
-														      tape_in        =>  ARDUINO_IO(2));
-
-
---de10_gen_ram: if BOARD = "DE10_Lite" generate
-	ram: RAM_DE10                    generic map(RAM_SIZE_KB   => RAM_SIZE_KB)
+														      uart_rx        =>  UART_RXD,
+														      uart_tx        =>  UART_TXD,
+														      spi_cs         =>  SD_DAT3,         -- SD Card Data 3          CS
+														      spi_sck        =>  SD_CLK,          -- SD Card Clock           SCLK
+														      spi_mosi       =>  SD_CMD,          -- SD Card Command Signal  MOSI
+														      spi_miso       =>  SD_DAT,          -- SD Card Data            MISO
+														      tape_out       =>  GPIO_1(0),
+														      tape_in        =>  GPIO_1(1));
+																
+	ram: RAM_DE1                     generic map(RAM_SIZE_KB   => RAM_SIZE_KB)
 								               port map(clock           => phi2,
 					   	                           cs_n            => ram_cs_n,
 											               we_n            => rw,
 											               address         => address_bus,
 											               data_in         => data_bus,
-							                           data_out        => ram_data);
---end generate de10_gen_ram;																
+							                           data_out        => ram_data,
+															   SRAM_DQ         => SRAM_DQ,
+                                                SRAM_ADDR       => SRAM_ADDR,
+                                                SRAM_UB_N       => SRAM_UB_N,
+                                                SRAM_LB_N       => SRAM_LB_N,
+                                                SRAM_WE_N       => SRAM_WE_N,
+                                                SRAM_CE_N       => SRAM_CE_N,
+                                                SRAM_OE_N       => SRAM_OE_N);															
 
-																
+
+
 	DRAM_ADDR      <= (others => 'Z');
 	DRAM_BA        <= (others => 'Z');
 	DRAM_CAS_N     <= 'Z';  
@@ -366,12 +441,5 @@ begin
 	VGA_R		   	<= (others => 'Z');  
 	VGA_VS	   	<= 'Z';
 		
-	GSENSOR_CS_N	<= 'Z';
-	GSENSOR_SCLK	<= 'Z';
-	GSENSOR_SDI		<= 'Z';
-	GSENSOR_SDO	 	<= 'Z';
-
-
-	
 end top;
 
