@@ -3,11 +3,11 @@
 A complete VHDL implementation of the Replica 1, which is a faithful clone of the original Apple 1 computer designed by Steve Wozniak in 1976.
 
 ## ChangeLog 
-- 15/08/25  Added DE1 Support
-- 29/08/25  Added John kent 6809 core
--           Added a simple 6809 Monitor in software/mon6809
--           Added Wozmon the sources code in software/wozmon    wozmon for 6809 derived from wozmon 6800 is still buggy and non working
--       
+- 15/08/25 Added DE1 Support
+- 29/08/25 Added John kent 6809 core
+- 29/08/25 Added a simple 6809 Monitor in software/mon6809
+- 29/08/25 Added Wozmon sources code in software/wozmon    wozmon for 6809 derived from wozmon 6800 is still buggy and non working
+       
 ## Overview
 
 This project recreates the Apple 1 computer using modern FPGA technology while maintaining the original functionality and behavior. The implementation is designed for the DE10-Lite FPGA board and features a configurable CPU core that supports both 6502 and 6800 processors.
