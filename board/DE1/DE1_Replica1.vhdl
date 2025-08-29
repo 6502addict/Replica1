@@ -143,14 +143,14 @@ end component;
 component Replica1_CORE is
   generic (
 		 BOARD           : string   := "DE1_Lite";
-		 CPU_TYPE        : string   := "6502";    -- 6502 or 6800
-  	    CPU_SPEED       : string   := "1mhz";    -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
-		 RAM_SIZE_KB     : positive := 8;         -- 8kb to 48kb
-  	    BAUD_RATE       : integer  := 9600;      -- uart speed 1200 to 115200
-		 HAS_ACI         : boolean  := false;     -- add the aci (incomplete)
-		 HAS_MSPI        : boolean  := false;     -- add master spi  C200
-		 HAS_TIMER       : boolean  := false;     -- add basic timer
-		 HAS_BASIC       : boolean  := false      -- true basic installed, false only wozmon
+		 CPU_TYPE        : string   := "6502";     -- 6502 or 6800
+  	    CPU_SPEED       : string   := "1mhz";     -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
+		 ROM             : string   := "WOZMON65"; -- default wozmon65
+		 RAM_SIZE_KB     : positive := 8;          -- 8kb to 48kb
+  	    BAUD_RATE       : integer  := 9600;       -- uart speed 1200 to 115200
+		 HAS_ACI         : boolean  := false;      -- add the aci (incomplete)
+		 HAS_MSPI        : boolean  := false;      -- add master spi  C200
+		 HAS_TIMER       : boolean  := false       -- add basic timer
 	);
   port (
   		main_clk       : in     std_logic;
@@ -228,14 +228,16 @@ end component;
 -- Board Configuration Parameters 
 --------------------------------------------------------------------------
 constant BOARD          : string   := "DE10_Lite";
-constant CPU_TYPE       : string   := "6502";
+constant CPU_TYPE       : string   := "6809";
 constant CPU_SPEED      : string   := "1mhz";
-constant RAM_SIZE_KB    : positive := 48;        -- DE10-Lite supports up to 48KB
+constant ROM            : string  :=  "MON6809";    -- default wozmon65
+constant RAM_SIZE_KB    : positive := 48;            
 constant BAUD_RATE      : integer  := 115200;
-constant HAS_ACI        : boolean  := true;
+constant HAS_ACI        : boolean  := false;
 constant HAS_MSPI       : boolean  := true;
 constant HAS_TIMER      : boolean  := true;
-constant HAS_BASIC      : boolean  := true;
+
+-- Note: Actally the 6809 only works with mon6809  woz6809 is still buggy
 
 signal  address_bus    : std_logic_vector(15 downto 0);
 signal  data_bus       : std_logic_vector(7 downto 0);
@@ -379,14 +381,14 @@ begin
 														      clk_out        => serial_clk);
 															 
 	ap1: Replica1_CORE               generic map(BOARD          =>  "DE10_Lite",
-										  				      CPU_TYPE       =>  "6502",   -- 6502 or 6800
-														      CPU_SPEED      =>  "1Mhz",   -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
-														      RAM_SIZE_KB    =>  48,       -- 8 to 48Kb 
-														      BAUD_RATE      =>  115200,   -- uart speed 1200 to 115200
-												  		      HAS_ACI        =>  false,    -- add the aci (incomplete)
-		                                          HAS_MSPI       =>  true,     -- add master spi  C200
-		                                          HAS_TIMER      =>  true,     -- add basic timer C210
- 														      HAS_BASIC      =>  true)     -- true basic installed, false only wozmon
+										  				      CPU_TYPE       =>  CPU_TYPE,
+														      CPU_SPEED      =>  CPU_SPEED, 
+																ROM            =>  ROM,
+														      RAM_SIZE_KB    =>  RAM_SIZE_KB,
+														      BAUD_RATE      =>  BAUD_RATE, 
+												  		      HAS_ACI        =>  HAS_ACI,
+		                                          HAS_MSPI       =>  HAS_MSPI,
+		                                          HAS_TIMER      =>  HAS_TIMER)
 									            port map(main_clk       =>  main_clk,
 											               serial_clk     =>  serial_clk,
 													   	   reset_n        =>  reset_n,

@@ -116,14 +116,14 @@ end component;
 component Replica1_CORE is
   generic (
 		 BOARD           : string   := "DE1_Lite";
-		 CPU_TYPE        : string   := "6502";    -- 6502 or 6800
-  	    CPU_SPEED       : string   := "1mhz";    -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
-		 RAM_SIZE_KB     : positive := 8;         -- 8kb to 48kb
-  	    BAUD_RATE       : integer  := 9600;      -- uart speed 1200 to 115200
-		 HAS_ACI         : boolean  := false;     -- add the aci (incomplete)
-		 HAS_MSPI        : boolean  := false;     -- add master spi  C200
-		 HAS_TIMER       : boolean  := false;     -- add basic timer
-		 HAS_BASIC       : boolean  := false      -- true basic installed, false only wozmon
+		 CPU_TYPE        : string   := "6502";     -- 6502 or 6800
+  	    CPU_SPEED       : string   := "1mhz";     -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
+  	    ROM             : string   := "WOZMON65"; -- default monitor
+		 RAM_SIZE_KB     : positive := 8;          -- 8kb to 48kb
+  	    BAUD_RATE       : integer  := 9600;       -- uart speed 1200 to 115200
+		 HAS_ACI         : boolean  := false;      -- add the aci (incomplete)
+		 HAS_MSPI        : boolean  := false;      -- add master spi  C200
+		 HAS_TIMER       : boolean  := false       -- add basic timer
 	);
   port (
   		main_clk       : in     std_logic;
@@ -179,15 +179,14 @@ end component;
 -- Board Configuration Parameters 
 --------------------------------------------------------------------------
 constant BOARD          : string   := "DE10_Lite";
-constant CPU_TYPE       : string   := "6502";
+constant CPU_TYPE       : string   := "6809";
 constant CPU_SPEED      : string   := "1mhz";
+constant ROM            : string   := "MON6809";
 constant RAM_SIZE_KB    : positive := 48;        -- DE10-Lite supports up to 48KB
 constant BAUD_RATE      : integer  := 115200;
-constant HAS_ACI        : boolean  := true;
+constant HAS_ACI        : boolean  := false;
 constant HAS_MSPI       : boolean  := true;
 constant HAS_TIMER      : boolean  := true;
-constant HAS_BASIC      : boolean  := true;
-
 
 signal  address_bus    : std_logic_vector(15 downto 0);
 signal  data_bus       : std_logic_vector(7 downto 0);
@@ -311,12 +310,12 @@ begin
 	ap1: Replica1_CORE               generic map(BOARD          =>  BOARD,
 										  				      CPU_TYPE       =>  CPU_TYPE,    -- 6502 or 6800
 														      CPU_SPEED      =>  CPU_SPEED,   -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
+															   ROM            =>  ROM,         -- default wozmon65
 														      RAM_SIZE_KB    =>  RAM_SIZE_KB, -- 8 to 48Kb 
 														      BAUD_RATE      =>  BAUD_RATE,   -- uart speed 1200 to 115200
 												  		      HAS_ACI        =>  HAS_ACI,     -- add the aci (incomplete)
 		                                          HAS_MSPI       =>  HAS_MSPI,    -- add master spi  C200
-		                                          HAS_TIMER      =>  HAS_TIMER,   -- add basic timer C210
- 														      HAS_BASIC      =>  HAS_BASIC)   -- true basic installed, false only wozmon
+		                                          HAS_TIMER      =>  HAS_TIMER)   -- add basic timer C210
 									            port map(main_clk       =>  main_clk,
 											               serial_clk     =>  serial_clk,
 													   	   reset_n        =>  reset_n,
