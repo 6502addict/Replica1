@@ -6,13 +6,15 @@ entity Replica1_CORE is
   generic (
 		BOARD           : string  :=  "DE10_Lite";   -- DE10_Lite or DE1
 		CPU_TYPE        : string  :=  "6502";        -- 6502 or 6800
- 	   CPU_SPEED       : string  := "1mhz";         -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
+ 	   CPU_SPEED       : string  :=  "1mhz";        -- "debug", "1hz", "1Mhz", "2Mhz" "5Mhz", "10Mhz", "30Mhz"
+		ROM             : string  :=  "WOZMON65";    -- default wozmon65
 		RAM_SIZE_KB     : integer :=  8;             -- 8 to 48kb
 	   BAUD_RATE       : integer :=  115200;        -- uart speed 1200 to 115200
 		HAS_ACI         : boolean :=  false;         -- add the aci (incomplete)
 		HAS_MSPI        : boolean :=  false;         -- add master spi  C200
-		HAS_TIMER       : boolean :=  false;         -- add basic timer
-  	   HAS_BASIC       : boolean :=  false          -- true basic installed, false only wozmon		
+		HAS_TIMER       : boolean :=  false          -- add basic timer
+--  	   HAS_BASIC       : boolean :=  false;         -- true basic installed, false only wozmon		
+--		HAS_MON6809     : boolean :=  false          -- alternative enhanced 6809 monitor
   );
   port (
 		main_clk        : in     std_logic;
@@ -90,6 +92,31 @@ component CPU_6800 is
 end component;
 
 
+component CPU_6809 is
+	port (
+		-- Clock and Reset
+		main_clk : in  std_logic;       -- Main system clock
+		reset_n  : in  std_logic;       -- Active low reset
+		phi2     : out std_logic;       -- Phase 2 clock output (divided from main_clk)
+		
+		-- CPU Control Interface
+		rw       : out std_logic;       -- Read/Write (1=Read, 0=Write)
+		vma      : out std_logic;       -- Valid Memory Access
+		sync     : out std_logic;       -- Instruction fetch cycle
+		
+		-- Address and Data Bus
+		addr     : out std_logic_vector(15 downto 0);  -- Address bus
+		data_in  : in  std_logic_vector(7 downto 0);   -- Data input
+		data_out : out std_logic_vector(7 downto 0);   -- Data output
+		
+		-- Interrupt Interface  
+		nmi_n    : in  std_logic;       -- Non-maskable interrupt (active low)
+		irq_n    : in  std_logic;       -- Interrupt request (active low)
+		so_n     : in  std_logic := '1' -- Set overflow (not used by 6800)
+	);
+end component;
+
+
 -- END OF PROCESSOR MODULES
 
 -- ROM MODULES
@@ -112,6 +139,14 @@ component WOZMON68
 	);
 end component;
 
+component WOZMON69
+	port (
+		clock    : in std_logic;
+		cs_n     : in std_logic;
+		address  : in  std_logic_vector(7 downto 0); 
+		data_out : out std_logic_vector(7 downto 0)
+	);
+end component;
 
 component WOZACI is
     port (
@@ -129,6 +164,15 @@ component BASIC
 		address  : in  std_logic_vector(13 downto 0); 
 		data_out : out std_logic_vector(7 downto 0)
 	);
+end component;
+
+component MON6809 is
+    port (
+        clock:    in std_logic;
+        address:  in std_logic_vector(11 downto 0);
+        cs_n:     in std_logic;
+        data_out: out std_logic_vector(7 downto 0)
+    );
 end component;
 
 -- END ROM MODULES
@@ -293,7 +337,7 @@ gen_cpu0: if CPU_TYPE = "6502" generate
 											  so_n            => so_n);
 end generate gen_cpu0;
 											  
-gen_cpu3: if CPU_TYPE = "6800" generate
+gen_cpu1: if CPU_TYPE = "6800" generate
 	cpu: CPU_6800          port map(main_clk        => main_clk,
 	                                reset_n         => cpu_reset_n,
 											  phi2            => phi2,
@@ -306,34 +350,83 @@ gen_cpu3: if CPU_TYPE = "6800" generate
 											  nmi_n           => nmi_n,
 											  irq_n           => irq_n,
 											  so_n            => so_n);
-end generate gen_cpu3;
+end generate gen_cpu1;
+
+gen_cpu2: if CPU_TYPE = "6809" generate
+	cpu: CPU_6809          port map(main_clk        => main_clk,
+	                                reset_n         => cpu_reset_n,
+											  phi2            => phi2,
+											  rw              => rw,
+											  vma             => vma,
+											  sync            => sync,
+											  addr            => address_bus,
+											  data_in         => data_bus,
+											  data_out        => cpu_data,
+											  nmi_n           => nmi_n,
+											  irq_n           => irq_n,
+											  so_n            => so_n);
+end generate gen_cpu2;
+
 
 -- END OF CPU PORT MAP
 
 -- ROM PORT MAP
 											  
-gen_wozmon: if HAS_BASIC = false generate
-	gen_woz65: if CPU_TYPE /= "6800" generate
+--gen_wozmon: if HAS_BASIC = false generate
+--	gen_woz65: if CPU_TYPE = "6502" generate
+--	rom: WOZMON65          port map(clock           => phi2,
+--							              cs_n            => rom_cs_n,
+--	                                address         => address_bus(7 downto 0),
+--							              data_out        => rom_data);
+--	end generate gen_woz65;
+--	gen_woz68: if CPU_TYPE = "6800" generate
+--	rom: WOZMON68          port map(clock           => phi2,
+--							              cs_n            => rom_cs_n,
+--	                                address         => address_bus(7 downto 0),
+--							              data_out        => rom_data);
+--	end generate gen_woz68;
+--	gen_woz69: if CPU_TYPE = "6809" generate
+--	rom: WOZMON69          port map(clock           => phi2,
+--							              cs_n            => rom_cs_n,
+--	                                address         => address_bus(7 downto 0),
+--							              data_out        => rom_data);
+--	end generate gen_woz69;
+--end generate gen_wozmon;
+
+woz65: if ROM = "WOZMON65"  generate
 	rom: WOZMON65          port map(clock           => phi2,
 							              cs_n            => rom_cs_n,
 	                                address         => address_bus(7 downto 0),
 							              data_out        => rom_data);
-	end generate gen_woz65;
-	gen_woz68: if CPU_TYPE = "6800" generate
-	rom: WOZMON68          port map(clock           => phi2,
-							              cs_n            => rom_cs_n,
-	                                address         => address_bus(7 downto 0),
-							              data_out        => rom_data);
-	end generate gen_woz68;
-end generate gen_wozmon;
+end generate woz65;
 
-
-gen_basic: if HAS_BASIC = true generate
+basic65: if ROM = "BASIC65"  generate
 	rom: BASIC             port map(clock           => phi2,
 							              cs_n            => rom_cs_n,
 	                                address         => address_bus(13 downto 0),
 							              data_out        => rom_data);
-end generate gen_basic;
+end generate basic65;
+
+woz68: if ROM = "WOZMON68"  generate
+	rom: WOZMON68          port map(clock           => phi2,
+							              cs_n            => rom_cs_n,
+	                                address         => address_bus(7 downto 0),
+							              data_out        => rom_data);
+end generate woz68;
+
+woz69: if ROM = "WOZMON69"  generate
+	rom: WOZMON69          port map(clock           => phi2,
+							              cs_n            => rom_cs_n,
+	                                address         => address_bus(7 downto 0),
+							              data_out        => rom_data);
+end generate woz69;
+
+mon69: if ROM = "MON6809" generate
+	rom: MON6809           port map(clock           => phi2,
+							              cs_n            => rom_cs_n,
+	                                address         => address_bus(11 downto 0),
+							              data_out        => rom_data);
+end generate mon69;
 
 -- END ROM PORT MAP
 
@@ -347,17 +440,6 @@ gen_aci:  if HAS_ACI and CPU_TYPE = "6502" generate
 											  tape_in         => aci_in,
 											  tape_out        => aci_out);
 end generate gen_aci;											  
---
---
---de10_gen_ram: if BOARD = "DE10_Lite" generate
---	ram: RAM_DE10       generic map (RAM_SIZE_KB   => RAM_SIZE_KB)
---								  port map(clock           => phi2,
---					   	              cs_n            => ram_cs_n,
---											  we_n            => rw,
---											  address         => address_bus,
---											  data_in         => data_bus,
---							              data_out        => ram_data);
---end generate de10_gen_ram;
 
 										 
 	pia: PIA_UART       generic map(CLK_FREQ_HZ     => 1843200, 
@@ -423,21 +505,30 @@ end generate gen_timer;
 		 rom_cs_n <= '1';  -- Default inactive
 		 
 		 if vma = '1' then
-			  case HAS_BASIC is
-					when true =>
-						 if address_bus(15 downto 13) = "111" then
-							  rom_cs_n <= '0';
-						 end if;
-						 
-					when false =>
-						 if address_bus(15 downto 8) = x"FF" then
-							  rom_cs_n <= '0';
-						 end if;
-						 
-					when others =>
-						 rom_cs_n <= '1';  
-			  end case;
-		 end if;
+			if ROM = "WOZMON65" then
+				if address_bus(15 downto 8) = x"FF" then
+					rom_cs_n <= '0';
+				end if;
+			elsif ROM = "WOZMON68" then
+				if address_bus(15 downto 8) = x"FF" then
+					rom_cs_n <= '0';
+				end if;
+			elsif ROM = "WOZMON69" then
+				if address_bus(15 downto 8) = x"FF" then
+					rom_cs_n <= '0';
+				end if;
+			elsif ROM = "BASIC65" then
+				if address_bus(15 downto 13) = "111" then
+					rom_cs_n <= '0';
+				end if;
+			elsif ROM = "MON6809" then
+				if address_bus(15 downto 11) = "11111" then
+					rom_cs_n <= '0';
+				end if;
+			else
+				rom_cs_n <= '1';  
+			end if;
+		end if;
 	end process;	
 
 
