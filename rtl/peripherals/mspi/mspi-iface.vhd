@@ -30,7 +30,7 @@ architecture rtl of mspi_iface is
             spi_busy    : out std_logic;
             data_in     : in  std_logic_vector(7 downto 0);
             data_out    : out std_logic_vector(7 downto 0);
-				spi_enable  : in  std_logic := '0';
+			spi_enable  : in  std_logic := '0';
             cpol        : in  std_logic;
             cpha        : in  std_logic;
             spi_sck     : out std_logic;
@@ -59,19 +59,19 @@ architecture rtl of mspi_iface is
 begin
 	 
     SPI: spi_master   port map (clk         => spi_clk,
-										  reset_n     => reset_n,
-										  spi_req     => spi_req,
-										  spi_divider => spi_divider,
-										  spi_busy    => spi_busy,
-										  data_in     => spi_data_in,
-										  data_out    => spi_data_out,
-										  spi_enable  => spi_enable,
-										  cpol        => cpol,
-										  cpha        => cpha,
-										  spi_sck     => spi_sck,
-										  spi_cs_n    => spi_cs_n,
-										  spi_mosi    => spi_mosi,
-										  spi_miso    => spi_miso);
+							    reset_n     => reset_n,
+								spi_req     => spi_req,
+								spi_divider => spi_divider,
+								spi_busy    => spi_busy,
+								data_in     => spi_data_in,
+								data_out    => spi_data_out,
+								spi_enable  => spi_enable,
+								cpol        => cpol,
+								cpha        => cpha,
+								spi_sck     => spi_sck,
+								spi_cs_n    => spi_cs_n,
+								spi_mosi    => spi_mosi,
+								spi_miso    => spi_miso);
 										  
 	process(phi2, reset_n)
 	begin
@@ -147,6 +147,8 @@ begin
 						else
 							data_out    <= spi_divider;
 						end if;
+                   
+                    when others => null;
                         
 				end case;
          end if;

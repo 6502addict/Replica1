@@ -1,0 +1,37 @@
+
+State Machine - |DE10_Replica1|Replica1_CORE:ap1|pia_uart:pia|uart_receive:recv|uart_state
+Name uart_state.UART_STROBE uart_state.UART_STOP uart_state.UART_DATA uart_state.UART_START uart_state.UART_IDLE 
+uart_state.UART_IDLE 0 0 0 0 0 
+uart_state.UART_START 0 0 0 1 1 
+uart_state.UART_DATA 0 0 1 0 1 
+uart_state.UART_STOP 0 1 0 0 1 
+uart_state.UART_STROBE 1 0 0 0 1 
+
+State Machine - |DE10_Replica1|Replica1_CORE:ap1|pia_uart:pia|uart_send:send|uart_state
+Name uart_state.UART_STOP uart_state.UART_DATA uart_state.UART_START uart_state.UART_IDLE 
+uart_state.UART_IDLE 0 0 0 0 
+uart_state.UART_START 0 0 1 1 
+uart_state.UART_DATA 0 1 0 1 
+uart_state.UART_STOP 1 0 0 1 
+
+State Machine - |DE10_Replica1|Replica1_CORE:ap1|CPU_65XX:\gen_cpu0:cpu|cpu65xx:cpu65xx_inst|theCpuCycle
+Name theCpuCycle.cycleEnd theCpuCycle.cycleJump theCpuCycle.cycleStack4 theCpuCycle.cycleStack3 theCpuCycle.cycleStack2 theCpuCycle.cycleStack1 theCpuCycle.cycleWrite theCpuCycle.cyclePreWrite theCpuCycle.cycleRmw theCpuCycle.cycleRead2 theCpuCycle.cycleRead theCpuCycle.cyclePreRead theCpuCycle.cycleBranchPage theCpuCycle.cycleBranchTaken theCpuCycle.cycleIndirect theCpuCycle.cyclePreIndirect theCpuCycle.cycle3 theCpuCycle.opcodeFetch theCpuCycle.cycle2 
+theCpuCycle.cycle2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+theCpuCycle.opcodeFetch 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+theCpuCycle.cycle3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+theCpuCycle.cyclePreIndirect 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+theCpuCycle.cycleIndirect 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+theCpuCycle.cycleBranchTaken 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+theCpuCycle.cycleBranchPage 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+theCpuCycle.cyclePreRead 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+theCpuCycle.cycleRead 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+theCpuCycle.cycleRead2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+theCpuCycle.cycleRmw 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+theCpuCycle.cyclePreWrite 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+theCpuCycle.cycleWrite 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+theCpuCycle.cycleStack1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+theCpuCycle.cycleStack2 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+theCpuCycle.cycleStack3 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+theCpuCycle.cycleStack4 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+theCpuCycle.cycleJump 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+theCpuCycle.cycleEnd 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

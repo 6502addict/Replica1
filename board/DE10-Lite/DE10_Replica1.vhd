@@ -179,9 +179,9 @@ end component;
 -- Board Configuration Parameters 
 --------------------------------------------------------------------------
 constant BOARD          : string   := "DE10_Lite";
-constant CPU_TYPE       : string   := "6809";
+constant CPU_TYPE       : string   := "6502";
 constant CPU_SPEED      : string   := "1mhz";
-constant ROM            : string   := "MON6809";
+constant ROM            : string   := "BASIC65";
 constant RAM_SIZE_KB    : positive := 48;        -- DE10-Lite supports up to 48KB
 constant BAUD_RATE      : integer  := 115200;
 constant HAS_ACI        : boolean  := false;

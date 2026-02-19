@@ -210,6 +210,8 @@ begin
                             -- return crb register
                             data_out <= crb;
                         end if;
+                        
+                    when others => null;
 
                 end case;
             end if;
