@@ -789,13 +789,11 @@ begin
         when ST_REFRESH =>
             if seq_count = 0 then
                 cmd_next       <= CMD_REF;
-					 refresh_active <= '1';
                 seq_count_next <= seq_count + 1;
             elsif seq_count = TRFC_CYCLES then
                 cmd_next               <= CMD_NOP;
                 need_refresh_next      <= '0';
                 refresh_postponed_next <= '0';
-					 refresh_active         <= '0';
                 state_next             <= ST_IDLE;
                 seq_count_next         <= 0;
             else

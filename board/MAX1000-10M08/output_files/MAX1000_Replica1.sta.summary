@@ -1,0 +1,305 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[0]'
+Slack : -13.274
+TNS   : -1218.022
+
+Type  : Slow 1200mV 85C Model Setup 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[1]'
+Slack : -12.800
+TNS   : -582.725
+
+Type  : Slow 1200mV 85C Model Setup 'mclk|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -10.031
+TNS   : -601.669
+
+Type  : Slow 1200mV 85C Model Setup 'sdram_controller:sdram|seq_count[0]'
+Slack : -7.407
+TNS   : -7.407
+
+Type  : Slow 1200mV 85C Model Setup 'sdram_controller:sdram|need_refresh'
+Slack : -7.288
+TNS   : -75.615
+
+Type  : Slow 1200mV 85C Model Setup 'frac_clk_div:cclk|clk_i'
+Slack : -4.843
+TNS   : -9.337
+
+Type  : Slow 1200mV 85C Model Setup 'frac_clk_div:sclk|clk_i'
+Slack : -3.002
+TNS   : -76.841
+
+Type  : Slow 1200mV 85C Model Setup 'mclk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.583
+TNS   : -1.160
+
+Type  : Slow 1200mV 85C Model Hold 'sdram_controller:sdram|need_refresh'
+Slack : -4.916
+TNS   : -52.358
+
+Type  : Slow 1200mV 85C Model Hold 'sdram_controller:sdram|seq_count[0]'
+Slack : -2.353
+TNS   : -2.353
+
+Type  : Slow 1200mV 85C Model Hold 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[0]'
+Slack : -1.283
+TNS   : -9.876
+
+Type  : Slow 1200mV 85C Model Hold 'mclk|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.487
+TNS   : -0.945
+
+Type  : Slow 1200mV 85C Model Hold 'mclk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.462
+TNS   : -0.912
+
+Type  : Slow 1200mV 85C Model Hold 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[1]'
+Slack : 0.264
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'frac_clk_div:sclk|clk_i'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'frac_clk_div:cclk|clk_i'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[0]'
+Slack : -1.487
+TNS   : -178.440
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[1]'
+Slack : -1.487
+TNS   : -101.116
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'frac_clk_div:sclk|clk_i'
+Slack : -1.487
+TNS   : -68.402
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'frac_clk_div:cclk|clk_i'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sdram_controller:sdram|seq_count[0]'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sdram_controller:sdram|need_refresh'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mclk|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 3.870
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mclk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.890
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK12M'
+Slack : 41.513
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[0]'
+Slack : -12.334
+TNS   : -1143.259
+
+Type  : Slow 1200mV 0C Model Setup 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[1]'
+Slack : -12.179
+TNS   : -550.511
+
+Type  : Slow 1200mV 0C Model Setup 'mclk|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -9.425
+TNS   : -558.550
+
+Type  : Slow 1200mV 0C Model Setup 'sdram_controller:sdram|need_refresh'
+Slack : -7.521
+TNS   : -76.257
+
+Type  : Slow 1200mV 0C Model Setup 'sdram_controller:sdram|seq_count[0]'
+Slack : -7.207
+TNS   : -7.207
+
+Type  : Slow 1200mV 0C Model Setup 'frac_clk_div:cclk|clk_i'
+Slack : -4.595
+TNS   : -8.865
+
+Type  : Slow 1200mV 0C Model Setup 'frac_clk_div:sclk|clk_i'
+Slack : -2.799
+TNS   : -69.739
+
+Type  : Slow 1200mV 0C Model Setup 'mclk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.477
+TNS   : -0.948
+
+Type  : Slow 1200mV 0C Model Hold 'sdram_controller:sdram|need_refresh'
+Slack : -4.391
+TNS   : -46.840
+
+Type  : Slow 1200mV 0C Model Hold 'sdram_controller:sdram|seq_count[0]'
+Slack : -2.088
+TNS   : -2.088
+
+Type  : Slow 1200mV 0C Model Hold 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[0]'
+Slack : -1.128
+TNS   : -8.715
+
+Type  : Slow 1200mV 0C Model Hold 'mclk|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.535
+TNS   : -1.041
+
+Type  : Slow 1200mV 0C Model Hold 'mclk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.512
+TNS   : -1.014
+
+Type  : Slow 1200mV 0C Model Hold 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[1]'
+Slack : 0.226
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'frac_clk_div:sclk|clk_i'
+Slack : 0.303
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'frac_clk_div:cclk|clk_i'
+Slack : 0.701
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[0]'
+Slack : -1.487
+TNS   : -178.440
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[1]'
+Slack : -1.487
+TNS   : -101.116
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'frac_clk_div:sclk|clk_i'
+Slack : -1.487
+TNS   : -68.402
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'frac_clk_div:cclk|clk_i'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sdram_controller:sdram|need_refresh'
+Slack : 0.090
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sdram_controller:sdram|seq_count[0]'
+Slack : 0.103
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mclk|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 3.856
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mclk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.858
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK12M'
+Slack : 41.513
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[0]'
+Slack : -4.473
+TNS   : -401.083
+
+Type  : Fast 1200mV 0C Model Setup 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[1]'
+Slack : -4.400
+TNS   : -193.739
+
+Type  : Fast 1200mV 0C Model Setup 'mclk|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -4.287
+TNS   : -265.942
+
+Type  : Fast 1200mV 0C Model Setup 'sdram_controller:sdram|need_refresh'
+Slack : -3.478
+TNS   : -33.674
+
+Type  : Fast 1200mV 0C Model Setup 'sdram_controller:sdram|seq_count[0]'
+Slack : -3.092
+TNS   : -3.092
+
+Type  : Fast 1200mV 0C Model Setup 'frac_clk_div:cclk|clk_i'
+Slack : -2.118
+TNS   : -4.154
+
+Type  : Fast 1200mV 0C Model Setup 'frac_clk_div:sclk|clk_i'
+Slack : -0.547
+TNS   : -7.685
+
+Type  : Fast 1200mV 0C Model Setup 'mclk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.468
+TNS   : -0.930
+
+Type  : Fast 1200mV 0C Model Hold 'sdram_controller:sdram|need_refresh'
+Slack : -2.362
+TNS   : -27.338
+
+Type  : Fast 1200mV 0C Model Hold 'sdram_controller:sdram|seq_count[0]'
+Slack : -1.064
+TNS   : -1.064
+
+Type  : Fast 1200mV 0C Model Hold 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[0]'
+Slack : -0.659
+TNS   : -6.692
+
+Type  : Fast 1200mV 0C Model Hold 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[1]'
+Slack : -0.284
+TNS   : -0.823
+
+Type  : Fast 1200mV 0C Model Hold 'mclk|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.210
+TNS   : -0.434
+
+Type  : Fast 1200mV 0C Model Hold 'mclk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -0.190
+TNS   : -0.378
+
+Type  : Fast 1200mV 0C Model Hold 'frac_clk_div:sclk|clk_i'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'frac_clk_div:cclk|clk_i'
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[0]'
+Slack : -1.000
+TNS   : -120.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Replica1_CORE:ap1|CPU_MX65:\gen_cpu0:c2:cpu|cpu_clock_gen:clk|count[1]'
+Slack : -1.000
+TNS   : -68.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'frac_clk_div:sclk|clk_i'
+Slack : -1.000
+TNS   : -46.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'frac_clk_div:cclk|clk_i'
+Slack : -1.000
+TNS   : -2.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sdram_controller:sdram|need_refresh'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sdram_controller:sdram|seq_count[0]'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mclk|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 3.925
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mclk|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 3.926
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK12M'
+Slack : 41.168
+TNS   : 0.000
+
+------------------------------------------------------------

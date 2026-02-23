@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Mon Feb 23 16:11:07 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : MAX1000_Replica1
+Top-level Entity Name : MAX1000_Replica1
+Family : MAX 10
+Device : 10M16SAU169C8G
+Power Models : Final
+Total Thermal Power Dissipation : 268.29 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 226.58 mW
+I/O Thermal Power Dissipation : 41.71 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

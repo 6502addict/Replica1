@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Mon Feb 23 16:10:48 2026
+Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Revision Name : MAX1000_Replica1
+Top-level Entity Name : MAX1000_Replica1
+Family : MAX 10
+Total logic elements : 1,217
+    Total combinational functions : 1,124
+    Dedicated logic registers : 390
+Total registers : 390
+Total pins : 97
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 0
