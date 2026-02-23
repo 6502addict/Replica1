@@ -15,38 +15,43 @@ use ieee.numeric_std.all;
 entity CPU_65XX is
 	port (
 		-- Clock and Reset
-		main_clk : in  std_logic;       -- Main system clock
-		reset_n  : in  std_logic;       -- Active low reset
-		phi2     : out std_logic;       -- Phase 2 clock enable
+		main_clk    : in  std_logic;        -- Main system clock
+		reset_n     : in  std_logic;        -- Active low reset
+		cpu_reset_n : in  std_logic;        -- Active low cpu reset
+		phi2        : out std_logic;        -- Phase 2 clock enable
 		
 		-- CPU Control Interface
-		rw       : out std_logic;       -- Read/Write (1=Read, 0=Write)
-		vma      : out std_logic;       -- Valid Memory Access
-		sync     : out std_logic;       -- Instruction fetch cycle
+		rw          : out std_logic;        -- Read/Write (1=Read, 0=Write)
+		vma         : out std_logic;        -- Valid Memory Access
+		sync        : out std_logic;        -- Instruction fetch cycle
 		
 		-- Address and Data Bus
-		addr     : out std_logic_vector(15 downto 0);  -- Address bus
-		data_in  : in  std_logic_vector(7 downto 0);   -- Data input
-		data_out : out std_logic_vector(7 downto 0);   -- Data output
+		addr        : out std_logic_vector(15 downto 0);  -- Address bus
+		data_in     : in  std_logic_vector(7 downto 0);   -- Data input
+		data_out    : out std_logic_vector(7 downto 0);   -- Data output
 		
-		-- Interrupt Interface  
-		nmi_n    : in  std_logic;       -- Non-maskable interrupt (active low)
-		irq_n    : in  std_logic;       -- Interrupt request (active low)
-		so_n     : in  std_logic := '1' -- Set overflow (active low)
+		-- Interrupt Interface   
+		nmi_n       : in  std_logic;        -- Non-maskable interrupt (active low)
+		irq_n       : in  std_logic;        -- Interrupt request (active low)
+		so_n        : in  std_logic := '1'; -- Set overflow (active low)
+		
+		-- wait states
+		mrdy        : in  std_logic
 	);
 end CPU_65XX;
 
 architecture CPU65XX_impl of CPU_65XX is
 
-	component clock_divider is
-		 generic (divider : integer := 4);
-		 port (
-			  reset    : in  std_logic := '1';
-			  clk_in   : in  std_logic;
-			  clk_out  : out std_logic
+	component cpu_clock_gen is
+		 Port (
+			  clk_4x  : in  STD_LOGIC;
+			  reset_n : in  STD_LOGIC;
+			  mrdy    : in  STD_LOGIC;       -- Memory Ready
+			  clk_1x  : out STD_LOGIC;       -- CPU clock (stretched)
+			  clk_2x  : out STD_LOGIC;       -- 2x clock for 6502 cores
+			  stretch : out STD_LOGIC        -- '1' only when actually stretching
 		 );
 	end component;
-
 
 	-- CPU65XX Component
 	component cpu65xx is
@@ -88,6 +93,7 @@ architecture CPU65XX_impl of CPU_65XX is
 	signal cpu65xx_do    : unsigned(7 downto 0);
 	signal cpu65xx_addr  : unsigned(15 downto 0);
 	signal cpu65xx_we    : std_logic;
+	signal cpu65xx_clk   : std_logic;
 
 begin
 
@@ -95,10 +101,12 @@ begin
 	data_bus <= data_in;
 	phi2     <= phi2_internal;
 	
-	clk:  clock_divider generic map(divider         => 2)  
-								  port map(reset           => '1',
-									  	     clk_in          => main_clk,
-											  clk_out         => phi2_internal);
+	clk: cpu_clock_gen port map(clk_4x  => main_clk,
+						 			    reset_n => reset_n,
+									    mrdy    => mrdy,
+									    clk_1x  => phi2_internal,
+									    clk_2x  => cpu65xx_clk,
+									    stretch => open);
 
 	-- CPU65XX Instantiation
 	cpu65xx_inst: cpu65xx 
@@ -108,9 +116,9 @@ begin
 			pipelineAluOut  => false
 		)
 		port map(
-			clk             => main_clk,
-			enable          => phi2_internal,
-			reset           => not reset_n,         -- CPU65XX uses active high reset
+			clk             => cpu65xx_clk,
+			enable          => not phi2_internal,
+			reset           => not cpu_reset_n,         -- CPU65XX uses active high reset
 			nmi_n           => nmi_n,
 			irq_n           => irq_n,
 			so_n            => so_n,
@@ -131,7 +139,7 @@ begin
 	address_bus   <= std_logic_vector(cpu65xx_addr);
 	rw_internal   <= not cpu65xx_we;              -- Convert WE to RW
 	sync_internal <= '0';                         -- CPU65XX doesn't have sync
-	vma_internal  <= '1'; --phi2_internal;               -- on a 6502 the addresses are valid when phi2 is high
+	vma_internal  <= '1';                         -- on a 6502 the addresses are valid when phi2 is high
 
 	-- Output assignments
 	addr     <= address_bus;

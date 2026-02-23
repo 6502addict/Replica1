@@ -15,36 +15,41 @@ use ieee.numeric_std.all;
 entity CPU_6800 is
 	port (
 		-- Clock and Reset
-		main_clk : in  std_logic;       -- Main system clock
-		reset_n  : in  std_logic;       -- Active low reset
-		phi2     : out std_logic;       -- Phase 2 clock output (divided from main_clk)
-		
+		main_clk    : in  std_logic;       -- Main system clock
+		reset_n     : in  std_logic;       -- Active low reset
+		cpu_reset_n : in  std_logic;       -- Active low cpu reset
+		E           : out std_logic;       -- Phase 2 clock output (divided from main_clk)
+
 		-- CPU Control Interface
-		rw       : out std_logic;       -- Read/Write (1=Read, 0=Write)
-		vma      : out std_logic;       -- Valid Memory Access
-		sync     : out std_logic;       -- Instruction fetch cycle
+		rw          : out std_logic;       -- Read/Write (1=Read, 0=Write)
+		vma         : out std_logic;       -- Valid Memory Access
+		sync        : out std_logic;       -- Instruction fetch cycle
 		
 		-- Address and Data Bus
-		addr     : out std_logic_vector(15 downto 0);  -- Address bus
-		data_in  : in  std_logic_vector(7 downto 0);   -- Data input
-		data_out : out std_logic_vector(7 downto 0);   -- Data output
+		addr        : out std_logic_vector(15 downto 0);  -- Address bus
+		data_in     : in  std_logic_vector(7 downto 0);   -- Data input
+		data_out    : out std_logic_vector(7 downto 0);   -- Data output
 		
 		-- Interrupt Interface  
-		nmi_n    : in  std_logic;       -- Non-maskable interrupt (active low)
-		irq_n    : in  std_logic;       -- Interrupt request (active low)
-		so_n     : in  std_logic := '1' -- Set overflow (not used by 6800)
+		nmi_n       : in  std_logic;         -- Non-maskable interrupt (active low)
+		irq_n       : in  std_logic;         -- Interrupt request (active low)
+		so_n        : in  std_logic := '1';  -- Set overflow (not used by 6800)
+		
+		-- wait states
+		mrdy        : in  std_logic
 	);
 end CPU_6800;
 
 architecture MC6800_impl of CPU_6800 is
-
-
-	component clock_divider is
-		 generic (divider : integer := 4);
-		 port (
-			  reset    : in  std_logic := '1';
-			  clk_in   : in  std_logic;
-			  clk_out  : out std_logic
+	
+	component cpu_clock_gen is
+		 Port (
+			  clk_4x  : in  STD_LOGIC;
+			  reset_n : in  STD_LOGIC;
+			  mrdy    : in  STD_LOGIC;       -- Memory Ready
+			  clk_1x  : out STD_LOGIC;       -- CPU clock (stretched)
+			  clk_2x  : out STD_LOGIC;       -- 2x clock for 6502 cores
+			  stretch : out STD_LOGIC        -- '1' only when actually stretching
 		 );
 	end component;
 
@@ -66,39 +71,33 @@ architecture MC6800_impl of CPU_6800 is
 	end component;
 
 	-- Internal signals
-	signal reset_internal: std_logic;              -- Internal reset (active high)
+--	signal reset_internal: std_logic;              -- Internal reset (active high)
 	signal data_bus      : std_logic_vector(7 downto 0);
 	signal address_bus   : std_logic_vector(15 downto 0);
 	signal cpu_data_out  : std_logic_vector(7 downto 0);
-	signal rw_internal   : std_logic;
-	signal sync_internal : std_logic;
-	signal vma_internal  : std_logic;
-	signal phi2_internal : std_logic;
 
 	-- MC6800 specific signals
 	signal mc6800_rw     : std_logic;
 	signal mc6800_vma    : std_logic;
+	signal mc6800_clk    : std_logic;
 
 begin
 
-	clk:  clock_divider generic map(divider         => 2)  
-								  port map(reset           => '1',
-									  	     clk_in          => main_clk,
-											  clk_out         => phi2_internal);	
-											  
-	phi2 <= phi2_internal;
+	clk: cpu_clock_gen port map(clk_4x  => main_clk,
+						 			    reset_n => reset_n,
+									    mrdy    => mrdy,
+									    clk_1x  => mc6800_clk,
+									    clk_2x  => open,
+									    stretch => open);	
 
-	-- Clock and reset assignments
-	reset_internal <= not reset_n;
-
-	-- Input data bus assignment
+	E <= mc6800_clk;
 	data_bus <= data_in;
 
 	-- MC6800 Instantiation
 	mc6800_inst: cpu68 
 		port map(
-			clk     => phi2_internal,              -- CPU68 uses main_clk directly
-			rst     => reset_internal,             -- MC6800 uses active high reset
+			clk     => mc6800_clk,                 -- CPU68 uses 1x clock
+			rst     => not cpu_reset_n,            -- MC6800 uses active high reset
 			rw      => mc6800_rw,
 			vma     => mc6800_vma,
 			address => address_bus,
@@ -111,9 +110,6 @@ begin
 		);
 		
 	-- Signal assignments for MC6800
-	rw_internal   <= mc6800_rw;
-	vma_internal  <= mc6800_vma;                  -- MC6800 provides its own VMA
-	sync_internal <= '0';                         -- 6800 doesn't have sync like 6502
 	
 	-- Note: 6800 VMA timing is different from 6502:
 	-- - 6502: VMA = phi2 (address valid during phi2 high)
@@ -122,8 +118,8 @@ begin
 	-- Output assignments
 	addr     <= address_bus;
 	data_out <= cpu_data_out;
-	rw       <= rw_internal;
-	sync     <= sync_internal;
-	vma      <= vma_internal;
+	rw       <= mc6800_rw;
+	vma      <= mc6800_vma;                  -- MC6800 provides its own VMA
+	sync     <= '0';
 
 end MC6800_impl;
