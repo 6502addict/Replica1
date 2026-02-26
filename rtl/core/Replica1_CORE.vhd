@@ -6,7 +6,7 @@ entity Replica1_CORE is
     generic (
         CPU_TYPE        : string  :=  "6502";        -- 6502, 65C02, 6800 or 6809
         CPU_CORE        : string  :=  "65XX";        -- 65XX, T65, MX65 
-        ROM             : string  :=  "WOZMON65";    -- default wozmon65
+        ROM             : string  :=  "INTBASIC";    -- default wozmon65
         RAM_SIZE_KB     : integer :=  8;             -- 8 to 48kb
         BAUD_RATE       : integer :=  115200;        -- uart speed 1200 to 115200
         HAS_ACI         : boolean :=  false;         -- add the aci (incomplete)
@@ -251,7 +251,7 @@ component BASIC
     port (
         clock    : in std_logic;
         cs_n     : in std_logic;
-        address  : in  std_logic_vector(13 downto 0); 
+        address  : in  std_logic_vector(12 downto 0); 
         data_out : out std_logic_vector(7 downto 0)
     );
 end component;
@@ -260,10 +260,23 @@ component INTBASIC
     port (
         clock    : in std_logic;
         cs_n     : in std_logic;
-        address  : in  std_logic_vector(13 downto 0); 
+        address  : in  std_logic_vector(12 downto 0); 
         data_out : out std_logic_vector(7 downto 0)
     );
 end component;
+
+--
+--component intbasic
+--    PORT
+--    (
+--        address     : in  std_logic_vector(12 DOWNTO 0);
+--        clock       : in  std_logic  := '1';
+--        rden        : in  std_logic  := '1';
+--        q           : out std_logic_vector(7 DOWNTO 0)
+--    );
+--end component;
+--
+
 
 component MON6809 is
     port (
@@ -526,16 +539,24 @@ end generate gen_cpu0;
     basic1: if ROM = "BASIC65"  generate
     rom: BASIC             port map(clock           => phi2,
                                     cs_n            => rom_cs_n,
-                                    address         => address_bus(13 downto 0),
+                                    address         => address_bus(12 downto 0),
                                     data_out        => rom_data);
     end generate basic1;
+
+--    basic2: if ROM = "INTBASIC"  generate
+--    rom: intbasic          port map(address         => address_bus(12 downto 0),
+--                                    clock           => phi2,
+--                                    rden            => rom_cs_n,
+--                                    q               => rom_data);
+--    end generate basic2;
 
     basic2: if ROM = "INTBASIC"  generate
     rom: INTBASIC          port map(clock           => phi2,
                                     cs_n            => rom_cs_n,
-                                    address         => address_bus(13 downto 0),
+                                    address         => address_bus(12 downto 0),
                                     data_out        => rom_data);
     end generate basic2;
+
 
     woz68: if ROM = "WOZMON68"  generate
     rom: WOZMON68          port map(clock           => phi2,

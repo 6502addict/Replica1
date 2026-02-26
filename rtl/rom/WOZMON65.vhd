@@ -8,7 +8,7 @@ entity WOZMON65 is
         address:  in std_logic_vector(7 downto 0); 
         cs_n:     in std_logic;
         data_out: out std_logic_vector(7 downto 0)
-		 );
+    );
 end entity;
 
 architecture rtl of WOZMON65 is

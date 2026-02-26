@@ -6,7 +6,7 @@ entity INTBASIC is
     port (
         clock:    in std_logic;
         cs_n:     in std_logic;
-        address:  in std_logic_vector(13 downto 0);
+        address:  in std_logic_vector(12 downto 0);
         data_out: out std_logic_vector(7 downto 0)
     );
 end entity;
@@ -14,7 +14,7 @@ end entity;
 architecture rtl of INTBASIC is
     -- ROM from $E000 to $FFFF (8192 bytes)
     type rom_type is array(0 to 8191) of std_logic_vector(7 downto 0);
-    signal rom : rom_type := (
+    constant rom : rom_type := (
         X"4C", X"B0", X"E2", X"AD", X"11", X"D0", X"10", X"FB", 
         X"AD", X"10", X"D0", X"60", X"8A", X"29", X"20", X"F0", 
         X"23", X"A9", X"A0", X"85", X"E4", X"4C", X"C9", X"E3", 
@@ -1040,7 +1040,7 @@ architecture rtl of INTBASIC is
         X"12", X"D0", X"30", X"FB", X"8D", X"12", X"D0", X"60", 
         X"00", X"00", X"00", X"0F", X"00", X"FF", X"00", X"01"
     );
-
+    
 begin
     process(clock)
     begin

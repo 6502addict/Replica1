@@ -218,7 +218,6 @@ end function;
 --------------------------------------------------------------------------
 -- Board Configuration Parameters 
 --------------------------------------------------------------------------
-constant BOARD            : string   := "DE10_Lite";
 constant CPU_TYPE         : string   := "6502";                   -- 6502, 65C02, 6800, 6809
 constant CPU_CORE         : string   := "MX65";                   -- 65XX or T65 or MX65
 constant CPU_CLK_SPEED    : real     := 15.0;                     -- cpu speed 1 to  15 Mhz

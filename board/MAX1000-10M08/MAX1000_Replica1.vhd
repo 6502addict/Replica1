@@ -215,6 +215,18 @@ begin
     return std_logic_vector(to_unsigned(int_part * 256 + frac_part, 16));
 end function;
 
+function kb_to_addr_bits(kb : positive) return integer is
+    variable bits  : integer := 0;
+    variable bytes : integer;
+begin
+    bytes := kb * 1024;
+    while (2**bits) < bytes loop
+        bits := bits + 1;
+    end loop;
+    return bits;
+end function;
+
+
 --------------------------------------------------------------------------
 -- Board Configuration Parameters 
 --------------------------------------------------------------------------
@@ -237,15 +249,16 @@ constant TRP_NS           : integer  := 18;                       -- Precharge t
 constant TRCD_NS          : integer  := 18;                       -- RAS to CAS delay (for ACTIVE→READ/WRITE)
 constant TRFC_NS          : integer  := 60;                       -- Refresh cycle time (for AUTO REFRESH wait)
 constant CAS_LATENCY      : integer  := 2;                        -- CAS Latency: 2 or 3 cycles
-constant ADDR_BITS        : integer  := 16; 
 constant AUTO_PRECHARGE   : boolean  := false;
 constant AUTO_REFRESH     : boolean  := false;
 constant CACHE_DATA       : boolean  := false;                    -- actually only works fine on DE10-Lite
 constant CACHE_SIZE_BYTES : integer  := 1024;                     -- 1KB cache
 constant LINE_SIZE_BYTES  : integer  := 16;                       -- 16-byte cache lines
-constant SDRAM_ADDR_WIDTH : integer  := ROW_BITS + COL_BITS + 2;  -- +2 pour BA(1:0)
 constant RAM_BLOCK_TYPE   : string   := "M9K, no_rw_check";       -- "M9K", "M4K", "M10K", "AUTO"
 
+-- constant computed from other constants
+constant ADDR_BITS        : integer  := kb_to_addr_bits(RAM_SIZE_KB);
+constant SDRAM_ADDR_WIDTH : integer  := ROW_BITS + COL_BITS + 2;  -- +2 for BA(1:0)
 
 signal  address_bus    : std_logic_vector(15 downto 0);
 signal  data_bus       : std_logic_vector(7 downto 0);
@@ -414,8 +427,8 @@ begin
     LED(6)             <= '0';
     LED(7)             <= refresh_busy;
 
-    BDBUS(1)           <= serial_tx;
     serial_rx          <= BDBUS(0);
+    BDBUS(1)           <= serial_tx;
 
     -- same thing for the sdcard both are mapped to the PMOD connector    
     PIO(0)             <= sdcard_cs;
