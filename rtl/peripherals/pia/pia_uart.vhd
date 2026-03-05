@@ -1,233 +1,243 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
--- note:  create a fake mc6821 connected to serial transmitter / receiver
+-- note:  fake mc6821 connected to serial transmitter / receiver
 --        CRA, CRB, DDRA and DDRB are just there to make the software happy
 
 entity pia_uart is
-  generic (
-     CLK_FREQ_HZ     : positive := 50000000;  
-     BAUD_RATE       : positive := 9600;      
-     BITS            : positive := 8          
-  );
-  port (
-    -- System interface
-    clock       : in  std_logic;    -- CPU clock
-    serial_clk  : in  std_logic;    -- Serial clock
-    reset_n     : in  std_logic;    -- Active low reset
-    
-    -- CPU interface
-    cs_n        : in  std_logic;                     -- Chip select
-    rw          : in  std_logic;                     -- Read/Write: 1=read, 0=write
-    address     : in  std_logic_vector(1 downto 0);  -- Register select (for 4 registers)
-    data_in     : in  std_logic_vector(7 downto 0);  -- Data from CPU
-    data_out    : out std_logic_vector(7 downto 0);  -- Data to CPU
-    
-    -- Physical UART interface
-    rx          : in  std_logic;    -- Serial input
-    tx          : out std_logic     -- Serial output
-  );
+    port (
+        -- Note: serial_clk must be exactly 16x the desired baud rate
+        --       e.g. MC14411 at 153600 Hz for 9600 baud
+        clock      : in  std_logic;
+        serial_clk : in  std_logic;   -- x16 baud clock
+        reset_n    : in  std_logic;
+        format     : in  std_logic_vector(2 downto 0);
+        cs_n       : in  std_logic;
+        rw         : in  std_logic;
+        address    : in  std_logic_vector(1 downto 0);
+        data_in    : in  std_logic_vector(7 downto 0);
+        data_out   : out std_logic_vector(7 downto 0);
+        rx         : in  std_logic;
+        tx         : out std_logic
+    );
 end entity pia_uart;
 
 architecture rtl of pia_uart is
 
-component uart_send is
-    generic (
-        CLK_FREQ_HZ : integer := 1000000;
-        BAUD_RATE   : integer := 1200;
-        BITS        : integer := 8
-    );
-    port (
-        clk      : in  std_logic;
-        reset_n     : in  std_logic;
-        tx       : out std_logic;
-        strobe_n : in  std_logic;        -- Active low strobe to start transmission
-        busy     : out std_logic;
-        data_in  : in  std_logic_vector(7 downto 0)
-    );
-end component;
+    -- "101" = 8 bits + 1 stop + no parity (MC6850 CR4:CR3:CR2 encoding)
+--    constant FORMAT : std_logic_vector(2 downto 0) := "101";
 
-component uart_receive is
-  generic (
-        CLK_FREQ_HZ : integer := 1000000;
-        BAUD_RATE   : integer := 1200;
-        BITS        : integer := 8
-    );
-    port (
-        clk         : in  std_logic;
-        reset_n     : in  std_logic;
-        rx          : in  std_logic;
-        strobe_n    : out std_logic;
-        data_out    : out std_logic_vector(7 downto 0)
-    );
-end component;
+    component uart_send is
+        port (
+            clk     : in  std_logic;
+            reset_n : in  std_logic;
+            tx      : out std_logic;
+            req     : in  std_logic;
+            ready   : out std_logic;
+            ack     : out std_logic;
+            format  : in  std_logic_vector(2 downto 0);
+            data_in : in  std_logic_vector(7 downto 0)
+        );
+    end component;
 
-    signal tx_busy        : std_logic := '0';
-    signal tx_done        : std_logic := '0';	
-    signal tx_strobe_n    : std_logic := '0';
-    signal tx_data        : std_logic_vector(7 downto 0);
+    component uart_receive is
+        port (
+            clk          : in  std_logic;
+            reset_n      : in  std_logic;
+            rx           : in  std_logic;
+            format       : in  std_logic_vector(2 downto 0);
+            req          : in  std_logic;
+            ready        : out std_logic;
+            ack          : out std_logic;
+            data_out     : out std_logic_vector(7 downto 0);
+            parity_error : out std_logic
+        );
+    end component;
 
-    signal rx_strobe_n    : std_logic := '0';
-    signal rx_data        : std_logic_vector(7 downto 0);
-    
-    -- Clock domain crossing synchronizers
-    signal rx_strobe_sync : std_logic_vector(2 downto 0) := (others => '1');
-    signal rx_strobe_prev : std_logic := '1';
-    signal tx_busy_sync   : std_logic_vector(2 downto 0) := (others => '0');
+    -- TX signals (serial_clk domain)
+    signal tx_req        : std_logic := '0';
+    signal tx_ready      : std_logic;
+    signal tx_ack        : std_logic;
+    signal tx_data       : std_logic_vector(7 downto 0) := (others => '0');
+    -- tx_ready synchronized from serial_clk to clock domain
+    signal tx_ready_sync : std_logic_vector(1 downto 0) := "11";
+    signal tx_ready_prev : std_logic := '1';
 
-    signal ddra           : std_logic_vector(7 downto 0);
-    signal cra            : std_logic_vector(7 downto 0);
-    signal ddrb           : std_logic_vector(7 downto 0);
-    signal crb            : std_logic_vector(7 downto 0);
+    -- RX signals (serial_clk domain)
+    signal rx_req        : std_logic := '0';
+    signal rx_ready      : std_logic;
+    signal rx_ack        : std_logic;
+    signal rx_data       : std_logic_vector(7 downto 0);
+    signal rx_parity_err : std_logic;
+    -- rx_ready synchronized from serial_clk to clock domain
+    signal rx_ready_sync : std_logic_vector(1 downto 0) := "00";
+    signal rx_ready_prev : std_logic := '0';
 
-    signal kbd_ready      : std_logic := '0';  
-    signal kbd_data       : std_logic_vector(7 downto 0) := (others => '0');
-    
+    -- PIA registers
+    signal ddra          : std_logic_vector(7 downto 0) := (others => '0');
+    signal cra           : std_logic_vector(7 downto 0) := (others => '0');
+    signal ddrb          : std_logic_vector(7 downto 0) := (others => '0');
+    signal crb           : std_logic_vector(7 downto 0) := (others => '0');
+
+    -- Keyboard buffer (clock domain)
+    signal kbd_ready     : std_logic := '0';
+    signal kbd_data      : std_logic_vector(7 downto 0) := (others => '0');
+
 begin
-    send:  uart_send    generic map(CLK_FREQ_HZ      => CLK_FREQ_HZ,
-                                    BAUD_RATE        => BAUD_RATE,
-                                    BITS             => 8)
-                           port map(clk              => serial_clk,
-                                    reset_n          => reset_n,
-                                    tx               => tx,
-                                    strobe_n         => tx_strobe_n,
-                                    busy             => tx_busy,
-                                    data_in          => tx_data);
-												
-    recv:  uart_receive generic map(CLK_FREQ_HZ      => CLK_FREQ_HZ,
-                                    BAUD_RATE        => BAUD_RATE,
-                                    BITS             => 8)
-                           port map(clk              => serial_clk,
-                                    reset_n          => reset_n,
-                                    rx               => rx,
-                                    strobe_n         => rx_strobe_n,
-                                    data_out         => rx_data);
-                                    
-                                    
-    process(clock, reset_n)
-    begin
-        if reset_n = '0' then
-            tx_busy_sync <= (others => '0');
-        elsif rising_edge(clock) then
-            tx_busy_sync <= tx_busy_sync(1 downto 0) & tx_busy;
-        end if;
-    end process;
 
-    -- Synchronize rx_strobe_n from serial_clk domain to clock domain
-    process(clock, reset_n)
+    send: uart_send
+        port map (
+            clk     => serial_clk,
+            reset_n => reset_n,
+            tx      => tx,
+            req     => tx_req,
+            ready   => tx_ready,
+            ack     => tx_ack,
+            format  => format,
+            data_in => tx_data
+        );
+
+    -- rx_req tied low: pia_uart manages its own kbd_ready flag independently
+    recv: uart_receive
+        port map (
+            clk          => serial_clk,
+            reset_n      => reset_n,
+            rx           => rx,
+            format       => format,
+            req          => rx_req,
+            ready        => rx_ready,
+            ack          => rx_ack,
+            data_out     => rx_data,
+            parity_error => rx_parity_err
+        );
+
+    -- Synchronize tx_ready from serial_clk domain to clock domain
+    process(clock)
     begin
-        if reset_n = '0' then
-            rx_strobe_sync <= (others => '1');
-            rx_strobe_prev <= '1';
-            kbd_ready <= '0';
-            kbd_data <= (others => '0');
-        elsif rising_edge(clock) then
-            -- Synchronizer chain for rx_strobe_n
-            rx_strobe_sync <= rx_strobe_sync(1 downto 0) & rx_strobe_n;
-            rx_strobe_prev <= rx_strobe_sync(2);
-            
-            -- Detect falling edge of synchronized rx_strobe_n (character received)
-            -- Only accept new character if previous one has been read (kbd_ready = '0')
-            if rx_strobe_prev = '1' and rx_strobe_sync(2) = '0' and kbd_ready = '0' then
-                kbd_data <= rx_data;
-                kbd_ready <= '1';
-            elsif cs_n = '0' and address = "00" and rw = '1' and cra(2) = '1' then
-                kbd_ready <= '0';
+        if rising_edge(clock) then
+            if reset_n = '0' then
+                tx_ready_sync <= "11";
+                tx_ready_prev <= '1';
+            else
+                tx_ready_sync <= tx_ready_sync(0) & tx_ready;
+                tx_ready_prev <= tx_ready_sync(1);
             end if;
         end if;
     end process;
-	 
 
-    process(clock, reset_n)
+    -- Synchronize rx_ready from serial_clk domain to clock domain
+    process(clock)
     begin
-        if reset_n = '0' then
-            tx_data     <= (others => '0');
-            ddra        <= (others => '0');
-            ddrb        <= (others => '0');
-            cra         <= (others => '0');
-            crb         <= (others => '0');
-            tx_strobe_n <=  '1';
-            tx_done     <=  '0';
-        elsif rising_edge(clock) then
-            if tx_busy_sync(2) = '1' and tx_done = '0' then
-                tx_strobe_n <= '1';
-                tx_done <= '1';
+        if rising_edge(clock) then
+            if reset_n = '0' then
+                rx_ready_sync <= "00";
+                rx_ready_prev <= '0';
+                rx_req        <= '0';
+                kbd_ready     <= '0';
+                kbd_data      <= (others => '0');
+            else
+                rx_ready_sync <= rx_ready_sync(0) & rx_ready;
+                rx_ready_prev <= rx_ready_sync(1);
+
+                -- rising edge: new byte available, latch and ack to uart_receive
+                if rx_ready_prev = '0' and rx_ready_sync(1) = '1' then
+                    if kbd_ready = '0' then
+                        kbd_data  <= rx_data;
+                        kbd_ready <= '1';
+                    end if;
+                    rx_req <= '1';  -- tell uart_receive to clear its ready
+                end if;
+
+                -- deassert rx_req once uart_receive has cleared ready (falling edge)
+                if rx_ready_prev = '1' and rx_ready_sync(1) = '0' then
+                    rx_req <= '0';
+                end if;
+
+                -- CPU read of keyboard data clears kbd_ready
+                if cs_n = '0' and address = "00" and rw = '1' and cra(2) = '1' then
+                    kbd_ready <= '0';
+                end if;
             end if;
-            
-            if tx_busy_sync(2) = '0' and tx_done = '1' then
-                tx_done <= '0';
-            end if;	
-            
-            if cs_n = '0' then
-                case address is
-                    when "00" => -- 0xD010 - KEYBOARD Data register
-                        if rw = '0' then
-                            if cra(2) = '0' then
-                                -- if ddra flag set in cra write ddra content
-                                ddra <= data_in;
+        end if;
+    end process;
+
+    -- CPU bus interface + TX req management
+    process(clock)
+    begin
+        if rising_edge(clock) then
+            if reset_n = '0' then
+                tx_data  <= (others => '0');
+                tx_req   <= '0';
+                ddra     <= (others => '0');
+                ddrb     <= (others => '0');
+                cra      <= (others => '0');
+                crb      <= (others => '0');
+            else
+                -- Clear tx_req as soon as uart_send has accepted the byte
+                -- (tx_ready falls meaning uart_send has latched the data and started)
+                -- This ensures tx_req is low well before uart_send returns to IDLE
+                if tx_ready_sync(1) = '0' and tx_ready_prev = '1' then
+                    tx_req <= '0';
+                end if;
+
+                if cs_n = '0' then
+                    case address is
+
+                        when "00" => -- 0xD010 - KEYBOARD Data register
+                            if rw = '0' then
+                                if cra(2) = '0' then
+                                    ddra <= data_in;
+                                end if;
                             else
-                                null; -- ora data ignored
-                            end if;	
-                        else
-                            if cra(2) = '0' then
-                                -- if ddra flag set in cra return ddra content
-                                data_out <= ddra;
-                            else
-                                -- if ora selected return keyboard data with high bit set
-                                -- force input to upper case
-                                if kbd_data >= x"61" and kbd_data <= x"7A" then
-                                    data_out <= kbd_data and x"DF"; 
-                                    data_out(7) <= '1';
+                                if cra(2) = '0' then
+                                    data_out <= ddra;
                                 else
-                                    data_out <= kbd_data;
-                                    data_out(7) <= '1';
+                                    -- return keyboard data, force upper case, set bit 7
+                                    if kbd_data >= x"61" and kbd_data <= x"7A" then
+                                        data_out <= '1' & (kbd_data(6 downto 0) and "1011111");
+                                    else
+                                        data_out <= '1' & kbd_data(6 downto 0);
+                                    end if;
                                 end if;
                             end if;
-                        end if;
 
-                    when "01" => -- 0xD011 - KEYBOARD Control register
-                        if rw = '0' then
-                            -- write cra content
-                            cra <= data_in;
-                        else
-                            -- return irqa flag set if keyboard data are ready (from serial line)
-                            data_out <= kbd_ready & '0' & cra(5 downto 0);
-                        end if;
-
-                    when "10" => -- 0xD012 - SCREEN Data Register
-                        if rw = '0' then
-                            if crb(2) = '0' then
-                                -- if ddrb flag set in crb write ddrb
-                                ddrb <= data_in;
+                        when "01" => -- 0xD011 - KEYBOARD Control register
+                            if rw = '0' then
+                                cra <= data_in;
                             else
-                                -- write data to the serial transmiter with high bit set to 0
-                                tx_data <= '0' & data_in(6 downto 0);
-                                -- kick the tx_strobe_n;
-                                tx_strobe_n <= '0';
+                                data_out <= kbd_ready & '0' & cra(5 downto 0);
                             end if;
-                        else 
-                            if crb(2) = '0' then
-                                -- if ddrb flag set in crb return ddrb register;
-                                data_out <= ddrb;
+
+                        when "10" => -- 0xD012 - SCREEN Data Register
+                            if rw = '0' then
+                                if crb(2) = '0' then
+                                    ddrb <= data_in;
+                                else
+                                    -- send byte (strip bit 7, Apple-1 convention)
+                                    tx_data <= '0' & data_in(6 downto 0);
+                                    tx_req  <= '1';
+                                end if;
                             else
-                                -- return the tx busy flag when device not ready
-                                data_out <= tx_done & "0000000";
+                                if crb(2) = '0' then
+                                    data_out <= ddrb;
+                                else
+                                    -- bit 7 = busy (uart_send not ready)
+                                    data_out <= (not tx_ready_sync(1)) & "0000000";
+                                end if;
                             end if;
-                        end if;
 
-                    when "11" => -- 0xD013 - SCREEN Control Register
-                        if rw = '0' then
-                            -- write crb register
-                            crb <= data_in;
-                        else
-                            -- return crb register
-                            data_out <= crb;
-                        end if;
-                        
-                    when others => null;
+                        when "11" => -- 0xD013 - SCREEN Control Register
+                            if rw = '0' then
+                                crb <= data_in;
+                            else
+                                data_out <= crb;
+                            end if;
 
-                end case;
+                        when others => null;
+
+                    end case;
+                end if;
             end if;
         end if;
     end process;

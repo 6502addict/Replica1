@@ -132,7 +132,6 @@ component Replica1_CORE is
         CPU_CORE        : string  :=  "65XX";        -- 65XX, T65, MX65 
         ROM             : string  :=  "WOZMON65";    -- default wozmon65
         RAM_SIZE_KB     : integer :=  8;             -- 8 to 48kb
-        BAUD_RATE       : integer :=  115200;        -- uart speed 1200 to 115200
         HAS_ACI         : boolean :=  false;         -- add the aci (incomplete)
         HAS_MSPI        : boolean :=  false;         -- add master spi  C200
         HAS_TIMER       : boolean :=  false          -- add basic timer
@@ -147,10 +146,12 @@ component Replica1_CORE is
         bus_data        : out    std_logic_vector(7  downto 0);
         bus_rw          : out    std_logic;
         bus_mrdy        : in     std_logic;
+        bus_so          : in     std_logic;
         ext_ram_cs_n    : out    std_logic;
         ext_ram_data    : in     std_logic_vector(7  downto 0);
         ext_tram_cs_n   : out    std_logic;
         ext_tram_data   : in     std_logic_vector(7  downto 0);
+        uart_format     : in     std_logic_vector(2  downto 0);
         uart_rx         : in     std_logic;
         uart_tx         : out    std_logic;
         spi_cs          : out    std_logic;
@@ -260,37 +261,59 @@ begin
 end function;
 
 
+function kb_to_addr_bits(kb : positive) return integer is
+    variable bits  : integer := 0;
+    variable bytes : integer;
+begin
+    bytes := kb * 1024;
+    while (2**bits) < bytes loop
+        bits := bits + 1;
+    end loop;
+    return bits;
+end function;
+
+-- UART format constants (MC6850 CR4:CR3:CR2 encoding)
+constant FMT_7E2 : std_logic_vector(2 downto 0) := "000";
+constant FMT_7O2 : std_logic_vector(2 downto 0) := "001";
+constant FMT_7E1 : std_logic_vector(2 downto 0) := "010";
+constant FMT_7O1 : std_logic_vector(2 downto 0) := "011";
+constant FMT_8N2 : std_logic_vector(2 downto 0) := "100";
+constant FMT_8N1 : std_logic_vector(2 downto 0) := "101";
+constant FMT_8E1 : std_logic_vector(2 downto 0) := "110";
+constant FMT_8O1 : std_logic_vector(2 downto 0) := "111";
+
 --------------------------------------------------------------------------
 -- Board Configuration Parameters 
 --------------------------------------------------------------------------
-constant CPU_TYPE         : string   := "6502";
-constant CPU_CORE         : string   := "MX65";
-constant ROM              : string   := "INTBASIC";
-constant RAM_SIZE_KB      : positive := 48;
-constant BAUD_RATE        : integer  := 115200;
-constant FAST_CLK_SPEED   : real     := 120.0;
-constant CPU_CLK_SPEED    : real     := 12.0;
-constant CPU_MULTIPLIER   : integer  := 4;
-constant SERIAL_CLK_SPEED : real     := 1.8432;
-constant HAS_ACI          : boolean  := false;
-constant HAS_MSPI         : boolean  := false;
-constant HAS_TIMER        : boolean  := false;
-constant USE_EBR_RAM      : boolean  := true;
-constant SDRAM_MHZ        : integer  := 100;                      -- 100MHz SDRAM clock
-constant ROW_BITS         : integer  := 13;                       -- H57V2562GTR: 13 row bits
-constant COL_BITS         : integer  := 9;                        -- H57V2562GTR: 9 col bits
-constant TRP_NS           : integer  := 20;                       -- Precharge time (for PRECHARGE wait)
-constant TRCD_NS          : integer  := 20;                       -- RAS to CAS delay (for ACTIVE→READ/WRITE)
-constant TRFC_NS          : integer  := 70;                       -- Refresh cycle time (for AUTO REFRESH wait)
-constant CAS_LATENCY      : integer  := 2;                        -- CAS Latency: 2 or 3 cycles
-constant ADDR_BITS        : integer  := 16;                       -- 4KB test window
-constant AUTO_PRECHARGE   : boolean  := false;
-constant AUTO_REFRESH     : boolean  := true;
-constant CACHE_DATA       : boolean  := false;                    -- WARNING: Cache uses LUTs on this small FPGA!
-constant CACHE_SIZE_BYTES : integer  := 512;                      -- Small cache (512B) to save resources
-constant LINE_SIZE_BYTES  : integer  := 16;
-constant SDRAM_ADDR_WIDTH : integer  := ROW_BITS + COL_BITS + 2;
-constant RAM_BLOCK_TYPE   : string   := "M9K";
+constant CPU_TYPE         : string                       := "6502";
+constant CPU_CORE         : string                       := "MX65";
+constant ROM              : string                       := "INTBASIC";
+constant RAM_SIZE_KB      : positive                     := 48;
+constant BAUD_RATE        : integer                      := 115200;
+constant FAST_CLK_SPEED   : real                         := 120.0;
+constant CPU_CLK_SPEED    : real                         := 12.0;
+constant CPU_MULTIPLIER   : integer                      := 4;
+constant SERIAL_CLK_SPEED : real                         := 1.8432;
+constant SERIAL_FORMAT    : std_logic_vector(2 downto 0) := FMT_8N2;
+constant HAS_ACI          : boolean                      := false;
+constant HAS_MSPI         : boolean                      := false;
+constant HAS_TIMER        : boolean                      := false;
+constant USE_EBR_RAM      : boolean                      := true;
+constant SDRAM_MHZ        : integer                      := 100;                      -- 100MHz SDRAM clock
+constant ROW_BITS         : integer                      := 13;                       -- H57V2562GTR: 13 row bits
+constant COL_BITS         : integer                      := 9;                        -- H57V2562GTR: 9 col bits
+constant TRP_NS           : integer                      := 20;                       -- Precharge time (for PRECHARGE wait)
+constant TRCD_NS          : integer                      := 20;                       -- RAS to CAS delay (for ACTIVE→READ/WRITE)
+constant TRFC_NS          : integer                      := 70;                       -- Refresh cycle time (for AUTO REFRESH wait)
+constant CAS_LATENCY      : integer                      := 2;                        -- CAS Latency: 2 or 3 cycles
+constant ADDR_BITS        : integer                      := 16;                       -- 4KB test window
+constant AUTO_PRECHARGE   : boolean                      := false;
+constant AUTO_REFRESH     : boolean                      := true;
+constant CACHE_DATA       : boolean                      := false;                    -- WARNING: Cache uses LUTs on this small FPGA!
+constant CACHE_SIZE_BYTES : integer                      := 512;                      -- Small cache (512B) to save resources
+constant LINE_SIZE_BYTES  : integer                      := 16;
+constant SDRAM_ADDR_WIDTH : integer                      := ROW_BITS + COL_BITS + 2;
+constant RAM_BLOCK_TYPE   : string                       := "M9K";
 
 
 signal  address_bus    : std_logic_vector(15 downto 0);
@@ -308,6 +331,7 @@ signal  disp_clk       : std_logic;
 signal  pll_locked     : std_logic;
 signal  phi2           : std_logic;
 signal  rw             : std_logic;
+signal  so             : std_logic;
 signal  tram_cs_n      : std_logic;
 signal  sdcard_cs      : std_logic;
 signal  sdcard_sck     : std_logic;
@@ -383,7 +407,6 @@ begin
                                                                 CPU_CORE           =>  CPU_CORE,    -- "65XX", "T65", MX65"
                                                                 ROM                =>  ROM,         -- default wozmon65
                                                                 RAM_SIZE_KB        =>  RAM_SIZE_KB, -- 8 to 48Kb 
-                                                                BAUD_RATE          =>  BAUD_RATE,   -- uart speed 1200 to 115200
                                                                 HAS_ACI            =>  HAS_ACI,     -- add the aci (incomplete)
                                                                 HAS_MSPI           =>  HAS_MSPI,    -- add master spi  C200
                                                                 HAS_TIMER          =>  HAS_TIMER)   -- add basic timer C210
@@ -396,10 +419,12 @@ begin
                                                                 bus_data           =>  data_bus,
                                                                 bus_rw             =>  rw,
                                                                 bus_mrdy           =>  mrdy,
+                                                                bus_so             =>  so,
                                                                 ext_ram_cs_n       =>  ram_cs_n,
                                                                 ext_ram_data       =>  ram_data,
                                                                 ext_tram_cs_n      =>  tram_cs_n,
                                                                 ext_tram_data      =>  tram_data,
+                                                                uart_format        =>  SERIAL_FORMAT,
                                                                 uart_rx            =>  serial_rx,
                                                                 uart_tx            =>  serial_tx,
                                                                 spi_cs             =>  sdcard_cs,
@@ -474,29 +499,32 @@ begin
 
 
     -- LEDs
-    LED(0)     <= refresh_busy;
-    LED(1)     <= serial_rx;
-    LED(2)     <= serial_tx;
-    LED(3)     <= pll_locked;
+    LED(0)      <= refresh_busy;
+    LED(1)      <= serial_rx;
+    LED(2)      <= serial_tx;
+    LED(3)      <= pll_locked;
 
     -- VGA: not used yet (for future TVI925 terminal)
-    VGA_R      <= (others => '0');
-    VGA_G      <= (others => '0');
-    VGA_B      <= (others => '0');
-    VGA_HS     <= '0';
-    VGA_VS     <= '0';
+    VGA_R       <= (others => '0');
+    VGA_G       <= (others => '0');
+    VGA_B       <= (others => '0');
+    VGA_HS      <= '0';
+    VGA_VS      <= '0';
     
-    UART_TX    <= serial_tx;
-    serial_rx  <= UART_RX;
+    UART_TX     <= serial_tx;
+    serial_rx   <= UART_RX;
 
     
-    SD_CS   <= sdcard_cs;
-    SD_SCK  <= sdcard_sck;
-    SD_MOSI <= sdcard_mosi;
+    SD_CS       <= sdcard_cs;
+    SD_SCK      <= sdcard_sck;
+    SD_MOSI     <= sdcard_mosi;
     sdcard_miso <= SD_MISO;
     
     -- Unused peripherals
-    BUZZER <= '1';
+    BUZZER      <= '1';
+    
+    -- so test
+    so          <= KEY(1);
     
 
 end top;

@@ -10,60 +10,61 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
-	
+    
 entity mx65 is
-  port (
-	clock	: in std_logic;
-	reset	: in std_logic;	  
-	ce		: in std_logic;
-	data_in	: in std_logic_vector(7 downto 0);
-	data_out: out std_logic_vector(7 downto 0);
-	address	: out std_logic_vector(15 downto 0);
-	rw		: out std_logic;
-	sync	: out std_logic;
-	nmi		: in std_logic;
-	irq		: in std_logic);
+    port (
+        clock       : in std_logic;
+        reset       : in std_logic;	  
+        ce          : in std_logic;
+        data_in     : in std_logic_vector(7 downto 0);
+        data_out    : out std_logic_vector(7 downto 0);
+        address     : out std_logic_vector(15 downto 0);
+        rw          : out std_logic;
+        sync        : out std_logic;
+        nmi         : in std_logic;
+        irq         : in std_logic;
+        so          : in std_logic);
 end entity;
 
 architecture rtl of mx65 is
 
-	signal a : std_logic_vector(7 downto 0);
-	signal x : std_logic_vector(7 downto 0);
-	signal y : std_logic_vector(7 downto 0);
-	signal s : std_logic_vector(7 downto 0);
-	signal dl : std_logic_vector(7 downto 0);
-	signal ir : std_logic_vector(7 downto 0);
-	signal pcl : std_logic_vector(7 downto 0);
-	signal pch : std_logic_vector(7 downto 0);
-	signal adl : std_logic_vector(7 downto 0);
-	signal adh : std_logic_vector(7 downto 0);
-	signal c : std_logic;
-	signal z : std_logic;
-	signal n : std_logic;
-	signal v : std_logic;
-	signal d : std_logic;
-	signal i : std_logic;	
-	signal b : std_logic;
-	
-	type state_type is (T0,T1,BRK2_JSR3,PHA2,PHP2_BRK4,PLX2_RTX2,JSR2,JMPABS2_JSR5,ABS2,
-			BR2,IZX2_ZPX2,IZY2_IZX3_JMPIND3,ZPY2,ABX2,ABY2,TREAD,TWRITE,BRK3_JSR4,PLA3,
-			PLP3,RTS3_RTI4,RTI3,BR3,IZY3,RTS4_RTI5,JMPIND4,IZX4,BRK5,BRK6,RTS5,TFIX,TMOD);
-	
-	type control_type is record 
-		src_a,src_x,src_y,src_s,src_dl,src_pcl,src_pch,src_p,dst_a,dst_x,dst_y,dst_dl,
+    signal a : std_logic_vector(7 downto 0);
+    signal x : std_logic_vector(7 downto 0);
+    signal y : std_logic_vector(7 downto 0);
+    signal s : std_logic_vector(7 downto 0);
+    signal dl : std_logic_vector(7 downto 0);
+    signal ir : std_logic_vector(7 downto 0);
+    signal pcl : std_logic_vector(7 downto 0);
+    signal pch : std_logic_vector(7 downto 0);
+    signal adl : std_logic_vector(7 downto 0);
+    signal adh : std_logic_vector(7 downto 0);
+    signal c : std_logic;
+    signal z : std_logic;
+    signal n : std_logic;
+    signal v : std_logic;
+    signal d : std_logic;
+    signal i : std_logic;
+    signal b : std_logic;
+    signal so_reg : std_logic;  -- previous SO state for falling edge detection
+
+    type state_type is (T0,T1,BRK2_JSR3,PHA2,PHP2_BRK4,PLX2_RTX2,JSR2,JMPABS2_JSR5,ABS2,
+            BR2,IZX2_ZPX2,IZY2_IZX3_JMPIND3,ZPY2,ABX2,ABY2,TREAD,TWRITE,BRK3_JSR4,PLA3,
+            PLP3,RTS3_RTI4,RTI3,BR3,IZY3,RTS4_RTI5,JMPIND4,IZX4,BRK5,BRK6,RTS5,TFIX,TMOD);
+
+    type control_type is record 
+        src_a,src_x,src_y,src_s,src_dl,src_pcl,src_pch,src_p,dst_a,dst_x,dst_y,dst_dl,
         dst_adl,dst_adh,dst_pcl,dst_pch,dst_s,load_dl,load_adl,load_adh,load_pcl,
         load_pch,load_nv,load_czid,update_c,update_z,update_n,update_v,clcsec,clisei,
         cldsed,inc_pc,alu_fn0,alu_fn1,force_carry,carry_enable,alu_invert,alu_dl,alu_sr,
-        bcd_add,bcd_sub,write_enable : std_logic;		
-		end record;
-			
-	type decode_type is record
-		brk,jsr,rti,rts,php,plp,pha,pla,bita,jmpabs,jmpind,sty,ldy,cpy,cpx,dey,tya,tay,clv,
-		iny,inx,clcsec,clisei,cldsed,ora,anda,eor,adc,sta,lda,cmp,sbc,asl,rotl,lsr,rotr,stx,
-		sta_stx_sty,ldx,dec,inc,a_shift,txa,txs,tax,tsx,dex,index_y,zp,ab,zp_index,ab_index,
-		indirect_x,indirect_y,single_byte,br,read_mod_write : std_logic;
-		
-		end record;
+        bcd_add,bcd_sub,write_enable : std_logic;
+        end record;
+    
+    type decode_type is record
+        brk,jsr,rti,rts,php,plp,pha,pla,bita,jmpabs,jmpind,sty,ldy,cpy,cpx,dey,tya,tay,clv,
+        iny,inx,clcsec,clisei,cldsed,ora,anda,eor,adc,sta,lda,cmp,sbc,asl,rotl,lsr,rotr,stx,
+        sta_stx_sty,ldx,dec,inc,a_shift,txa,txs,tax,tsx,dex,index_y,zp,ab,zp_index,ab_index,
+        indirect_x,indirect_y,single_byte,br,read_mod_write : std_logic;
+    end record;
 		
 	signal addr_pc, addr_ad, addr_s : std_logic_vector(15 downto 0);
 	signal state : state_type;
@@ -95,14 +96,14 @@ architecture rtl of mx65 is
 
 begin
 
-	data_mux <= (a or (7 downto 0 => not control.src_a)) and
-				(x or (7 downto 0 => not control.src_x)) and
-				(y or (7 downto 0 => not control.src_y)) and	 
-				(s or (7 downto 0 => not control.src_s)) and	 
-				(dl or (7 downto 0 => not control.src_dl)) and
-				(pcl or (7 downto 0 => not control.src_pcl)) and
-				(pch or (7 downto 0 => not control.src_pch)) and
-				( n & v & '1' & b & d & i & z & c or (7 downto 0 => not control.src_p));
+    data_mux <= (a   or (7 downto 0 => not control.src_a))   and
+                (x   or (7 downto 0 => not control.src_x))   and
+                (y   or (7 downto 0 => not control.src_y))   and
+                (s   or (7 downto 0 => not control.src_s))   and 
+                (dl  or (7 downto 0 => not control.src_dl))  and
+                (pcl or (7 downto 0 => not control.src_pcl)) and
+                (pch or (7 downto 0 => not control.src_pch)) and
+                ( n & v & '1' & b & d & i & z & c or (7 downto 0 => not control.src_p));
 
 	data_out <= data_mux;  
 	enable <= ce;
@@ -185,16 +186,16 @@ begin
 	process(ir) begin
 		decode <= (others=>'0');
 		
-		decode.index_y <= ir(2) nand (ir(1) nand (ir(7) and not ir(6)));
-		decode.zp <= ir(2) and (ir(3) nor ir(4));
-		decode.ab <= ir(2) and ir(3) and not ir(4);
-		decode.zp_index <= ir(2) and ir(4) and not ir(3);
-		decode.ab_index <= (ir(2) or ir(0)) and ir(3) and ir(4);
-		decode.indirect_x <= ir(0) and not (ir(2) or ir(3) or ir(4));
-		decode.indirect_y <= ir(0) and ir(4) and (ir(2) nor ir(3));	
-		decode.single_byte <= ir(3) and (ir(0) nor ir(2));		
-		decode.br <= ir(4) and not (ir(3) or ir(2) or ir(1) or ir(0));
-		decode.sta_stx_sty <= ir(7) and (ir(6) nor ir(5));
+        decode.index_y <= ir(2) nand (ir(1) nand (ir(7) and not ir(6)));
+        decode.zp <= ir(2) and (ir(3) nor ir(4));
+        decode.ab <= ir(2) and ir(3) and not ir(4);
+        decode.zp_index <= ir(2) and ir(4) and not ir(3);
+        decode.ab_index <= (ir(2) or ir(0)) and ir(3) and ir(4);
+        decode.indirect_x <= ir(0) and not (ir(2) or ir(3) or ir(4));
+        decode.indirect_y <= ir(0) and ir(4) and (ir(2) nor ir(3));	
+        decode.single_byte <= ir(3) and (ir(0) nor ir(2));		
+        decode.br <= ir(4) and not (ir(3) or ir(2) or ir(1) or ir(0));
+        decode.sta_stx_sty <= ir(7) and (ir(6) nor ir(5));
 		
 		if ir(1 downto 0)="00" then
 			case(ir(7 downto 2))is
@@ -852,53 +853,76 @@ begin
 		end if;
 	end process;
 	
-	---------------------------------------
-	--
-	-- Decimal Flag
-	--
-	---------------------------------------
+    ---------------------------------------
+    --
+    -- Decimal Flag
+    --
+    ---------------------------------------
     
-	process(clock, reset, enable)
-	begin	
-		if reset = '1' then
-			d <= '0'; 
-		elsif rising_edge(clock) then
-			if enable='1' then	
-				if control.load_czid = '1' then
-					d <= data_in(3);
-				elsif control.cldsed = '1' then
-					d <= ir(5);
-				end if;
-			end if;
-		end if;
-	end process;
-	
-	---------------------------------------
-	--
-	-- Overflow Flag
-	--
-	---------------------------------------
+    process(clock, reset, enable)
+    begin
+        if reset = '1' then
+            d <= '0'; 
+        elsif rising_edge(clock) then
+            if enable='1' then	
+                if control.load_czid = '1' then
+                    d <= data_in(3);
+                elsif control.cldsed = '1' then
+                    d <= ir(5);
+                end if;
+            end if;
+        end if;
+    end process;
+
+    ---------------------------------------
+    --
+    -- Overflow Flag
+    --
+    ---------------------------------------
     
-	process(clock, reset, enable)
-	begin	
-		if reset = '1' then
-			v <= '0'; 
-		elsif rising_edge(clock) then
-			if enable='1' then
-				if control.load_nv = '1' then
-					v <= data_in(6);
-				elsif control.update_v = '1' then
-					-- Overflow occurs when the ALU input signs match and the output sign does not
-					if alu_a(7) /= adder_hi(3) and alu_b(7) /= adder_hi(3) then
-						v <= '1';
-					else
-						v <= '0';
-					end if;			
-				end if;
-			end if;
-		end if;
-	end process;
-	
+--    process(clock, reset, enable)
+--    begin	
+--        if reset = '1' then
+--            v <= '0'; 
+--        elsif rising_edge(clock) then
+--            if enable='1' then
+--                if control.load_nv = '1' then
+--                    v <= data_in(6);
+--                elsif control.update_v = '1' then
+--                    -- Overflow occurs when the ALU input signs match and the output sign does not
+--                    if alu_a(7) /= adder_hi(3) and alu_b(7) /= adder_hi(3) then
+--                        v <= '1';
+--                    else
+--                        v <= '0';
+--                    end if;
+--                end if;
+--            end if;
+--        end if;
+--    end process;
+
+    process(clock, reset, enable)
+    begin
+        if reset = '1' then
+            v <= '0';
+            so_reg <= '1';
+        elsif rising_edge(clock) then
+            if enable='1' then
+                so_reg <= so;
+                if so_reg = '1' and so = '0' then  -- falling edge on SO
+                    v <= '1';
+                elsif control.load_nv = '1' then
+                    v <= data_in(6);
+                elsif control.update_v = '1' then
+                    if alu_a(7) /= adder_hi(3) and alu_b(7) /= adder_hi(3) then
+                        v <= '1';
+                    else
+                        v <= '0';
+                    end if;
+                end if;
+            end if;
+        end if;
+    end process;
+
 	---------------------------------------
 	--
 	-- Negative Flag
@@ -926,22 +950,22 @@ begin
 	--
 	---------------------------------------	
 	
-	process(control, dl, enable)
-	begin
-		if control.alu_dl = '1' then
-			if control.alu_invert = '1' then
-				alu_b <= unsigned(not dl);
-			else
-				alu_b <= unsigned(dl);
-			end if;
-		else
-			if control.alu_invert = '1' then
-				alu_b <= X"FF";
-			else
-				alu_b <= X"00";
-			end if;
-		end if;
-	end process;
+    process(control, dl, enable)
+    begin
+        if control.alu_dl = '1' then
+            if control.alu_invert = '1' then
+                alu_b <= unsigned(not dl);
+            else
+                alu_b <= unsigned(dl);
+            end if;
+        else
+            if control.alu_invert = '1' then
+                alu_b <= X"FF";
+            else
+                alu_b <= X"00";
+            end if;
+        end if;
+    end process;
 
 	---------------------------------------
 	--
@@ -975,21 +999,21 @@ begin
 	end process;
 	
 
-	---------------------------------------
-	--
-	-- BCD FiX 
-	--
-	---------------------------------------		
-	
-	bcd_fix(0) <= '0';
-	bcd_fix(1) <= bcd_fix(2) or bcd_fix(3);
-	bcd_fix(2) <= control.bcd_add and half_carry;
-	bcd_fix(3) <= control.bcd_sub and not half_carry;
-	bcd_fix(4) <= '0';
-	bcd_fix(5) <= bcd_fix(6) or bcd_fix(7);
-	bcd_fix(6) <= control.bcd_add and full_carry;
-	bcd_fix(7) <= control.bcd_sub and not full_carry;
-		
+    ---------------------------------------
+    --
+    -- BCD FiX 
+    --
+    ---------------------------------------		
+
+    bcd_fix(0) <= '0';
+    bcd_fix(1) <= bcd_fix(2) or bcd_fix(3);
+    bcd_fix(2) <= control.bcd_add and half_carry;
+    bcd_fix(3) <= control.bcd_sub and not half_carry;
+    bcd_fix(4) <= '0';
+    bcd_fix(5) <= bcd_fix(6) or bcd_fix(7);
+    bcd_fix(6) <= control.bcd_add and full_carry;
+    bcd_fix(7) <= control.bcd_sub and not full_carry;
+
 end architecture;
 
 -- End of file

@@ -34,6 +34,7 @@ set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
 set_global_assignment -name RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_location_assignment PIN_A13 -to GPIO_0[0]
 set_location_assignment PIN_B13 -to GPIO_0[1]
 set_location_assignment PIN_A14 -to GPIO_0[2]
@@ -763,14 +764,19 @@ set_instance_assignment -name OUTPUT_PIN_LOAD 10 -to DRAM_CLK
 set_instance_assignment -name OUTPUT_PIN_LOAD 10 -to DRAM_CKE
 set_instance_assignment -name OUTPUT_PIN_LOAD 10 -to TDO
 set_instance_assignment -name PRESERVE_FANOUT_FREE_NODE ON -to SD_CLK
+
+
+set_global_assignment -name VHDL_FILE DE1_Replica1.vhdl
+set_global_assignment -name SDC_FILE MO5_Replica1.sdc
+set_global_assignment -name QIP_FILE  pll_clock.qip
+set_global_assignment -name VHDL_FILE ../../rtl/sdram/sram_sdram_bridge.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/sdram/sdram_controller.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/utils/frac_clk_div.vhd
 set_global_assignment -name VHDL_FILE "../../rtl/utils/spi-master.vhd"
-set_global_assignment -name VHDL_FILE ../../rtl/utils/simple_clock_switch.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/utils/prog_clock_divider.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/utils/nor_gate.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/utils/nand3_gate.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/utils/hexto7seg.vhd
-set_global_assignment -name VHDL_FILE ../../rtl/utils/fractional_clock_divider.vhd
-set_global_assignment -name VHDL_FILE ../../rtl/utils/debug_clock_button.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/utils/clock_divider.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/rom/WOZMON68.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/rom/WOZMON65.vhd
@@ -778,24 +784,30 @@ set_global_assignment -name VHDL_FILE ../../rtl/rom/WOZMON69.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/rom/WOZACI.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/rom/MON6809.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/rom/BASIC.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/rom/INTBASIC.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/peripherals/timer/simple_timer.vhd
-set_global_assignment -name SOURCE_FILE hclk.cmp
-set_global_assignment -name SDC_FILE MO5_Replica1.sdc
 set_global_assignment -name VHDL_FILE ../../rtl/peripherals/pia/uart_send.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/peripherals/pia/uart_receive.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/peripherals/pia/pia_uart.vhd
 set_global_assignment -name VHDL_FILE "../../rtl/peripherals/mspi/mspi-iface.vhd"
 set_global_assignment -name VHDL_FILE ../../rtl/peripherals/aci/aci.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/core/Replica1_CORE.vhd
-set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu68.vhd
-set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu65xx.vhd
-set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu09.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu_clock_gen.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/cpu/CPU_6800.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/cpu/CPU_65XX.vhd
 set_global_assignment -name VHDL_FILE ../../rtl/cpu/CPU_6809.vhd
-set_global_assignment -name QIP_FILE hclk.qip
-set_global_assignment -name QIP_FILE main_clock.qip
-set_global_assignment -name VHDL_FILE sram.vhd
-set_global_assignment -name VHDL_FILE RAM_DE1.vhd
-set_global_assignment -name VHDL_FILE DE1_Replica1.vhdl
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/CPU_MX65.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/mx65.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu65xx.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu68.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu09.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/T65_Pack.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/T65_MCode.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/T65_ALU.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/T65.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/R65C02.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/CPU_T65.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/CPU_R65C02.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu6507.vhd
+set_global_assignment -name VHDL_FILE ../../rtl/cpu/cpu6504.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

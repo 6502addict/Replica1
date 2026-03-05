@@ -14,6 +14,9 @@
 -- if still failing use a 3.3v ftdi cable connected to GPIO
 -- check the SERIAL_PORT constant and set it to "BUILTIN" to use the DE1-SOC serial port
 -- or set it to "GPIO" to use a ftdi cable connected to GPIO_1(0) and GPIO_1(1)
+--
+-- till now I've not been able to get a stable connection with the builtin usb-serial
+-- a ftdi cable connecte to GPIO works fine
 ----------------------------------------------------------------------------------------
  
 
@@ -199,27 +202,6 @@ component hexto7seg is
     );
 end component;
 
-component fractional_clock_divider is
-    generic (
-        CLK_FREQ_HZ     : positive := 50_000_000;  
-        FREQUENCY_HZ    : positive := 1_843_200      
-    );
-    port (
-        clk_in   : in  std_logic;  
-        reset_n  : in  std_logic;  
-        clk_out  : out std_logic   
-    );
-end component;
-
-component clock_divider IS
-    generic (divider : integer := 4);
-    port (
-        reset    : in  std_logic := '1';
-        clk_in   : in  std_logic;
-        clk_out  : out std_logic
-    );
-end component;
-
 component pll_clock is
     port (
         refclk   : in  std_logic := 'X'; -- clk
@@ -245,7 +227,6 @@ component Replica1_CORE is
         CPU_CORE        : string  :=  "65XX";        -- 65XX, T65, MX65 
         ROM             : string  :=  "WOZMON65";    -- default wozmon65
         RAM_SIZE_KB     : integer :=  8;             -- 8 to 48kb
-        BAUD_RATE       : integer :=  115200;        -- uart speed 1200 to 115200
         HAS_ACI         : boolean :=  false;         -- add the aci (incomplete)
         HAS_MSPI        : boolean :=  false;         -- add master spi  C200
         HAS_TIMER       : boolean :=  false          -- add basic timer
@@ -260,10 +241,12 @@ component Replica1_CORE is
         bus_data        : out    std_logic_vector(7  downto 0);
         bus_rw          : out    std_logic;
         bus_mrdy        : in     std_logic;
+        bus_so          : in     std_logic;
         ext_ram_cs_n    : out    std_logic;
         ext_ram_data    : in     std_logic_vector(7  downto 0);
         ext_tram_cs_n   : out    std_logic;
         ext_tram_data   : in     std_logic_vector(7  downto 0);
+        uart_format     : in     std_logic_vector(2  downto 0);
         uart_rx         : in     std_logic;
         uart_tx         : out    std_logic;
         spi_cs          : out    std_logic;
@@ -384,34 +367,45 @@ begin
 end function;
 
 
+-- UART format constants (MC6850 CR4:CR3:CR2 encoding)
+constant FMT_7E2 : std_logic_vector(2 downto 0) := "000";
+constant FMT_7O2 : std_logic_vector(2 downto 0) := "001";
+constant FMT_7E1 : std_logic_vector(2 downto 0) := "010";
+constant FMT_7O1 : std_logic_vector(2 downto 0) := "011";
+constant FMT_8N2 : std_logic_vector(2 downto 0) := "100";
+constant FMT_8N1 : std_logic_vector(2 downto 0) := "101";
+constant FMT_8E1 : std_logic_vector(2 downto 0) := "110";
+constant FMT_8O1 : std_logic_vector(2 downto 0) := "111";
+
 --------------------------------------------------------------------------
 -- Board Configuration Parameters 
 --------------------------------------------------------------------------
-constant CPU_TYPE         : string   := "6502";                   -- 6502, 65C02, 6800, 6809
-constant CPU_CORE         : string   := "MX65";                   -- 65XX or T65 or MX65
-constant ROM              : string   := "INTBASIC";
-constant RAM_SIZE_KB      : positive := 48;                       -- DE10-Lite supports up to 48KB
-constant BAUD_RATE        : integer  := 115200;
-constant FAST_CLK_SPEED   : real     := 120.0;
-constant CPU_MULTIPLIER   : integer  := 4;
-constant SERIAL_CLK_SPEED : real     := 1.8432;
-constant HAS_ACI          : boolean  := false;
-constant HAS_MSPI         : boolean  := false;
-constant HAS_TIMER        : boolean  := false;
-constant SDRAM_MHZ        : integer  := 100;
-constant ROW_BITS         : integer  := 13;
-constant COL_BITS         : integer  := 10;
-constant TRP_NS           : integer  := 20;                       -- Precharge time (for PRECHARGE wait)
-constant TRCD_NS          : integer  := 20;                       -- RAS to CAS delay (for ACTIVE→READ/WRITE)
-constant TRFC_NS          : integer  := 70;                       -- Refresh cycle time (for AUTO REFRESH wait)
-constant CAS_LATENCY      : integer  := 2;                        -- CAS Latency: 2 or 3 cycles
-constant AUTO_PRECHARGE   : boolean  := false;
-constant AUTO_REFRESH     : boolean  := false;
-constant CACHE_DATA       : boolean  := false;
-constant CACHE_SIZE_BYTES : integer  := 1024;                     -- 1KB cache
-constant LINE_SIZE_BYTES  : integer  := 16;                       -- 16-byte cache lines
-constant RAM_BLOCK_TYPE   : string   := "AUTO";                   -- "M9K", "M4K", "M10K", "AUTO"
-constant SERIAL_PORT      : string   := "BUILTIN";                -- "GPIO" or "BUILTIN"
+constant CPU_TYPE         : string                       := "6502";                   -- 6502, 65C02, 6800, 6809
+constant CPU_CORE         : string                       := "MX65";                   -- 65XX or T65 or MX65
+constant ROM              : string                       := "INTBASIC";
+constant RAM_SIZE_KB      : positive                     := 48;                       -- DE10-Lite supports up to 48KB
+constant BAUD_RATE        : integer                      := 115200;
+constant FAST_CLK_SPEED   : real                         := 120.0;
+constant CPU_MULTIPLIER   : integer                      := 4;
+constant SERIAL_CLK_SPEED : real                         := 1.8432;
+constant SERIAL_FORMAT    : std_logic_vector(2 downto 0) := FMT_8N2;
+constant HAS_ACI          : boolean                      := false;
+constant HAS_MSPI         : boolean                      := false;
+constant HAS_TIMER        : boolean                      := false;
+constant SDRAM_MHZ        : integer                      := 100;
+constant ROW_BITS         : integer                      := 13;
+constant COL_BITS         : integer                      := 10;
+constant TRP_NS           : integer                      := 20;                       -- Precharge time (for PRECHARGE wait)
+constant TRCD_NS          : integer                      := 20;                       -- RAS to CAS delay (for ACTIVE→READ/WRITE)
+constant TRFC_NS          : integer                      := 70;                       -- Refresh cycle time (for AUTO REFRESH wait)
+constant CAS_LATENCY      : integer                      := 2;                        -- CAS Latency: 2 or 3 cycles
+constant AUTO_PRECHARGE   : boolean                      := false;
+constant AUTO_REFRESH     : boolean                      := false;
+constant CACHE_DATA       : boolean                      := false;
+constant CACHE_SIZE_BYTES : integer                      := 1024;                     -- 1KB cache
+constant LINE_SIZE_BYTES  : integer                      := 16;                       -- 16-byte cache lines
+constant RAM_BLOCK_TYPE   : string                       := "AUTO";                   -- "M9K", "M4K", "M10K", "AUTO"
+constant SERIAL_PORT      : string                       := "GPIO";                   -- "GPIO" or "BUILTIN"
 
 -- constant computed from other constants
 constant ADDR_BITS        : integer  := kb_to_addr_bits(RAM_SIZE_KB);
@@ -433,6 +427,7 @@ signal  sdram_clk      : std_logic;
 signal  pll_locked     : std_logic;
 signal  phi2           : std_logic;
 signal  rw             : std_logic;
+signal  so             : std_logic;
 signal  tram_cs_n      : std_logic;
 signal  sdcard_cs      : std_logic;
 signal  sdcard_sck     : std_logic;
@@ -507,17 +502,6 @@ begin
                                                                divider             => compute_divider(FAST_CLK_SPEED, 1.8432, 1),
                                                                clk_out             => serial_clk);
 
---    cclk : clock_divider                             generic map(divider             => 120_000_000/12_000_000)
---                                                        port map(reset               => reset_n,
---                                                                 clk_in              => fast_clk,
---                                                                 clk_out             => cpu_clk);
---    
---    sclk:  fractional_clock_divider                  generic map(CLK_FREQ_HZ         => 120_000_000,
---                                                                 FREQUENCY_HZ        => 1_843_200)
---                                                        port map(clk_in              => fast_clk,
---                                                                 reset_n             => reset_n,
---                                                                 clk_out             => serial_clk);
-    
     cache_hit_tens <= resize(cache_hit / 10, 4);
     cache_hit_ones <= resize(cache_hit mod 10, 4);    
 
@@ -547,7 +531,6 @@ begin
                                                                 CPU_CORE           =>  CPU_CORE,    -- "65XX", "T65", MX65"
                                                                 ROM                =>  ROM,         -- default wozmon65
                                                                 RAM_SIZE_KB        =>  RAM_SIZE_KB, -- 8 to 48Kb 
-                                                                BAUD_RATE          =>  BAUD_RATE,   -- uart speed 1200 to 115200
                                                                 HAS_ACI            =>  HAS_ACI,     -- add the aci (incomplete)
                                                                 HAS_MSPI           =>  HAS_MSPI,    -- add master spi  C200
                                                                 HAS_TIMER          =>  HAS_TIMER)   -- add basic timer C210
@@ -560,10 +543,12 @@ begin
                                                                 bus_data           =>  data_bus,
                                                                 bus_rw             =>  rw,
                                                                 bus_mrdy           =>  mrdy,
+                                                                bus_so             =>  so,
                                                                 ext_ram_cs_n       =>  ram_cs_n,
                                                                 ext_ram_data       =>  ram_data,
                                                                 ext_tram_cs_n      =>  tram_cs_n,
                                                                 ext_tram_data      =>  tram_data,
+                                                                uart_format        =>  SERIAL_FORMAT,
                                                                 uart_rx            =>  serial_rx,
                                                                 uart_tx            =>  serial_tx,
                                                                 spi_cs             =>  sdcard_cs,
@@ -667,6 +652,9 @@ end generate gen_gpio_serial;
     GPIO_1(5)       <= sdcard_sck;
     GPIO_1(6)       <= sdcard_mosi;
     sdcard_miso     <= GPIO_1(7);
+    
+    -- so test
+    so              <= KEY(1);
 
 end top;
 

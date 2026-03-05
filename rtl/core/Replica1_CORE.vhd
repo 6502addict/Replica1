@@ -8,7 +8,6 @@ entity Replica1_CORE is
         CPU_CORE        : string  :=  "65XX";        -- 65XX, T65, MX65 
         ROM             : string  :=  "INTBASIC";    -- default wozmon65
         RAM_SIZE_KB     : integer :=  8;             -- 8 to 48kb
-        BAUD_RATE       : integer :=  115200;        -- uart speed 1200 to 115200
         HAS_ACI         : boolean :=  false;         -- add the aci (incomplete)
         HAS_MSPI        : boolean :=  false;         -- add master spi  C200
         HAS_TIMER       : boolean :=  false          -- add basic timer
@@ -23,10 +22,12 @@ entity Replica1_CORE is
         bus_data        : out    std_logic_vector(7  downto 0);
         bus_rw          : out    std_logic;
         bus_mrdy        : in     std_logic;
-        ext_ram_cs_n    : out    std_logic;		
+        bus_so          : in     std_logic;
+        ext_ram_cs_n    : out    std_logic;
         ext_ram_data    : in     std_logic_vector(7  downto 0);
-        ext_tram_cs_n   : out    std_logic;		 
+        ext_tram_cs_n   : out    std_logic; 
         ext_tram_data   : in     std_logic_vector(7  downto 0);
+        uart_format     : in     std_logic_vector(2 downto 0);
         uart_rx         : in     std_logic;
         uart_tx         : out    std_logic;
         spi_cs          : out    std_logic;
@@ -265,18 +266,6 @@ component INTBASIC
     );
 end component;
 
---
---component intbasic
---    PORT
---    (
---        address     : in  std_logic_vector(12 DOWNTO 0);
---        clock       : in  std_logic  := '1';
---        rden        : in  std_logic  := '1';
---        q           : out std_logic_vector(7 DOWNTO 0)
---    );
---end component;
---
-
 
 component MON6809 is
     port (
@@ -306,17 +295,13 @@ component ACI is
 end component;
 
 component PIA_UART is
-    generic (
-        CLK_FREQ_HZ : positive := 50000000;  
-        BAUD_RATE   : positive := 9600;      
-        BITS        : positive := 8          
-    );
     port (
     -- System interface
     clock           : in  std_logic;    -- CPU clock
     serial_clk      : in  std_logic;    -- Serial clock
     reset_n         : in  std_logic;    -- Active low reset
-    
+    format          : in  std_logic_vector(2 downto 0);
+ 
     -- CPU interface
     cs_n            : in  std_logic;                     -- Chip select
     rw              : in  std_logic;                     -- Read/Write: 1=read, 0=write
@@ -369,34 +354,34 @@ end component;
     signal pia_data	  : std_logic_vector(7 downto 0);
     signal rom_data	  : std_logic_vector(7 downto 0);
     signal ram_data	  : std_logic_vector(7 downto 0);
-    signal tram_data	  : std_logic_vector(7 downto 0);
-    signal mspi_data	  : std_logic_vector(7 downto 0);
-    signal aci_data	  : std_logic_vector(7 downto 0);
-    signal timer_data	  : std_logic_vector(7 downto 0);
-    signal ram_addr 	  : std_logic_vector(18 downto 0);
-    signal rw			  : std_logic;
-    signal vma  		  : std_logic;
-    signal nmi_n        : std_logic := '1';
-    signal irq_n        : std_logic := '1';
-    signal so_n         : std_logic := '1';
-    signal ram_cs_n     : std_logic;
-    signal tram_cs_n    : std_logic;
-    signal rom_cs_n     : std_logic;
-    signal aci_cs_n     : std_logic;
-    signal mspi_cs_n    : std_logic;
-    signal sspi_cs_n    : std_logic;
-    signal timer_cs_n   : std_logic;
-    signal pia_cs_n     : std_logic;
-    signal phi2         : std_logic;
-    signal sync         : std_logic;
-    signal aci_in       : std_logic;
-    signal aci_out      : std_logic;
-    signal mrdy         : std_logic;
+    signal tram_data      : std_logic_vector(7 downto 0);
+    signal mspi_data      : std_logic_vector(7 downto 0);
+    signal aci_data       : std_logic_vector(7 downto 0);
+    signal timer_data     : std_logic_vector(7 downto 0);
+    signal ram_addr       : std_logic_vector(18 downto 0);
+    signal rw             : std_logic;
+    signal vma            : std_logic;
+    signal nmi_n          : std_logic := '1';
+    signal irq_n          : std_logic := '1';
+    signal so_n           : std_logic := '1';
+    signal ram_cs_n       : std_logic;
+    signal tram_cs_n      : std_logic;
+    signal rom_cs_n       : std_logic;
+    signal aci_cs_n       : std_logic;
+    signal mspi_cs_n      : std_logic;
+    signal sspi_cs_n      : std_logic;
+    signal timer_cs_n     : std_logic;
+    signal pia_cs_n       : std_logic;
+    signal phi2           : std_logic;
+    signal sync           : std_logic;
+    signal aci_in         : std_logic;
+    signal aci_out        : std_logic;
+    signal mrdy           : std_logic;
 
-    signal spi_sck_ext  : std_logic;
-   signal spi_cs_ext   : std_logic;
-   signal spi_mosi_ext : std_logic;
-   signal spi_miso_ext : std_logic;
+    signal spi_sck_ext    : std_logic;
+    signal spi_cs_ext      : std_logic;
+    signal spi_mosi_ext    : std_logic;
+    signal spi_miso_ext    : std_logic;
 
     attribute keep of nmi_n    : signal is "true";
     attribute keep of irq_n    : signal is "true";
@@ -411,6 +396,7 @@ begin
     bus_data       <= data_bus;
     bus_phi2       <= phi2;
     bus_rw         <= rw;
+    so_n           <= bus_so;
     mrdy           <= bus_mrdy;
     ext_ram_cs_n   <= ram_cs_n;
     ext_tram_cs_n  <= tram_cs_n;
@@ -543,13 +529,6 @@ end generate gen_cpu0;
                                     data_out        => rom_data);
     end generate basic1;
 
---    basic2: if ROM = "INTBASIC"  generate
---    rom: intbasic          port map(address         => address_bus(12 downto 0),
---                                    clock           => phi2,
---                                    rden            => rom_cs_n,
---                                    q               => rom_data);
---    end generate basic2;
-
     basic2: if ROM = "INTBASIC"  generate
     rom: INTBASIC          port map(clock           => phi2,
                                     cs_n            => rom_cs_n,
@@ -584,12 +563,10 @@ end generate gen_cpu0;
     -- Note this peripheral is mandatory it's the Apple 1/ Replica 1 console port
     -- normally connected to the video / keyboad
     -- here in this implementation it is connected to a serial port
-    pia: PIA_UART       generic map(CLK_FREQ_HZ     => 1843200, 
-                                    BAUD_RATE       => BAUD_RATE,
-                                    BITS            => 8)
-                           port map(clock           => phi2,
+    pia: PIA_UART          port map(clock           => phi2,
                                     serial_clk      => serial_clk,
                                     reset_n         => cpu_reset_n,
+                                    format          => uart_format,
                                     cs_n            => pia_cs_n,
                                     rw              => rw,
                                     address         => address_bus(1 downto 0),
