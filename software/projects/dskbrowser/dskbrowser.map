@@ -1,0 +1,3285 @@
+Modules list:
+-------------
+dskbrowser.c.3223.0.o:
+    CODE              Offs=000000  Size=0010A4  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=0004C4  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=001210  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000006  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/home/didier/Developments/6502/software/lib/fatfs.lib(ff.o):
+    CODE              Offs=0010A4  Size=0049C5  Align=00001  Fill=0000
+    RODATA            Offs=0004C4  Size=000098  Align=00001  Fill=0000
+    BSS               Offs=001210  Size=000004  Align=00001  Fill=0000
+    DATA              Offs=000006  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/home/didier/Developments/6502/software/lib/fatfs.lib(diskio.o):
+    CODE              Offs=005A69  Size=0001E4  Align=00001  Fill=0000
+    RODATA            Offs=00055C  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001214  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000006  Size=000003  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/home/didier/Developments/6502/software/lib/sdcard.lib(sdcard.o):
+    CODE              Offs=005C4D  Size=00096F  Align=00001  Fill=0000
+    RODATA            Offs=00055C  Size=0001DA  Align=00001  Fill=0000
+    BSS               Offs=001214  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=000009  Size=000008  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/home/didier/Developments/6502/software/lib/spi.lib(spi.o):
+    CODE              Offs=0065BC  Size=0000EF  Align=00001  Fill=0000
+    RODATA            Offs=000736  Size=000030  Align=00001  Fill=0000
+    BSS               Offs=001215  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000011  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/home/didier/Developments/6502/software/lib/timer.lib(timer.o):
+    CODE              Offs=0066AB  Size=00021C  Align=00001  Fill=0000
+    RODATA            Offs=000766  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001215  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000011  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_directerrno.o):
+    CODE              Offs=0068C7  Size=00000A  Align=00001  Fill=0000
+    RODATA            Offs=000766  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001215  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000011  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_file.o):
+    CODE              Offs=0068D1  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000766  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001215  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000011  Size=00001E  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_hextab.o):
+    CODE              Offs=0068D1  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000766  Size=000010  Align=00001  Fill=0000
+    BSS               Offs=001215  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00002F  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_longminstr.o):
+    CODE              Offs=0068D1  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000776  Size=00000C  Align=00001  Fill=0000
+    BSS               Offs=001215  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00002F  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_oserror.o):
+    CODE              Offs=0068D1  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000782  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001215  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=00002F  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_printf.o):
+    CODE              Offs=0068D1  Size=0003A2  Align=00001  Fill=0000
+    RODATA            Offs=000782  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001216  Size=00002B  Align=00001  Fill=0000
+    DATA              Offs=00002F  Size=000003  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_scanf.o):
+    CODE              Offs=006C73  Size=00078B  Align=00001  Fill=0000
+    RODATA            Offs=000782  Size=000010  Align=00001  Fill=0000
+    BSS               Offs=001241  Size=000042  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_seterrno.o):
+    CODE              Offs=0073FE  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(add.o):
+    CODE              Offs=007407  Size=00001C  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(addeqsp.o):
+    CODE              Offs=007423  Size=000011  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(addysp.o):
+    CODE              Offs=007434  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(aslax1.o):
+    CODE              Offs=007442  Size=000008  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(aslax2.o):
+    CODE              Offs=00744A  Size=00000B  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(aslax3.o):
+    CODE              Offs=007455  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(aslax4.o):
+    CODE              Offs=007463  Size=000011  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(asleax1.o):
+    CODE              Offs=007474  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(asleax2.o):
+    CODE              Offs=007480  Size=000013  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(axlong.o):
+    CODE              Offs=007493  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(checkferror.o):
+    CODE              Offs=0074A0  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(compl.o):
+    CODE              Offs=0074AC  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(condes.o):
+    CODE              Offs=0074B5  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000032  Size=000025  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(copydata.o):
+    CODE              Offs=0074C1  Size=00002D  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(crt0.o):
+    CODE              Offs=0074EE  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    STARTUP           Offs=000000  Size=00001D  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ctype.o):
+    CODE              Offs=0074EE  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000792  Size=00008B  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ctypemask.o):
+    CODE              Offs=0074EE  Size=00001E  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decax1.o):
+    CODE              Offs=00750C  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decax4.o):
+    CODE              Offs=007513  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decaxy.o):
+    CODE              Offs=00751A  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp1.o):
+    CODE              Offs=007523  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp2.o):
+    CODE              Offs=00752C  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp3.o):
+    CODE              Offs=007539  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp4.o):
+    CODE              Offs=007546  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp5.o):
+    CODE              Offs=007553  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp6.o):
+    CODE              Offs=007560  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp7.o):
+    CODE              Offs=00756D  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp8.o):
+    CODE              Offs=00757A  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(div.o):
+    CODE              Offs=007587  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(errno.o):
+    CODE              Offs=00759C  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001283  Size=000002  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(fgetc.o):
+    CODE              Offs=00759C  Size=00005F  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001285  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(fmisc.o):
+    CODE              Offs=0075FB  Size=000040  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001286  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(fwrite.o):
+    CODE              Offs=00763B  Size=000079  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001286  Size=000002  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(getchar.o):
+    CODE              Offs=0076B4  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(icmp.o):
+    CODE              Offs=0076BD  Size=00002E  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incax1.o):
+    CODE              Offs=0076EB  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incax2.o):
+    CODE              Offs=0076F2  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incax3.o):
+    CODE              Offs=0076F9  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incax8.o):
+    CODE              Offs=0076FE  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incaxy.o):
+    CODE              Offs=007703  Size=00000B  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp1.o):
+    CODE              Offs=00770E  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp2.o):
+    CODE              Offs=007715  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp3.o):
+    CODE              Offs=00772B  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp4.o):
+    CODE              Offs=007730  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp5.o):
+    CODE              Offs=007735  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp6.o):
+    CODE              Offs=00773A  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp7.o):
+    CODE              Offs=00773F  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp8.o):
+    CODE              Offs=007744  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(isdigit.o):
+    CODE              Offs=007749  Size=000008  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(isspace.o):
+    CODE              Offs=007751  Size=000008  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(isxdigit.o):
+    CODE              Offs=007759  Size=000008  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(jmpvec.o):
+    CODE              Offs=007761  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000057  Size=000003  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ladd.o):
+    CODE              Offs=007761  Size=000025  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(laddeqsp.o):
+    CODE              Offs=007786  Size=000023  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(land.o):
+    CODE              Offs=0077A9  Size=000024  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lcmp.o):
+    CODE              Offs=0077CD  Size=00003B  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lcompl.o):
+    CODE              Offs=007808  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ldaxi.o):
+    CODE              Offs=00781D  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ldaxsp.o):
+    CODE              Offs=00782A  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ldeaxi.o):
+    CODE              Offs=007833  Size=000017  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ldeaxysp.o):
+    CODE              Offs=00784A  Size=000013  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ldec.o):
+    CODE              Offs=00785D  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ldptr1sp.o):
+    CODE              Offs=007872  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(leaaxsp.o):
+    CODE              Offs=00787E  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(leq.o):
+    CODE              Offs=00788A  Size=000006  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(linc.o):
+    CODE              Offs=007890  Size=000011  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lmul.o):
+    CODE              Offs=0078A1  Size=00005C  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lne.o):
+    CODE              Offs=0078FD  Size=000006  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lneg.o):
+    CODE              Offs=007903  Size=00001E  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(longjmp.o):
+    CODE              Offs=007921  Size=000028  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lor.o):
+    CODE              Offs=007949  Size=000024  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lpush.o):
+    CODE              Offs=00796D  Size=000021  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lsave.o):
+    CODE              Offs=00798E  Size=00001A  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lsub.o):
+    CODE              Offs=0079A8  Size=000027  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lsubeqsp.o):
+    CODE              Offs=0079CF  Size=000027  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ltest.o):
+    CODE              Offs=0079F6  Size=00000F  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ltoa.o):
+    CODE              Offs=007A05  Size=000095  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ludiv.o):
+    CODE              Offs=007A9A  Size=00007A  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(luge.o):
+    CODE              Offs=007B14  Size=000006  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lugt.o):
+    CODE              Offs=007B1A  Size=000006  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lule.o):
+    CODE              Offs=007B20  Size=000006  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lult.o):
+    CODE              Offs=007B26  Size=000006  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(makebool.o):
+    CODE              Offs=007B2C  Size=00002C  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(memcmp.o):
+    CODE              Offs=007B58  Size=000034  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(memcpy.o):
+    CODE              Offs=007B8C  Size=00003C  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(memset.o):
+    CODE              Offs=007BC8  Size=00005D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(mul.o):
+    CODE              Offs=007C25  Size=000045  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(mul8.o):
+    CODE              Offs=007C6A  Size=00003A  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(mulax10.o):
+    CODE              Offs=007CA4  Size=000019  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(negabs.o):
+    CODE              Offs=007CBD  Size=000012  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(or.o):
+    CODE              Offs=007CCF  Size=000012  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(popptr1.o):
+    CODE              Offs=007CE1  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(printf.o):
+    CODE              Offs=007CEF  Size=000033  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001288  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(push1.o):
+    CODE              Offs=007D22  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001289  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(pusha.o):
+    CODE              Offs=007D27  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001289  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(pushax.o):
+    CODE              Offs=007D3D  Size=00001A  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001289  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(pushw.o):
+    CODE              Offs=007D57  Size=00000F  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001289  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(pushwsp.o):
+    CODE              Offs=007D66  Size=00001C  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001289  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(read.o):
+    CODE              Offs=007D82  Size=000042  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001289  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(return0.o):
+    CODE              Offs=007DC4  Size=000004  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001289  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(returnFFFF.o):
+    CODE              Offs=007DC8  Size=000004  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001289  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(scanf.o):
+    CODE              Offs=007DCC  Size=000033  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=001289  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(setjmp.o):
+    CODE              Offs=007DFF  Size=000025  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(shelp.o):
+    CODE              Offs=007E24  Size=000020  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(shrax1.o):
+    CODE              Offs=007E44  Size=000008  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(shrax4.o):
+    CODE              Offs=007E4C  Size=000011  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(shreax1.o):
+    CODE              Offs=007E5D  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(shreax3.o):
+    CODE              Offs=007E69  Size=00001A  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(shreax4.o):
+    CODE              Offs=007E83  Size=000011  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(staspidx.o):
+    CODE              Offs=007E94  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(staxsp.o):
+    CODE              Offs=007EAA  Size=00000B  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(staxspi.o):
+    CODE              Offs=007EB5  Size=00001B  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(steaxsp.o):
+    CODE              Offs=007ED0  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(steaxspi.o):
+    CODE              Offs=007EE5  Size=000022  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(strchr.o):
+    CODE              Offs=007F07  Size=000027  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(strcmp.o):
+    CODE              Offs=007F2E  Size=000021  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(strcpy.o):
+    CODE              Offs=007F4F  Size=00001F  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(strlen.o):
+    CODE              Offs=007F6E  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(strlower.o):
+    CODE              Offs=007F84  Size=000027  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(sub.o):
+    CODE              Offs=007FAB  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(subeqsp.o):
+    CODE              Offs=007FC0  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(subysp.o):
+    CODE              Offs=007FD5  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(tolower.o):
+    CODE              Offs=007FE2  Size=000012  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(toslong.o):
+    CODE              Offs=007FF4  Size=000038  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(udiv.o):
+    CODE              Offs=00802C  Size=00004F  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(umod.o):
+    CODE              Offs=00807B  Size=000011  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ungetc.o):
+    CODE              Offs=00808C  Size=00002A  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(vfprintf.o):
+    CODE              Offs=0080B6  Size=000061  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00005A  Size=000008  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(vfscanf.o):
+    CODE              Offs=008117  Size=000033  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000062  Size=000006  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(write.o):
+    CODE              Offs=00814A  Size=000037  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000068  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(zerobss.o):
+    CODE              Offs=008181  Size=000023  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000068  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(zeropage.o):
+    CODE              Offs=0081A4  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=00081D  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00128A  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000068  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=00001A  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+NULL                  000000  000000  000000  00001
+ZEROPAGE              000000  000019  00001A  00001
+STARTUP               000300  00031C  00001D  00001
+CODE                  00031D  0084C0  0081A4  00001
+RODATA                0084C1  008CDD  00081D  00001
+ONCE                  008CDE  008CE9  00000C  00001
+DATA                  008CEA  008D51  000068  00001
+BSS                   008D52  009FDB  00128A  00001
+
+
+Exports list by name:
+---------------------
+__BSS_LOAD__              008D52  LA    __BSS_RUN__               008D52 RLA    
+__BSS_SIZE__              00128A REA    __CODE_LOAD__             00031D  LA    
+__CODE_RUN__              00031D  LA    __CODE_SIZE__             0081A4  EA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     00031D RLA    
+__CPUSTACK_FILEOFFS__     000000  EA    __CPUSTACK_LAST__         000100  LA    
+__CPUSTACK_SIZE__         000100  EA    __CPUSTACK_START__        000100  LA    
+__DATA_LOAD__             008CEA RLA    __DATA_RUN__              008CEA RLA    
+__DATA_SIZE__             000068 REA    __DESTRUCTOR_COUNT__      000000 REA    
+__DESTRUCTOR_TABLE__      00031D RLA    __ONCE_LOAD__             008CDE  LA    
+__ONCE_RUN__              008CDE  LA    __ONCE_SIZE__             00000C  EA    
+__RAM_FILEOFFS__          000000  EA    __RAM_LAST__              009FDC  LA    
+__RAM_SIZE__              00EC80 REA    __RAM_START__             000300 RLA    
+__RODATA_LOAD__           0084C1  LA    __RODATA_RUN__            0084C1  LA    
+__RODATA_SIZE__           00081D  EA    __ROM_FILEOFFS__          000000  EA    
+__ROM_LAST__              00F000  LA    __ROM_SIZE__              001000  EA    
+__ROM_START__             00F000  LA    __STACKSIZE__             000080 REA    
+__STARTADDRESS__          000300  EA    __STARTUP_LOAD__          000300  LA    
+__STARTUP_RUN__           000300  LA    __STARTUP_SIZE__          00001D  EA    
+__STARTUP__               000001 REA    __ZEROPAGE_LOAD__         000000  LA    
+__ZEROPAGE_RUN__          000000  LA    __ZEROPAGE_SIZE__         00001A  EA    
+__ZP_FILEOFFS__           000000  EA    __ZP_LAST__               00001A  LA    
+__ZP_SIZE__               0000EE  EA    __ZP_START__              000000  LA    
+___bzero                  007EE5 RLA    ___directerrno            006BE4 RLA    
+___errno                  009FD5 RLA    ___oserror                009F67 RLA    
+___seterrno               00771B RLA    ___setjmp                 00811C RLA    
+__ctype                   008C53 RLA    __ctypeidx                008C5E RLA    
+__filetab                 008CFB  LA    __hextab                  008C27 RLA    
+__longminstr              008C37 RLA    __printf                  006CDF RLA    
+__scanf                   006F90 RLA    _abs                      007FDA  LA    
+_block_browser            000F64  LA    _bzero                    007EE5  LA    
+_calculate_block_position 000516  LA    _clearerr                 007923  LA    
+_disk_initialize          005D86 RLA    _disk_ioctl               005EFB RLA    
+_disk_operations_menu     001135  LA    _disk_read                005DED RLA    
+_disk_status              005DCB RLA    _disk_write               005E74 RLA    
+_dump                     00032A  LA    _exit                     00031A  LA    
+_extract_flex_filename    000648  LA    _f_close                  0017FF RLA    
+_f_closedir               0028D0 RLA    _f_getfree                003066  LA    
+_f_lseek                  002165 RLA    _f_mkdir                  0029B3  LA    
+_f_mount                  0032FA RLA    _f_open                   0013C1 RLA    
+_f_opendir                0027CA RLA    _f_read                   001842 RLA    
+_f_readdir                002901 RLA    _f_rename                 002D87  LA    
+_f_stat                   002FD8  LA    _f_sync                   0026DC  LA    
+_f_truncate               002563  LA    _f_unlink                 002C49  LA    
+_f_write                  001C30  LA    _feof                     00792F  LA    
+_ferror                   00793B RLA    _fflush                   0080E1  EA    
+_fgetc                    0078B9 RLA    _fileno                   007947  LA    
+_fwrite                   007958 RLA    _get_fattime              00031D RLA    
+_getchar                  0079D1 RLA    _init                     000300  LA    
+_isdigit                  007A66 RLA    _isspace                  007A6E RLA    
+_isxdigit                 007A76 RLA    _longjmp                  007C3E RLA    
+_ltoa                     007D3A RLA    _main                     00131A RLA    
+_memcmp                   007E75 RLA    _memcpy                   007EA9 RLA    
+_memset                   007EED RLA    _printf                   00800C RLA    
+_read                     00809F RLA    _read_disk_block          00059C  LA    
+_read_flex_directory      000967  LA    _read_flex_sir            0007AF  LA    
+_scan_disk_files          000CBB  LA    _scanf                    0080E9 RLA    
+_sd_cmd                   005F6A  LA    _sd_crc7_byte             006676  LA    
+_sd_error_string          006520  LA    _sd_go_idle_state         006705  LA    
+_sd_init                  006305 RLA    _sd_power_up              0066B2  LA    
+_sd_read                  006027 RLA    _sd_read_ocr              0067B0  LA    
+_sd_send_app              00681D  LA    _sd_send_if_cond          00673E  LA    
+_sd_send_op_cond          006858  LA    _sd_set_blocklen          00689A  LA    
+_sd_set_speed             00665D  LA    _sd_set_timeout           006644  LA    
+_sd_type                  00651A  LA    _sd_write                 00616F RLA    
+_sdcard_type              009F66  LA    _show_file_menu           000E5D  LA    
+_spi_calculate_divisor    006930  LA    _spi_cs_high              006927 RLA    
+_spi_cs_low               00691E RLA    _spi_init                 0068D9 RLA    
+_spi_set_divisor          0068F7  LA    _spi_set_frequency_khz    006992 RLA    
+_spi_set_mode             006904  LA    _spi_transfer             0069A8 RLA    
+_stderr                   008D17  LA    _stdin                    008D13 RLA    
+_stdout                   008D15 RLA    _strchr                   008224 RLA    
+_strcmp                   00824B RLA    _strcpy                   00826C RLA    
+_strlen                   00828B RLA    _strlen_ptr4              00828F  LA    
+_strlower                 0082A1 RLA    _strlwr                   0082A1  LA    
+_timer_cpu_speed          0069FD  LA    _timer_delay_ms           006B38 RLA    
+_timer_delay_ticks        006A56  LA    _timer_delay_us           006A7D  LA    
+_timer_get_frequency_hz   006BA7  LA    _timer_get_ticks_per_ms   006BC7  LA    
+_timer_get_ticks_per_us   006BE1  LA    _timer_is_running         0069F0  LA    
+_timer_read               0069D4  LA    _timer_start              0069C8  LA    
+_timer_stop               0069CE  LA    _timer_ticks_to_ms        006A26  LA    
+_timer_ticks_to_us        006A03  LA    _tolower                  0082FF RLA    
+_ultoa                    007D7B RLA    _ungetc                   0083A9 RLA    
+_vfprintf                 00840B RLA    _vfscanf                  008434 RLA    
+_write                    008467 RLA    addeq0sp                  007740 RLA    
+addeqysp                  007742 RLA    addysp                    007752 RLA    
+addysp1                   007751 RLA    aslax1                    00775F RLA    
+aslax2                    007767 RLA    aslax3                    007772  LA    
+aslax4                    007780  LA    asleax1                   007791  LA    
+asleax2                   00779D  LA    axlong                    0077B0 RLA    
+axulong                   0077B6 RLA    booleq                    007E4F RLA    
+boolge                    007E60  LA    boolgt                    007E5E  LA    
+boolle                    007E56  LA    boollt                    007E58  LA    
+boolne                    007E49 RLA    booluge                   007E70 RLA    
+boolugt                   007E6E RLA    boolule                   007E66 RLA    
+boolult                   007E68 RLA    c_sp                      000000 RLZ    
+checkferror               0077BD RLA    complax                   0077C9 RLA    
+compleax                  007B25 RLA    condes                    008D1C  LA    
+copydata                  0077DE RLA    ctypemask                 00780B RLA    
+ctypemaskdirect           00780F RLA    decax1                    007829 RLA    
+decax4                    007830 RLA    decaxy                    007837 RLA    
+deceaxy                   007B7A RLA    decsp1                    007840 RLA    
+decsp2                    007849 RLA    decsp3                    007856 RLA    
+decsp4                    007863 RLA    decsp5                    007870 RLA    
+decsp6                    00787D RLA    decsp7                    00788A RLA    
+decsp8                    007897 RLA    donelib                   0077D2  LA    
+getlop                    007DC8  LA    incax1                    007A08 RLA    
+incax2                    007A0F RLA    incax3                    007A16 RLA    
+incax4                    007A20  LA    incax8                    007A1B RLA    
+incaxy                    007A22 RLA    inceaxy                   007BAD RLA    
+incsp1                    007A2B RLA    incsp2                    007A3A RLA    
+incsp3                    007A48 RLA    incsp4                    007A4D RLA    
+incsp5                    007A52 RLA    incsp6                    007A57 RLA    
+incsp7                    007A5C RLA    incsp8                    007A61 RLA    
+initlib                   008CDE RLA    jmpvec                    008D41 RLA    
+laddeq0sp                 007AA3 RLA    laddeqysp                 007AA5 RLA    
+ldax0sp                   007B47 RLA    ldaxi                     007B3A RLA    
+ldaxidx                   007B3C RLA    ldaxysp                   007B49 RLA    
+ldeax0sp                  007B67 RLA    ldeaxi                    007B50 RLA    
+ldeaxidx                  007B52 RLA    ldeaxysp                  007B69 RLA    
+ldptr10sp                 007B8F RLA    ldptr1ysp                 007B91 RLA    
+leaa0sp                   007B9B RLA    leaaxsp                   007B9D RLA    
+lsubeq0sp                 007CEC RLA    lsubeqysp                 007CEE RLA    
+memcpy_getparams          007ED2  LA    memcpy_upwards            007EAC  LA    
+mul8x16                   007F89 RLA    mul8x16a                  007F93 RLA    
+mulax10                   007FC1 RLA    negax                     007FDE RLA    
+negeax                    007C20 RLA    popax                     007A32 RLA    
+popptr1                   007FFE RLA    popsargsudiv16            008141 RLA    
+ptr1                      000008 RLZ    ptr2                      00000A RLZ    
+ptr3                      00000C RLZ    ptr4                      00000E RLZ    
+push0                     00805A RLA    push0ax                   007C8D RLA    
+push1                     00803F RLA    pusha                     008048 RLA    
+pusha0                    00805C RLA    pusha0sp                  008044  LA    
+pushax                    00805E RLA    pushaysp                  008046  LA    
+pusheax                   007C93 RLA    pushl0                    007C8A RLA    
+pushptr1idx               00807A  LA    pushw                     008074 RLA    
+pushw0sp                  008083 RLA    pushwidx                  008076 RLA    
+pushwysp                  008085 RLA    regbank                   000014 RLZ    
+regsave                   000004 RLZ    resteax                   007CB8 RLA    
+return0                   0080E1 RLA    returnFFFF                0080E5 RLA    
+saveeax                   007CAB RLA    shlax1                    00775F RLA    
+shlax2                    007767  LA    shlax3                    007772 RLA    
+shlax4                    007780 RLA    shleax1                   007791 RLA    
+shleax2                   00779D RLA    shrax1                    008161 RLA    
+shrax4                    008169 RLA    shreax1                   00817A RLA    
+shreax3                   008186 RLA    shreax4                   0081A0 RLA    
+sreg                      000002 RLZ    staspidx                  0081B1 RLA    
+stax0sp                   0081C7 RLA    staxspidx                 0081D2 RLA    
+staxysp                   0081C9 RLA    steax0sp                  0081ED RLA    
+steaxspidx                008202 RLA    steaxysp                  0081EF RLA    
+subeq0sp                  0082DD  LA    subeqysp                  0082DF RLA    
+subysp                    0082F2 RLA    tmp1                      000010 RLZ    
+tmp2                      000011 RLZ    tmp3                      000012 RLZ    
+tmp4                      000013 RLZ    tolowerdirect             008303  LA    
+tosadd0ax                 007A7E RLA    tosadda0                  007724  LA    
+tosaddax                  007726 RLA    tosaddeax                 007A84 RLA    
+tosand0ax                 007AC6 RLA    tosandeax                 007ACC RLA    
+tosdiva0                  0078A4 RLA    tosdivax                  0078A6  LA    
+toseqeax                  007BA7 RLA    tosicmp                   0079DC RLA    
+tosicmp0                  0079DA  LA    toslcmp                   007AEA RLA    
+toslong                   00832F  LA    tosmul0ax                 007BBE  LA    
+tosmula0                  007F87 RLA    tosmulax                  007F42  LA    
+tosmuleax                 007BC4 RLA    tosneeax                  007C1A RLA    
+tosor0ax                  007C66  LA    tosora0                   007FEC RLA    
+tosorax                   007FEE  LA    tosoreax                  007C6C RLA    
+tossub0ax                 007CC5  LA    tossuba0                  0082C8 RLA    
+tossubax                  0082CA RLA    tossubeax                 007CCB RLA    
+tosudiv0ax                007DB7  LA    tosudiva0                 008349  LA    
+tosudivax                 00834B RLA    tosudiveax                007DBD RLA    
+tosugeeax                 007E31 RLA    tosugteax                 007E37 RLA    
+tosuleeax                 007E3D RLA    tosulong                  008311 RLA    
+tosulteax                 007E43 RLA    tosumoda0                 008398  LA    
+tosumodax                 00839A RLA    tosumul0ax                007BBE RLA    
+tosumula0                 007F87  LA    tosumulax                 007F42 RLA    
+tosumuleax                007BC4 RLA    tsteax                    007D13  LA    
+udiv16                    00835A RLA    udiv32                    007DEC  LA    
+utsteax                   007D13 RLA    zerobss                   00849E RLA    
+
+
+
+Exports list by value:
+----------------------
+__CONSTRUCTOR_COUNT__     000000 REA    __CPUSTACK_FILEOFFS__     000000  EA    
+__DESTRUCTOR_COUNT__      000000 REA    __RAM_FILEOFFS__          000000  EA    
+__ROM_FILEOFFS__          000000  EA    __ZEROPAGE_LOAD__         000000  LA    
+__ZEROPAGE_RUN__          000000  LA    __ZP_FILEOFFS__           000000  EA    
+__ZP_START__              000000  LA    c_sp                      000000 RLZ    
+__STARTUP__               000001 REA    sreg                      000002 RLZ    
+regsave                   000004 RLZ    ptr1                      000008 RLZ    
+ptr2                      00000A RLZ    __ONCE_SIZE__             00000C  EA    
+ptr3                      00000C RLZ    ptr4                      00000E RLZ    
+tmp1                      000010 RLZ    tmp2                      000011 RLZ    
+tmp3                      000012 RLZ    tmp4                      000013 RLZ    
+regbank                   000014 RLZ    __ZEROPAGE_SIZE__         00001A  EA    
+__ZP_LAST__               00001A  LA    __STARTUP_SIZE__          00001D  EA    
+__DATA_SIZE__             000068 REA    __STACKSIZE__             000080 REA    
+__ZP_SIZE__               0000EE  EA    __CPUSTACK_LAST__         000100  LA    
+__CPUSTACK_SIZE__         000100  EA    __CPUSTACK_START__        000100  LA    
+__RAM_START__             000300 RLA    __STARTADDRESS__          000300  EA    
+__STARTUP_LOAD__          000300  LA    __STARTUP_RUN__           000300  LA    
+_init                     000300  LA    _exit                     00031A  LA    
+__CODE_LOAD__             00031D  LA    __CODE_RUN__              00031D  LA    
+__CONSTRUCTOR_TABLE__     00031D RLA    __DESTRUCTOR_TABLE__      00031D RLA    
+_get_fattime              00031D RLA    _dump                     00032A  LA    
+_calculate_block_position 000516  LA    _read_disk_block          00059C  LA    
+_extract_flex_filename    000648  LA    _read_flex_sir            0007AF  LA    
+__RODATA_SIZE__           00081D  EA    _read_flex_directory      000967  LA    
+_scan_disk_files          000CBB  LA    _show_file_menu           000E5D  LA    
+_block_browser            000F64  LA    __ROM_SIZE__              001000  EA    
+_disk_operations_menu     001135  LA    __BSS_SIZE__              00128A REA    
+_main                     00131A RLA    _f_open                   0013C1 RLA    
+_f_close                  0017FF RLA    _f_read                   001842 RLA    
+_f_write                  001C30  LA    _f_lseek                  002165 RLA    
+_f_truncate               002563  LA    _f_sync                   0026DC  LA    
+_f_opendir                0027CA RLA    _f_closedir               0028D0 RLA    
+_f_readdir                002901 RLA    _f_mkdir                  0029B3  LA    
+_f_unlink                 002C49  LA    _f_rename                 002D87  LA    
+_f_stat                   002FD8  LA    _f_getfree                003066  LA    
+_f_mount                  0032FA RLA    _disk_initialize          005D86 RLA    
+_disk_status              005DCB RLA    _disk_read                005DED RLA    
+_disk_write               005E74 RLA    _disk_ioctl               005EFB RLA    
+_sd_cmd                   005F6A  LA    _sd_read                  006027 RLA    
+_sd_write                 00616F RLA    _sd_init                  006305 RLA    
+_sd_type                  00651A  LA    _sd_error_string          006520  LA    
+_sd_set_timeout           006644  LA    _sd_set_speed             00665D  LA    
+_sd_crc7_byte             006676  LA    _sd_power_up              0066B2  LA    
+_sd_go_idle_state         006705  LA    _sd_send_if_cond          00673E  LA    
+_sd_read_ocr              0067B0  LA    _sd_send_app              00681D  LA    
+_sd_send_op_cond          006858  LA    _sd_set_blocklen          00689A  LA    
+_spi_init                 0068D9 RLA    _spi_set_divisor          0068F7  LA    
+_spi_set_mode             006904  LA    _spi_cs_low               00691E RLA    
+_spi_cs_high              006927 RLA    _spi_calculate_divisor    006930  LA    
+_spi_set_frequency_khz    006992 RLA    _spi_transfer             0069A8 RLA    
+_timer_start              0069C8  LA    _timer_stop               0069CE  LA    
+_timer_read               0069D4  LA    _timer_is_running         0069F0  LA    
+_timer_cpu_speed          0069FD  LA    _timer_ticks_to_us        006A03  LA    
+_timer_ticks_to_ms        006A26  LA    _timer_delay_ticks        006A56  LA    
+_timer_delay_us           006A7D  LA    _timer_delay_ms           006B38 RLA    
+_timer_get_frequency_hz   006BA7  LA    _timer_get_ticks_per_ms   006BC7  LA    
+_timer_get_ticks_per_us   006BE1  LA    ___directerrno            006BE4 RLA    
+__printf                  006CDF RLA    __scanf                   006F90 RLA    
+___seterrno               00771B RLA    tosadda0                  007724  LA    
+tosaddax                  007726 RLA    addeq0sp                  007740 RLA    
+addeqysp                  007742 RLA    addysp1                   007751 RLA    
+addysp                    007752 RLA    aslax1                    00775F RLA    
+shlax1                    00775F RLA    aslax2                    007767 RLA    
+shlax2                    007767  LA    aslax3                    007772  LA    
+shlax3                    007772 RLA    aslax4                    007780  LA    
+shlax4                    007780 RLA    asleax1                   007791  LA    
+shleax1                   007791 RLA    asleax2                   00779D  LA    
+shleax2                   00779D RLA    axlong                    0077B0 RLA    
+axulong                   0077B6 RLA    checkferror               0077BD RLA    
+complax                   0077C9 RLA    donelib                   0077D2  LA    
+copydata                  0077DE RLA    ctypemask                 00780B RLA    
+ctypemaskdirect           00780F RLA    decax1                    007829 RLA    
+decax4                    007830 RLA    decaxy                    007837 RLA    
+decsp1                    007840 RLA    decsp2                    007849 RLA    
+decsp3                    007856 RLA    decsp4                    007863 RLA    
+decsp5                    007870 RLA    decsp6                    00787D RLA    
+decsp7                    00788A RLA    decsp8                    007897 RLA    
+tosdiva0                  0078A4 RLA    tosdivax                  0078A6  LA    
+_fgetc                    0078B9 RLA    _clearerr                 007923  LA    
+_feof                     00792F  LA    _ferror                   00793B RLA    
+_fileno                   007947  LA    _fwrite                   007958 RLA    
+_getchar                  0079D1 RLA    tosicmp0                  0079DA  LA    
+tosicmp                   0079DC RLA    incax1                    007A08 RLA    
+incax2                    007A0F RLA    incax3                    007A16 RLA    
+incax8                    007A1B RLA    incax4                    007A20  LA    
+incaxy                    007A22 RLA    incsp1                    007A2B RLA    
+popax                     007A32 RLA    incsp2                    007A3A RLA    
+incsp3                    007A48 RLA    incsp4                    007A4D RLA    
+incsp5                    007A52 RLA    incsp6                    007A57 RLA    
+incsp7                    007A5C RLA    incsp8                    007A61 RLA    
+_isdigit                  007A66 RLA    _isspace                  007A6E RLA    
+_isxdigit                 007A76 RLA    tosadd0ax                 007A7E RLA    
+tosaddeax                 007A84 RLA    laddeq0sp                 007AA3 RLA    
+laddeqysp                 007AA5 RLA    tosand0ax                 007AC6 RLA    
+tosandeax                 007ACC RLA    toslcmp                   007AEA RLA    
+compleax                  007B25 RLA    ldaxi                     007B3A RLA    
+ldaxidx                   007B3C RLA    ldax0sp                   007B47 RLA    
+ldaxysp                   007B49 RLA    ldeaxi                    007B50 RLA    
+ldeaxidx                  007B52 RLA    ldeax0sp                  007B67 RLA    
+ldeaxysp                  007B69 RLA    deceaxy                   007B7A RLA    
+ldptr10sp                 007B8F RLA    ldptr1ysp                 007B91 RLA    
+leaa0sp                   007B9B RLA    leaaxsp                   007B9D RLA    
+toseqeax                  007BA7 RLA    inceaxy                   007BAD RLA    
+tosmul0ax                 007BBE  LA    tosumul0ax                007BBE RLA    
+tosmuleax                 007BC4 RLA    tosumuleax                007BC4 RLA    
+tosneeax                  007C1A RLA    negeax                    007C20 RLA    
+_longjmp                  007C3E RLA    tosor0ax                  007C66  LA    
+tosoreax                  007C6C RLA    pushl0                    007C8A RLA    
+push0ax                   007C8D RLA    pusheax                   007C93 RLA    
+saveeax                   007CAB RLA    resteax                   007CB8 RLA    
+tossub0ax                 007CC5  LA    tossubeax                 007CCB RLA    
+lsubeq0sp                 007CEC RLA    lsubeqysp                 007CEE RLA    
+tsteax                    007D13  LA    utsteax                   007D13 RLA    
+_ltoa                     007D3A RLA    _ultoa                    007D7B RLA    
+tosudiv0ax                007DB7  LA    tosudiveax                007DBD RLA    
+getlop                    007DC8  LA    udiv32                    007DEC  LA    
+tosugeeax                 007E31 RLA    tosugteax                 007E37 RLA    
+tosuleeax                 007E3D RLA    tosulteax                 007E43 RLA    
+boolne                    007E49 RLA    booleq                    007E4F RLA    
+boolle                    007E56  LA    boollt                    007E58  LA    
+boolgt                    007E5E  LA    boolge                    007E60  LA    
+boolule                   007E66 RLA    boolult                   007E68 RLA    
+boolugt                   007E6E RLA    booluge                   007E70 RLA    
+_memcmp                   007E75 RLA    _memcpy                   007EA9 RLA    
+memcpy_upwards            007EAC  LA    memcpy_getparams          007ED2  LA    
+___bzero                  007EE5 RLA    _bzero                    007EE5  LA    
+_memset                   007EED RLA    tosmulax                  007F42  LA    
+tosumulax                 007F42 RLA    tosmula0                  007F87 RLA    
+tosumula0                 007F87  LA    mul8x16                   007F89 RLA    
+mul8x16a                  007F93 RLA    mulax10                   007FC1 RLA    
+_abs                      007FDA  LA    negax                     007FDE RLA    
+tosora0                   007FEC RLA    tosorax                   007FEE  LA    
+popptr1                   007FFE RLA    _printf                   00800C RLA    
+push1                     00803F RLA    pusha0sp                  008044  LA    
+pushaysp                  008046  LA    pusha                     008048 RLA    
+push0                     00805A RLA    pusha0                    00805C RLA    
+pushax                    00805E RLA    pushw                     008074 RLA    
+pushwidx                  008076 RLA    pushptr1idx               00807A  LA    
+pushw0sp                  008083 RLA    pushwysp                  008085 RLA    
+_read                     00809F RLA    _fflush                   0080E1  EA    
+return0                   0080E1 RLA    returnFFFF                0080E5 RLA    
+_scanf                    0080E9 RLA    ___setjmp                 00811C RLA    
+popsargsudiv16            008141 RLA    shrax1                    008161 RLA    
+shrax4                    008169 RLA    shreax1                   00817A RLA    
+shreax3                   008186 RLA    shreax4                   0081A0 RLA    
+__CODE_SIZE__             0081A4  EA    staspidx                  0081B1 RLA    
+stax0sp                   0081C7 RLA    staxysp                   0081C9 RLA    
+staxspidx                 0081D2 RLA    steax0sp                  0081ED RLA    
+steaxysp                  0081EF RLA    steaxspidx                008202 RLA    
+_strchr                   008224 RLA    _strcmp                   00824B RLA    
+_strcpy                   00826C RLA    _strlen                   00828B RLA    
+_strlen_ptr4              00828F  LA    _strlower                 0082A1 RLA    
+_strlwr                   0082A1  LA    tossuba0                  0082C8 RLA    
+tossubax                  0082CA RLA    subeq0sp                  0082DD  LA    
+subeqysp                  0082DF RLA    subysp                    0082F2 RLA    
+_tolower                  0082FF RLA    tolowerdirect             008303  LA    
+tosulong                  008311 RLA    toslong                   00832F  LA    
+tosudiva0                 008349  LA    tosudivax                 00834B RLA    
+udiv16                    00835A RLA    tosumoda0                 008398  LA    
+tosumodax                 00839A RLA    _ungetc                   0083A9 RLA    
+_vfprintf                 00840B RLA    _vfscanf                  008434 RLA    
+_write                    008467 RLA    zerobss                   00849E RLA    
+__RODATA_LOAD__           0084C1  LA    __RODATA_RUN__            0084C1  LA    
+__hextab                  008C27 RLA    __longminstr              008C37 RLA    
+__ctype                   008C53 RLA    __ctypeidx                008C5E RLA    
+__ONCE_LOAD__             008CDE  LA    __ONCE_RUN__              008CDE  LA    
+initlib                   008CDE RLA    __DATA_LOAD__             008CEA RLA    
+__DATA_RUN__              008CEA RLA    __filetab                 008CFB  LA    
+_stdin                    008D13 RLA    _stdout                   008D15 RLA    
+_stderr                   008D17  LA    condes                    008D1C  LA    
+jmpvec                    008D41 RLA    __BSS_LOAD__              008D52  LA    
+__BSS_RUN__               008D52 RLA    _sdcard_type              009F66  LA    
+___oserror                009F67 RLA    ___errno                  009FD5 RLA    
+__RAM_LAST__              009FDC  LA    __RAM_SIZE__              00EC80 REA    
+__ROM_LAST__              00F000  LA    __ROM_START__             00F000  LA    
+
+
+
+Imports list:
+-------------
+__BSS_LOAD__ ([linker generated]):
+__BSS_RUN__ ([linker generated]):
+    zerobss.o                 common/zerobss.s:8
+__BSS_SIZE__ ([linker generated]):
+    zerobss.o                 common/zerobss.s:8
+__CODE_LOAD__ ([linker generated]):
+__CODE_RUN__ ([linker generated]):
+__CODE_SIZE__ ([linker generated]):
+__CONSTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s:18
+__CONSTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s:18
+__CPUSTACK_FILEOFFS__ ([linker generated]):
+__CPUSTACK_LAST__ ([linker generated]):
+__CPUSTACK_SIZE__ ([linker generated]):
+__CPUSTACK_START__ ([linker generated]):
+__DATA_LOAD__ ([linker generated]):
+    copydata.o                common/copydata.s:8
+__DATA_RUN__ ([linker generated]):
+    copydata.o                common/copydata.s:8
+__DATA_SIZE__ ([linker generated]):
+    copydata.o                common/copydata.s:8
+__DESTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s:19
+__DESTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s:19
+__ONCE_LOAD__ ([linker generated]):
+__ONCE_RUN__ ([linker generated]):
+__ONCE_SIZE__ ([linker generated]):
+__RAM_FILEOFFS__ ([linker generated]):
+__RAM_LAST__ ([linker generated]):
+__RAM_SIZE__ ([linker generated]):
+    crt0.o                    max6502/crt0.s:10
+__RAM_START__ ([linker generated]):
+    crt0.o                    max6502/crt0.s:10
+__RODATA_LOAD__ ([linker generated]):
+__RODATA_RUN__ ([linker generated]):
+__RODATA_SIZE__ ([linker generated]):
+__ROM_FILEOFFS__ ([linker generated]):
+__ROM_LAST__ ([linker generated]):
+__ROM_SIZE__ ([linker generated]):
+__ROM_START__ ([linker generated]):
+__STACKSIZE__ ([linker generated]):
+    [linker generated]        /usr/local/share/cc65/cfg/max6502.cfg:26
+__STARTADDRESS__ ([linker generated]):
+__STARTUP_LOAD__ ([linker generated]):
+__STARTUP_RUN__ ([linker generated]):
+__STARTUP_SIZE__ ([linker generated]):
+__STARTUP__ (crt0.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:13
+__ZEROPAGE_LOAD__ ([linker generated]):
+__ZEROPAGE_RUN__ ([linker generated]):
+__ZEROPAGE_SIZE__ ([linker generated]):
+__ZP_FILEOFFS__ ([linker generated]):
+__ZP_LAST__ ([linker generated]):
+__ZP_SIZE__ ([linker generated]):
+__ZP_START__ ([linker generated]):
+___bzero (memset.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+___directerrno (_directerrno.o):
+    ungetc.o                  /home/didier/6502/tools/cc65/asminc/errno.inc:10
+    fmisc.o                   common/fmisc.s:8
+___errno (errno.o):
+    _seterrno.o               /home/didier/6502/tools/cc65/asminc/errno.inc:7
+___oserror (_oserror.o):
+    _directerrno.o            /home/didier/6502/tools/cc65/asminc/errno.inc:7
+___seterrno (_seterrno.o):
+    _directerrno.o            /home/didier/6502/tools/cc65/asminc/errno.inc:9
+    fwrite.o                  /home/didier/6502/tools/cc65/asminc/errno.inc:9
+    _scanf.o                  ../libwrk/max6502/_scanf.s:27
+___setjmp (setjmp.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:25
+__ctype (ctype.o):
+    ctypemask.o               common/ctypemask.s:23
+__ctypeidx (ctype.o):
+    ctypemask.o               common/ctypemask.s:24
+__filetab (_file.o):
+__hextab (_hextab.o):
+    ltoa.o                    common/ltoa.s:10
+__longminstr (_longminstr.o):
+    ltoa.o                    common/ltoa.s:10
+__printf (_printf.o):
+    vfprintf.o                common/vfprintf.s:10
+__scanf (_scanf.o):
+    vfscanf.o                 common/_scanf.inc:17
+_abs (negabs.o):
+_block_browser (dskbrowser.c.3223.0.o):
+_bzero (memset.o):
+_calculate_block_position (dskbrowser.c.3223.0.o):
+_clearerr (fmisc.o):
+_disk_initialize (diskio.o):
+    ff.o                      ff.s:34
+_disk_ioctl (diskio.o):
+    ff.o                      ff.s:38
+_disk_operations_menu (dskbrowser.c.3223.0.o):
+_disk_read (diskio.o):
+    ff.o                      ff.s:36
+_disk_status (diskio.o):
+    ff.o                      ff.s:35
+_disk_write (diskio.o):
+    ff.o                      ff.s:37
+_dump (dskbrowser.c.3223.0.o):
+_exit (crt0.o):
+_extract_flex_filename (dskbrowser.c.3223.0.o):
+_f_close (ff.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:22
+_f_closedir (ff.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:26
+_f_getfree (ff.o):
+_f_lseek (ff.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:24
+_f_mkdir (ff.o):
+_f_mount (ff.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:28
+_f_open (ff.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:21
+_f_opendir (ff.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:25
+_f_read (ff.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:23
+_f_readdir (ff.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:27
+_f_rename (ff.o):
+_f_stat (ff.o):
+_f_sync (ff.o):
+_f_truncate (ff.o):
+_f_unlink (ff.o):
+_f_write (ff.o):
+_feof (fmisc.o):
+_ferror (fmisc.o):
+    vfscanf.o                 common/vfscanf.s:9
+_fflush (fmisc.o):
+_fgetc (fgetc.o):
+    vfscanf.o                 common/vfscanf.s:9
+    getchar.o                 ../libwrk/max6502/getchar.s:17
+_fileno (fmisc.o):
+_fwrite (fwrite.o):
+    vfprintf.o                common/vfprintf.s:10
+_get_fattime (dskbrowser.c.3223.0.o):
+    ff.o                      ff.s:33
+_getchar (getchar.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:14
+_init (crt0.o):
+_isdigit (isdigit.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:28
+_isspace (isspace.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:29
+_isxdigit (isxdigit.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:30
+_longjmp (longjmp.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:26
+_ltoa (ltoa.o):
+    _printf.o                 common/_printf.s:12
+_main (dskbrowser.c.3223.0.o):
+    crt0.o                    max6502/crt0.s:8
+_memcmp (memcmp.o):
+    ff.o                      ff.s:14
+_memcpy (memcpy.o):
+    ff.o                      ff.s:15
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:20
+_memset (memset.o):
+    ff.o                      ff.s:16
+_printf (printf.o):
+    spi.o                     spi.s:13
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:15
+_read (read.o):
+    fgetc.o                   common/fgetc.s:8
+_read_disk_block (dskbrowser.c.3223.0.o):
+_read_flex_directory (dskbrowser.c.3223.0.o):
+_read_flex_sir (dskbrowser.c.3223.0.o):
+_scan_disk_files (dskbrowser.c.3223.0.o):
+_scanf (scanf.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:16
+_sd_cmd (sdcard.o):
+_sd_crc7_byte (sdcard.o):
+_sd_error_string (sdcard.o):
+_sd_go_idle_state (sdcard.o):
+_sd_init (sdcard.o):
+    diskio.o                  diskio.s:15
+_sd_power_up (sdcard.o):
+_sd_read (sdcard.o):
+    diskio.o                  diskio.s:13
+_sd_read_ocr (sdcard.o):
+_sd_send_app (sdcard.o):
+_sd_send_if_cond (sdcard.o):
+_sd_send_op_cond (sdcard.o):
+_sd_set_blocklen (sdcard.o):
+_sd_set_speed (sdcard.o):
+_sd_set_timeout (sdcard.o):
+_sd_type (sdcard.o):
+_sd_write (sdcard.o):
+    diskio.o                  diskio.s:14
+_sdcard_type (sdcard.o):
+_show_file_menu (dskbrowser.c.3223.0.o):
+_spi_calculate_divisor (spi.o):
+_spi_cs_high (spi.o):
+    sdcard.o                  sdcard.s:15
+_spi_cs_low (spi.o):
+    sdcard.o                  sdcard.s:14
+_spi_init (spi.o):
+    sdcard.o                  sdcard.s:13
+_spi_set_divisor (spi.o):
+_spi_set_frequency_khz (spi.o):
+    sdcard.o                  sdcard.s:16
+_spi_set_mode (spi.o):
+_spi_transfer (spi.o):
+    sdcard.o                  sdcard.s:17
+_stderr (_file.o):
+_stdin (_file.o):
+    scanf.o                   common/scanf.s:10
+    getchar.o                 ../libwrk/max6502/getchar.s:16
+_stdout (_file.o):
+    printf.o                  common/printf.s:8
+_strchr (strchr.o):
+    ff.o                      ff.s:13
+_strcmp (strcmp.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:17
+_strcpy (strcpy.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:18
+_strlen (strlen.o):
+    _printf.o                 common/_printf.s:13
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:19
+_strlen_ptr4 (strlen.o):
+_strlower (strlower.o):
+    _printf.o                 common/_printf.s:13
+_strlwr (strlower.o):
+_timer_cpu_speed (timer.o):
+_timer_delay_ms (timer.o):
+    sdcard.o                  sdcard.s:26
+_timer_delay_ticks (timer.o):
+_timer_delay_us (timer.o):
+_timer_get_frequency_hz (timer.o):
+_timer_get_ticks_per_ms (timer.o):
+_timer_get_ticks_per_us (timer.o):
+_timer_is_running (timer.o):
+_timer_read (timer.o):
+_timer_start (timer.o):
+_timer_stop (timer.o):
+_timer_ticks_to_ms (timer.o):
+_timer_ticks_to_us (timer.o):
+_tolower (tolower.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:31
+_ultoa (ltoa.o):
+    _printf.o                 common/_printf.s:12
+_ungetc (ungetc.o):
+    vfscanf.o                 common/vfscanf.s:9
+_vfprintf (vfprintf.o):
+    printf.o                  common/printf.s:8
+_vfscanf (vfscanf.o):
+    scanf.o                   common/scanf.s:10
+_write (write.o):
+    fwrite.o                  common/fwrite.s:10
+addeq0sp (addeqsp.o):
+    timer.o                   timer.s:425
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+addeqysp (addeqsp.o):
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+addysp (addysp.o):
+    fwrite.o                  common/fwrite.s:11
+    scanf.o                   common/scanf.s:10
+    printf.o                  common/printf.s:8
+    incsp8.o                  runtime/incsp8.s:8
+    incsp7.o                  runtime/incsp7.s:8
+    incsp6.o                  runtime/incsp6.s:8
+    incsp5.o                  runtime/incsp5.s:8
+    incsp4.o                  runtime/incsp4.s:8
+    incsp3.o                  runtime/incsp3.s:8
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+addysp1 (addysp.o):
+    sub.o                     runtime/sub.s:8
+    or.o                      runtime/or.s:9
+    ludiv.o                   runtime/ludiv.s:9
+    lsub.o                    runtime/lsub.s:11
+    lor.o                     runtime/lor.s:9
+    lmul.o                    runtime/lmul.s:9
+    land.o                    runtime/land.s:9
+    ladd.o                    runtime/ladd.s:8
+aslax1 (aslax1.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+aslax2 (aslax2.o):
+    ff.o                      ff.s:8963
+aslax3 (aslax3.o):
+aslax4 (aslax4.o):
+asleax1 (asleax1.o):
+asleax2 (asleax2.o):
+axlong (axlong.o):
+    _printf.o                 common/_printf.s:11
+    timer.o                   timer.s:425
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+axulong (axlong.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _printf.o                 common/_printf.s:11
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+booleq (makebool.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    leq.o                     runtime/leq.s:8
+    ff.o                      ff.s:8963
+boolge (makebool.o):
+boolgt (makebool.o):
+boolle (makebool.o):
+boollt (makebool.o):
+boolne (makebool.o):
+    lne.o                     runtime/lne.s:8
+booluge (makebool.o):
+    luge.o                    runtime/luge.s:8
+boolugt (makebool.o):
+    lugt.o                    runtime/lugt.s:8
+boolule (makebool.o):
+    lule.o                    runtime/lule.s:8
+boolult (makebool.o):
+    lult.o                    runtime/lult.s:8
+c_sp (zeropage.o):
+    setjmp.o                  common/setjmp.s:11
+    longjmp.o                 common/longjmp.s:10
+    lcmp.o                    runtime/lcmp.s:10
+    _scanf.o                  ../libwrk/max6502/_scanf.s:10
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:11
+    vfscanf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:11
+    vfprintf.o                common/vfprintf.s:11
+    toslong.o                 runtime/toslong.s:9
+    subysp.o                  runtime/subysp.s:9
+    subeqsp.o                 runtime/subeqsp.s:8
+    sub.o                     runtime/sub.s:9
+    steaxsp.o                 runtime/steaxsp.s:8
+    staxspi.o                 runtime/staxspi.s:10
+    staxsp.o                  runtime/staxsp.s:8
+    staspidx.o                runtime/staspidx.s:9
+    scanf.o                   common/scanf.s:11
+    pushwsp.o                 runtime/pushwsp.s:8
+    pushax.o                  runtime/pushax.s:8
+    pusha.o                   runtime/pusha.s:8
+    printf.o                  common/printf.s:9
+    popptr1.o                 runtime/popptr1.s:9
+    or.o                      runtime/or.s:10
+    memset.o                  common/memset.s:20
+    memcpy.o                  common/memcpy.s:15
+    ludiv.o                   runtime/ludiv.s:10
+    lsubeqsp.o                runtime/lsubeqsp.s:8
+    lsub.o                    runtime/lsub.s:12
+    lpush.o                   runtime/lpush.s:13
+    lor.o                     runtime/lor.s:10
+    lmul.o                    runtime/lmul.s:10
+    leaaxsp.o                 runtime/leaaxsp.s:8
+    ldptr1sp.o                runtime/ldptr1sp.s:8
+    ldeaxysp.o                runtime/ldeaxysp.s:12
+    ldaxsp.o                  runtime/ldaxsp.s:8
+    land.o                    runtime/land.s:10
+    laddeqsp.o                runtime/laddeqsp.s:8
+    ladd.o                    runtime/ladd.s:9
+    incsp2.o                  runtime/incsp2.s:8
+    incsp1.o                  runtime/incsp1.s:8
+    icmp.o                    runtime/icmp.s:9
+    decsp8.o                  runtime/decsp8.s:8
+    decsp7.o                  runtime/decsp7.s:8
+    decsp6.o                  runtime/decsp6.s:8
+    decsp5.o                  runtime/decsp5.s:8
+    decsp4.o                  runtime/decsp4.s:8
+    decsp3.o                  runtime/decsp3.s:8
+    decsp2.o                  runtime/decsp2.s:8
+    decsp1.o                  runtime/decsp1.s:8
+    crt0.o                    /home/didier/6502/tools/cc65/asminc/zeropage.inc:11
+    addysp.o                  runtime/addysp.s:8
+    addeqsp.o                 runtime/addeqsp.s:8
+    add.o                     runtime/add.s:12
+    timer.o                   timer.s:10
+    spi.o                     spi.s:10
+    sdcard.o                  sdcard.s:10
+    diskio.o                  diskio.s:10
+    ff.o                      ff.s:10
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:10
+checkferror (checkferror.o):
+    fgetc.o                   common/fgetc.s:8
+complax (compl.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+compleax (lcompl.o):
+    ff.o                      ff.s:8963
+condes (condes.o):
+copydata (copydata.o):
+    crt0.o                    max6502/crt0.s:9
+ctypemask (ctypemask.o):
+    isxdigit.o                common/isxdigit.s:15
+    isspace.o                 common/isspace.s:15
+    isdigit.o                 common/isdigit.s:15
+ctypemaskdirect (ctypemask.o):
+    tolower.o                 common/tolower.s:15
+    strlower.o                common/strlower.s:14
+decax1 (decax1.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+decax4 (decax4.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+decaxy (decaxy.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    ff.o                      ff.s:8963
+deceaxy (ldec.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+decsp1 (decsp1.o):
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+decsp2 (decsp2.o):
+    toslong.o                 runtime/toslong.s:8
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+decsp3 (decsp3.o):
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+decsp4 (decsp4.o):
+    lpush.o                   runtime/lpush.s:12
+    timer.o                   timer.s:425
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+decsp5 (decsp5.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+decsp6 (decsp6.o):
+    _printf.o                 common/_printf.s:11
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+decsp7 (decsp7.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+decsp8 (decsp8.o):
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+donelib (condes.o):
+getlop (ludiv.o):
+incax1 (incax1.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+incax2 (incax2.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+incax3 (incax3.o):
+    ff.o                      ff.s:8963
+incax4 (incaxy.o):
+incax8 (incax8.o):
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+incaxy (incaxy.o):
+    incax8.o                  runtime/incax8.s:8
+    incax3.o                  runtime/incax3.s:8
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+inceaxy (linc.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+incsp1 (incsp1.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    spi.o                     spi.s:232
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+incsp2 (incsp2.o):
+    fgetc.o                   common/fgetc.s:9
+    staxspi.o                 runtime/staxspi.s:9
+    staspidx.o                runtime/staspidx.s:8
+    popptr1.o                 runtime/popptr1.s:8
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    ff.o                      ff.s:8963
+incsp3 (incsp3.o):
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    spi.o                     spi.s:232
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+incsp4 (incsp4.o):
+    lcmp.o                    runtime/lcmp.s:9
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+incsp5 (incsp5.o):
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+incsp6 (incsp6.o):
+    fwrite.o                  common/fwrite.s:11
+    vfprintf.o                common/vfprintf.s:9
+    timer.o                   timer.s:425
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+incsp7 (incsp7.o):
+    timer.o                   timer.s:425
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+incsp8 (incsp8.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    spi.o                     spi.s:232
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+initlib (condes.o):
+    crt0.o                    max6502/crt0.s:9
+jmpvec (jmpvec.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+laddeq0sp (laddeqsp.o):
+    sdcard.o                  sdcard.s:1344
+laddeqysp (laddeqsp.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+ldax0sp (ldaxsp.o):
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    spi.o                     spi.s:232
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+ldaxi (ldaxi.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+ldaxidx (ldaxi.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+ldaxysp (ldaxsp.o):
+    fwrite.o                  common/fwrite.s:11
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+ldeax0sp (ldeaxysp.o):
+    timer.o                   timer.s:425
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+ldeaxi (ldeaxi.o):
+    ff.o                      ff.s:8963
+ldeaxidx (ldeaxi.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+ldeaxysp (ldeaxysp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+ldptr10sp (ldptr1sp.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+ldptr1ysp (ldptr1sp.o):
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+leaa0sp (leaaxsp.o):
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+leaaxsp (leaaxsp.o):
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+lsubeq0sp (lsubeqsp.o):
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+lsubeqysp (lsubeqsp.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+memcpy_getparams (memcpy.o):
+memcpy_upwards (memcpy.o):
+mul8x16 (mul8.o):
+    mul.o                     runtime/mul.s:8
+mul8x16a (mul8.o):
+    mul.o                     runtime/mul.s:8
+mulax10 (mulax10.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+negax (negabs.o):
+    shelp.o                   runtime/shelp.s:11
+    div.o                     runtime/div.s:11
+negeax (lneg.o):
+    ltoa.o                    common/ltoa.s:9
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+popax (incsp2.o):
+    write.o                   max6502/write.s:7
+    ungetc.o                  common/ungetc.s:10
+    read.o                    max6502/read.s:7
+    ltoa.o                    common/ltoa.s:9
+    _printf.o                 common/_printf.s:11
+    strcpy.o                  common/strcpy.s:8
+    strchr.o                  common/strchr.s:9
+    shelp.o                   runtime/shelp.s:11
+    memset.o                  common/memset.s:19
+    memcpy.o                  common/memcpy.s:14
+    memcmp.o                  common/memcmp.s:8
+popptr1 (popptr1.o):
+    write.o                   max6502/write.s:7
+    read.o                    max6502/read.s:7
+    mul.o                     runtime/mul.s:9
+    ltoa.o                    common/ltoa.s:9
+    longjmp.o                 common/longjmp.s:9
+    fgetc.o                   common/fgetc.s:9
+    umod.o                    runtime/umod.s:8
+    udiv.o                    runtime/udiv.s:9
+    strcmp.o                  common/strcmp.s:8
+    steaxspi.o                runtime/steaxspi.s:9
+    mul8.o                    runtime/mul8.s:9
+    memcpy.o                  common/memcpy.s:14
+    memcmp.o                  common/memcmp.s:8
+popsargsudiv16 (shelp.o):
+    div.o                     runtime/div.s:11
+ptr1 (zeropage.o):
+    checkferror.o             common/checkferror.s:12
+    write.o                   max6502/write.s:8
+    ungetc.o                  common/ungetc.s:11
+    strlower.o                common/strlower.s:13
+    setjmp.o                  common/setjmp.s:11
+    read.o                    max6502/read.s:8
+    mulax10.o                 runtime/mulax10.s:9
+    mul.o                     runtime/mul.s:10
+    ltoa.o                    common/ltoa.s:11
+    longjmp.o                 common/longjmp.s:10
+    lcmp.o                    runtime/lcmp.s:10
+    fwrite.o                  common/fwrite.s:14
+    fmisc.o                   common/fmisc.s:9
+    fgetc.o                   common/fgetc.s:10
+    copydata.o                common/copydata.s:9
+    _scanf.o                  ../libwrk/max6502/_scanf.s:11
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:12
+    zerobss.o                 common/zerobss.s:9
+    vfprintf.o                common/vfprintf.s:11
+    udiv.o                    runtime/udiv.s:10
+    strcpy.o                  common/strcpy.s:9
+    strcmp.o                  common/strcmp.s:9
+    strchr.o                  common/strchr.s:10
+    steaxspi.o                runtime/steaxspi.s:10
+    staxspi.o                 runtime/staxspi.s:10
+    staspidx.o                runtime/staspidx.s:9
+    shelp.o                   runtime/shelp.s:12
+    scanf.o                   common/scanf.s:11
+    pushw.o                   runtime/pushw.s:9
+    printf.o                  common/printf.s:9
+    popptr1.o                 runtime/popptr1.s:9
+    mul8.o                    runtime/mul8.s:10
+    memset.o                  common/memset.s:20
+    memcpy.o                  common/memcpy.s:15
+    memcmp.o                  common/memcmp.s:9
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+    ldptr1sp.o                runtime/ldptr1sp.s:8
+    ldeaxi.o                  runtime/ldeaxi.s:8
+    ldaxi.o                   runtime/ldaxi.s:8
+    div.o                     runtime/div.s:12
+    spi.o                     spi.s:11
+    sdcard.o                  sdcard.s:11
+    diskio.o                  diskio.s:11
+    ff.o                      ff.s:11
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:11
+ptr2 (zeropage.o):
+    write.o                   max6502/write.s:8
+    strlower.o                common/strlower.s:13
+    read.o                    max6502/read.s:8
+    ltoa.o                    common/ltoa.s:11
+    longjmp.o                 common/longjmp.s:10
+    copydata.o                common/copydata.s:9
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:12
+    strcpy.o                  common/strcpy.s:9
+    strcmp.o                  common/strcmp.s:9
+    memset.o                  common/memset.s:20
+    memcpy.o                  common/memcpy.s:15
+    memcmp.o                  common/memcmp.s:9
+    ludiv.o                   runtime/ludiv.s:10
+    ff.o                      ff.s:11
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:11
+ptr3 (zeropage.o):
+    write.o                   max6502/write.s:8
+    read.o                    max6502/read.s:8
+    ltoa.o                    common/ltoa.s:11
+    vfscanf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:12
+    memset.o                  common/memset.s:20
+    memcpy.o                  common/memcpy.s:15
+    memcmp.o                  common/memcmp.s:9
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+ptr4 (zeropage.o):
+    mul.o                     runtime/mul.s:10
+    umod.o                    runtime/umod.s:9
+    udiv.o                    runtime/udiv.s:10
+    strlen.o                  common/strlen.s:12
+    shelp.o                   runtime/shelp.s:12
+    mul8.o                    runtime/mul8.s:10
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+    linc.o                    runtime/linc.s:8
+push0 (pushax.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+push0ax (lpush.o):
+    spi.o                     spi.s:232
+push1 (push1.o):
+    _printf.o                 common/_printf.s:11
+    vfprintf.o                common/vfprintf.s:9
+pusha (pusha.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    spi.o                     spi.s:232
+    spi.o                     spi.s:232
+    spi.o                     spi.s:232
+    spi.o                     spi.s:232
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+pusha0 (pushax.o):
+    push1.o                   runtime/push1.s:8
+    fwrite.o                  common/fwrite.s:11
+    fgetc.o                   common/fgetc.s:9
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+pusha0sp (pusha.o):
+pushax (pushax.o):
+    fwrite.o                  common/fwrite.s:11
+    fgetc.o                   common/fgetc.s:9
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _printf.o                 common/_printf.s:11
+    scanf.o                   common/scanf.s:10
+    pushw.o                   runtime/pushw.s:8
+    printf.o                  common/printf.s:8
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    spi.o                     spi.s:232
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+pushaysp (pusha.o):
+pusheax (lpush.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    _printf.o                 common/_printf.s:11
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+pushl0 (lpush.o):
+    ff.o                      ff.s:8963
+pushptr1idx (pushw.o):
+pushw (pushw.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+pushw0sp (pushwsp.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+pushwidx (pushw.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+pushwysp (pushwsp.o):
+    fwrite.o                  common/fwrite.s:11
+    vfprintf.o                common/vfprintf.s:9
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+regbank (zeropage.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:10
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:14
+regsave (zeropage.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:10
+    lsave.o                   runtime/lsave.s:9
+resteax (lsave.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+return0 (return0.o):
+    setjmp.o                  common/setjmp.s:10
+    fmisc.o                   common/fmisc.s:8
+    memcmp.o                  common/memcmp.s:8
+returnFFFF (returnFFFF.o):
+    fgetc.o                   common/fgetc.s:9
+saveeax (lsave.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+shlax1 (aslax1.o):
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+shlax2 (aslax2.o):
+shlax3 (aslax3.o):
+    spi.o                     spi.s:232
+shlax4 (aslax4.o):
+    ff.o                      ff.s:8963
+shleax1 (asleax1.o):
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+shleax2 (asleax2.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+shrax1 (shrax1.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+shrax4 (shrax4.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+shreax1 (shreax1.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+shreax3 (shreax3.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+shreax4 (shreax4.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+sreg (zeropage.o):
+    ltoa.o                    common/ltoa.s:11
+    lneg.o                    runtime/lneg.s:11
+    lcmp.o                    runtime/lcmp.s:10
+    _scanf.o                  ../libwrk/max6502/_scanf.s:10
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:11
+    umod.o                    runtime/umod.s:9
+    udiv.o                    runtime/udiv.s:10
+    steaxspi.o                runtime/steaxspi.s:10
+    steaxsp.o                 runtime/steaxsp.s:8
+    shreax4.o                 runtime/shreax4.s:8
+    shreax3.o                 runtime/shreax3.s:8
+    shreax1.o                 runtime/shreax1.s:8
+    ludiv.o                   runtime/ludiv.s:10
+    ltest.o                   runtime/ltest.s:8
+    lsubeqsp.o                runtime/lsubeqsp.s:8
+    lsub.o                    runtime/lsub.s:12
+    lsave.o                   runtime/lsave.s:9
+    lpush.o                   runtime/lpush.s:13
+    lor.o                     runtime/lor.s:10
+    lmul.o                    runtime/lmul.s:10
+    linc.o                    runtime/linc.s:8
+    ldec.o                    runtime/ldec.s:9
+    ldeaxysp.o                runtime/ldeaxysp.s:12
+    ldeaxi.o                  runtime/ldeaxi.s:8
+    lcompl.o                  runtime/lcompl.s:8
+    land.o                    runtime/land.s:10
+    laddeqsp.o                runtime/laddeqsp.s:8
+    ladd.o                    runtime/ladd.s:9
+    icmp.o                    runtime/icmp.s:9
+    axlong.o                  runtime/axlong.s:9
+    asleax2.o                 runtime/asleax2.s:8
+    asleax1.o                 runtime/asleax1.s:8
+    timer.o                   timer.s:10
+    sdcard.o                  sdcard.s:10
+    diskio.o                  diskio.s:10
+    ff.o                      ff.s:10
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:10
+staspidx (staspidx.o):
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+stax0sp (staxsp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+staxspidx (staxspi.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+staxysp (staxsp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+steax0sp (steaxsp.o):
+    timer.o                   timer.s:425
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+steaxspidx (steaxspi.o):
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+steaxysp (steaxsp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+subeq0sp (subeqsp.o):
+subeqysp (subeqsp.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+subysp (subysp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    sdcard.o                  sdcard.s:1344
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+tmp1 (zeropage.o):
+    ungetc.o                  common/ungetc.s:11
+    mul.o                     runtime/mul.s:10
+    ltoa.o                    common/ltoa.s:11
+    copydata.o                common/copydata.s:9
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:13
+    strchr.o                  common/strchr.s:10
+    steaxspi.o                runtime/steaxspi.s:10
+    staxspi.o                 runtime/staxspi.s:10
+    staspidx.o                runtime/staspidx.s:9
+    shreax4.o                 runtime/shreax4.s:8
+    shreax3.o                 runtime/shreax3.s:8
+    shreax1.o                 runtime/shreax1.s:8
+    shrax4.o                  runtime/shrax4.s:8
+    shrax1.o                  runtime/shrax1.s:8
+    shelp.o                   runtime/shelp.s:12
+    or.o                      runtime/or.s:10
+    ltest.o                   runtime/ltest.s:8
+    lor.o                     runtime/lor.s:10
+    ldec.o                    runtime/ldec.s:9
+    land.o                    runtime/land.s:10
+    ladd.o                    runtime/ladd.s:9
+    incaxy.o                  runtime/incaxy.s:8
+    div.o                     runtime/div.s:12
+    decaxy.o                  runtime/decaxy.s:8
+    asleax2.o                 runtime/asleax2.s:8
+    asleax1.o                 runtime/asleax1.s:8
+    aslax4.o                  runtime/aslax4.s:8
+    aslax3.o                  runtime/aslax3.s:8
+    aslax2.o                  runtime/aslax2.s:8
+    aslax1.o                  runtime/aslax1.s:8
+    add.o                     runtime/add.s:12
+    ff.o                      ff.s:11
+tmp2 (zeropage.o):
+    steaxspi.o                runtime/steaxspi.s:10
+    shelp.o                   runtime/shelp.s:12
+    lmul.o                    runtime/lmul.s:10
+    div.o                     runtime/div.s:12
+tmp3 (zeropage.o):
+    steaxspi.o                runtime/steaxspi.s:10
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+tmp4 (zeropage.o):
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+tolowerdirect (tolower.o):
+tosadd0ax (ladd.o):
+    ff.o                      ff.s:8963
+tosadda0 (add.o):
+tosaddax (add.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+tosaddeax (ladd.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+    diskio.o                  diskio.s:322
+    diskio.o                  diskio.s:322
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+tosand0ax (land.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosandeax (land.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosdiva0 (div.o):
+    timer.o                   timer.s:425
+tosdivax (div.o):
+toseqeax (leq.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosicmp (icmp.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+tosicmp0 (icmp.o):
+toslcmp (lcmp.o):
+    lult.o                    runtime/lult.s:8
+    lule.o                    runtime/lule.s:8
+    lugt.o                    runtime/lugt.s:8
+    luge.o                    runtime/luge.s:8
+    lne.o                     runtime/lne.s:8
+    leq.o                     runtime/leq.s:8
+toslong (toslong.o):
+tosmul0ax (lmul.o):
+tosmula0 (mul8.o):
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+tosmulax (mul.o):
+tosmuleax (lmul.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+tosneeax (lne.o):
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosor0ax (lor.o):
+tosora0 (or.o):
+    ff.o                      ff.s:8963
+tosorax (or.o):
+tosoreax (lor.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tossub0ax (lsub.o):
+tossuba0 (sub.o):
+    _scanf.o                  ../libwrk/max6502/_scanf.s:1470
+tossubax (sub.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tossubeax (lsub.o):
+    timer.o                   timer.s:425
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosudiv0ax (ludiv.o):
+tosudiva0 (udiv.o):
+tosudivax (udiv.o):
+    fwrite.o                  common/fwrite.s:12
+    timer.o                   timer.s:425
+tosudiveax (ludiv.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    spi.o                     spi.s:232
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosugeeax (luge.o):
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosugteax (lugt.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosuleeax (lule.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosulong (toslong.o):
+    timer.o                   timer.s:425
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tosulteax (lult.o):
+    sdcard.o                  sdcard.s:1344
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    dskbrowser.c.3223.0.o     dskbrowser.c.3223.0.s:2308
+tosumoda0 (umod.o):
+tosumodax (umod.o):
+    timer.o                   timer.s:425
+tosumul0ax (lmul.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    ff.o                      ff.s:8963
+tosumula0 (mul8.o):
+tosumulax (mul.o):
+    fwrite.o                  common/fwrite.s:12
+tosumuleax (lmul.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+tsteax (ltest.o):
+udiv16 (udiv.o):
+    umod.o                    runtime/umod.s:8
+    shelp.o                   runtime/shelp.s:11
+udiv32 (ludiv.o):
+utsteax (ltest.o):
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+    ff.o                      ff.s:8963
+zerobss (zerobss.o):
+    crt0.o                    max6502/crt0.s:9
+

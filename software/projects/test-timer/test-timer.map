@@ -1,0 +1,1198 @@
+Modules list:
+-------------
+test-timer.c.3234.0.o:
+    CODE              Offs=000000  Size=0004B8  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=00028B  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/home/didier/Developments/6502/software/lib/timer.lib(timer.o):
+    CODE              Offs=0004B8  Size=00021C  Align=00001  Fill=0000
+    RODATA            Offs=00028B  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_file.o):
+    CODE              Offs=0006D4  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=00028B  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=00001E  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_hextab.o):
+    CODE              Offs=0006D4  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=00028B  Size=000010  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00001E  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_longminstr.o):
+    CODE              Offs=0006D4  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=00029B  Size=00000C  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00001E  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_printf.o):
+    CODE              Offs=0006D4  Size=0003A2  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=00002B  Align=00001  Fill=0000
+    DATA              Offs=00001E  Size=000003  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(_seterrno.o):
+    CODE              Offs=000A76  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000021  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(addeqsp.o):
+    CODE              Offs=000A7F  Size=000011  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000021  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(addysp.o):
+    CODE              Offs=000A90  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000021  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(axlong.o):
+    CODE              Offs=000A9E  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000021  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(call.o):
+    CODE              Offs=000AAB  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000021  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(condes.o):
+    CODE              Offs=000AB2  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000021  Size=000025  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    ONCE              Offs=000000  Size=00000C  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(copydata.o):
+    CODE              Offs=000ABE  Size=00002D  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(crt0.o):
+    CODE              Offs=000AEB  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    STARTUP           Offs=000000  Size=00001D  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ctype.o):
+    CODE              Offs=000AEB  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=0002A7  Size=00008B  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ctypemask.o):
+    CODE              Offs=000AEB  Size=00001E  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp2.o):
+    CODE              Offs=000B09  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp4.o):
+    CODE              Offs=000B16  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp6.o):
+    CODE              Offs=000B23  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(decsp8.o):
+    CODE              Offs=000B30  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(div.o):
+    CODE              Offs=000B3D  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(errno.o):
+    CODE              Offs=000B52  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002B  Size=000002  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(fwrite.o):
+    CODE              Offs=000B52  Size=000079  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002D  Size=000002  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incax1.o):
+    CODE              Offs=000BCB  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incax6.o):
+    CODE              Offs=000BD2  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incaxy.o):
+    CODE              Offs=000BD7  Size=00000B  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp1.o):
+    CODE              Offs=000BE2  Size=000007  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp2.o):
+    CODE              Offs=000BE9  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp3.o):
+    CODE              Offs=000BFF  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp4.o):
+    CODE              Offs=000C04  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp6.o):
+    CODE              Offs=000C09  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp7.o):
+    CODE              Offs=000C0E  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(incsp8.o):
+    CODE              Offs=000C13  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ldaxi.o):
+    CODE              Offs=000C18  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ldaxsp.o):
+    CODE              Offs=000C25  Size=000009  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ldeaxysp.o):
+    CODE              Offs=000C2E  Size=000013  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(leaaxsp.o):
+    CODE              Offs=000C41  Size=00000C  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lmul.o):
+    CODE              Offs=000C4D  Size=00005C  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lneg.o):
+    CODE              Offs=000CA9  Size=00001E  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lpush.o):
+    CODE              Offs=000CC7  Size=000021  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(lsub.o):
+    CODE              Offs=000CE8  Size=000027  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ltoa.o):
+    CODE              Offs=000D0F  Size=000095  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(ludiv.o):
+    CODE              Offs=000DA4  Size=00007A  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(mul.o):
+    CODE              Offs=000E1E  Size=000045  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(mul8.o):
+    CODE              Offs=000E63  Size=00003A  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(negabs.o):
+    CODE              Offs=000E9D  Size=000012  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(popptr1.o):
+    CODE              Offs=000EAF  Size=00000E  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(printf.o):
+    CODE              Offs=000EBD  Size=000033  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=00002F  Size=000001  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(push1.o):
+    CODE              Offs=000EF0  Size=000005  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(pusha.o):
+    CODE              Offs=000EF5  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(pushax.o):
+    CODE              Offs=000F0B  Size=00001A  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(pushw.o):
+    CODE              Offs=000F25  Size=00000F  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(pushwsp.o):
+    CODE              Offs=000F34  Size=00001C  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(shelp.o):
+    CODE              Offs=000F50  Size=000020  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(staxsp.o):
+    CODE              Offs=000F70  Size=00000B  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(staxspi.o):
+    CODE              Offs=000F7B  Size=00001B  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(steaxsp.o):
+    CODE              Offs=000F96  Size=000015  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(strlen.o):
+    CODE              Offs=000FAB  Size=000016  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(strlower.o):
+    CODE              Offs=000FC1  Size=000027  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(subysp.o):
+    CODE              Offs=000FE8  Size=00000D  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(toslong.o):
+    CODE              Offs=000FF5  Size=000038  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(udiv.o):
+    CODE              Offs=00102D  Size=00004F  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(umod.o):
+    CODE              Offs=00107C  Size=000011  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(vfprintf.o):
+    CODE              Offs=00108D  Size=000061  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000046  Size=000008  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(write.o):
+    CODE              Offs=0010EE  Size=000037  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00004E  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(zerobss.o):
+    CODE              Offs=001125  Size=000023  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00004E  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=000000  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+/usr/local/share/cc65/lib/max6502.lib(zeropage.o):
+    CODE              Offs=001148  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000332  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000030  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=00004E  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=00001A  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+NULL                  000000  000000  000000  00001
+ZEROPAGE              000000  000019  00001A  00001
+STARTUP               000300  00031C  00001D  00001
+CODE                  00031D  001464  001148  00001
+RODATA                001465  001796  000332  00001
+ONCE                  001797  0017A2  00000C  00001
+DATA                  0017A3  0017F0  00004E  00001
+BSS                   0017F1  001820  000030  00001
+
+
+Exports list by name:
+---------------------
+__BSS_LOAD__              0017F1  LA    __BSS_RUN__               0017F1 RLA    
+__BSS_SIZE__              000030 REA    __CODE_LOAD__             00031D  LA    
+__CODE_RUN__              00031D  LA    __CODE_SIZE__             001148  EA    
+__CONSTRUCTOR_COUNT__     000000 REA    __CONSTRUCTOR_TABLE__     00031D RLA    
+__CPUSTACK_FILEOFFS__     000000  EA    __CPUSTACK_LAST__         000100  LA    
+__CPUSTACK_SIZE__         000100  EA    __CPUSTACK_START__        000100  LA    
+__DATA_LOAD__             0017A3 RLA    __DATA_RUN__              0017A3 RLA    
+__DATA_SIZE__             00004E REA    __DESTRUCTOR_COUNT__      000000 REA    
+__DESTRUCTOR_TABLE__      00031D RLA    __ONCE_LOAD__             001797  LA    
+__ONCE_RUN__              001797  LA    __ONCE_SIZE__             00000C  EA    
+__RAM_FILEOFFS__          000000  EA    __RAM_LAST__              001821  LA    
+__RAM_SIZE__              00EC80 REA    __RAM_START__             000300 RLA    
+__RODATA_LOAD__           001465  LA    __RODATA_RUN__            001465  LA    
+__RODATA_SIZE__           000332  EA    __ROM_FILEOFFS__          000000  EA    
+__ROM_LAST__              00F000  LA    __ROM_SIZE__              001000  EA    
+__ROM_START__             00F000  LA    __STACKSIZE__             000080 REA    
+__STARTADDRESS__          000300  EA    __STARTUP_LOAD__          000300  LA    
+__STARTUP_RUN__           000300  LA    __STARTUP_SIZE__          00001D  EA    
+__STARTUP__               000001 REA    __ZEROPAGE_LOAD__         000000  LA    
+__ZEROPAGE_RUN__          000000  LA    __ZEROPAGE_SIZE__         00001A  EA    
+__ZP_FILEOFFS__           000000  EA    __ZP_LAST__               00001A  LA    
+__ZP_SIZE__               0000EE  EA    __ZP_START__              000000  LA    
+___errno                  00181C RLA    ___seterrno               000D93 RLA    
+__ctype                   00170C RLA    __ctypeidx                001717 RLA    
+__filetab                 0017A3  LA    __hextab                  0016F0 RLA    
+__longminstr              001700 RLA    __printf                  000AE2 RLA    
+_abs                      0011BA  LA    _delay_short              000351  LA    
+_exit                     00031A  LA    _fwrite                   000E6F RLA    
+_init                     000300  LA    _ltoa                     001044 RLA    
+_main                     0007AD RLA    _printf                   0011DA RLA    
+_run_timing_tests         0003E4  LA    _stderr                   0017BF  LA    
+_stdin                    0017BB  LA    _stdout                   0017BD RLA    
+_strlen                   0012C8 RLA    _strlen_ptr4              0012CC  LA    
+_strlower                 0012DE RLA    _strlwr                   0012DE  LA    
+_test_basic_timer         000724  LA    _test_function_1          000376  LA    
+_test_function_2          0003A7  LA    _test_timer_accuracy      00060F  LA    
+_test_timer_delays        0006AF  LA    _test_uart_output         0003D8  LA    
+_time_function            00031D  LA    _timer_cpu_speed          00080A RLA    
+_timer_delay_ms           000945 RLA    _timer_delay_ticks        000863 RLA    
+_timer_delay_us           00088A RLA    _timer_get_frequency_hz   0009B4 RLA    
+_timer_get_ticks_per_ms   0009D4  LA    _timer_get_ticks_per_us   0009EE  LA    
+_timer_is_running         0007FD RLA    _timer_read               0007E1 RLA    
+_timer_start              0007D5 RLA    _timer_stop               0007DB RLA    
+_timer_ticks_to_ms        000833 RLA    _timer_ticks_to_us        000810 RLA    
+_ultoa                    001085 RLA    _vfprintf                 0013E2 RLA    
+_write                    00140B RLA    addeq0sp                  000D9C RLA    
+addeqysp                  000D9E RLA    addysp                    000DAE RLA    
+addysp1                   000DAD RLA    axlong                    000DBB RLA    
+axulong                   000DC1 RLA    c_sp                      000000 RLZ    
+callax                    000DC8 RLA    condes                    0017C4  LA    
+copydata                  000DDB RLA    ctypemask                 000E08  LA    
+ctypemaskdirect           000E0C RLA    decsp2                    000E26 RLA    
+decsp4                    000E33 RLA    decsp6                    000E40 RLA    
+decsp8                    000E4D RLA    donelib                   000DCF  LA    
+getlop                    0010D2  LA    incax1                    000EE8 RLA    
+incax4                    000EF4 RLA    incax6                    000EEF RLA    
+incaxy                    000EF6 RLA    incsp1                    000EFF RLA    
+incsp2                    000F0E RLA    incsp3                    000F1C RLA    
+incsp4                    000F21 RLA    incsp6                    000F26 RLA    
+incsp7                    000F2B RLA    incsp8                    000F30 RLA    
+initlib                   001797 RLA    ldax0sp                   000F42 RLA    
+ldaxi                     000F35 RLA    ldaxidx                   000F37  LA    
+ldaxysp                   000F44 RLA    ldeax0sp                  000F4B RLA    
+ldeaxysp                  000F4D RLA    leaa0sp                   000F5E  LA    
+leaaxsp                   000F60 RLA    mul8x16                   001182 RLA    
+mul8x16a                  00118C RLA    negax                     0011BE RLA    
+negeax                    000FC6 RLA    popax                     000F06 RLA    
+popptr1                   0011CC RLA    popsargsudiv16            00126D RLA    
+ptr1                      000008 RLZ    ptr2                      00000A RLZ    
+ptr3                      00000C RLZ    ptr4                      00000E RLZ    
+push0                     001228 RLA    push0ax                   000FE7  LA    
+push1                     00120D RLA    pusha                     001216 RLA    
+pusha0                    00122A RLA    pusha0sp                  001212  LA    
+pushax                    00122C RLA    pushaysp                  001214  LA    
+pusheax                   000FED RLA    pushl0                    000FE4  LA    
+pushptr1idx               001248  LA    pushw                     001242 RLA    
+pushw0sp                  001251  LA    pushwidx                  001244  LA    
+pushwysp                  001253 RLA    regbank                   000014 RLZ    
+regsave                   000004  LZ    sreg                      000002 RLZ    
+stax0sp                   00128D RLA    staxspidx                 001298 RLA    
+staxysp                   00128F RLA    steax0sp                  0012B3 RLA    
+steaxysp                  0012B5 RLA    subysp                    001305 RLA    
+tmp1                      000010 RLZ    tmp2                      000011 RLZ    
+tmp3                      000012 RLZ    tmp4                      000013 RLZ    
+tosdiva0                  000E5A RLA    tosdivax                  000E5C  LA    
+toslong                   001330  LA    tosmul0ax                 000F6A  LA    
+tosmula0                  001180  LA    tosmulax                  00113B  LA    
+tosmuleax                 000F70  LA    tossub0ax                 001005  LA    
+tossubeax                 00100B RLA    tosudiv0ax                0010C1  LA    
+tosudiva0                 00134A  LA    tosudivax                 00134C RLA    
+tosudiveax                0010C7 RLA    tosulong                  001312 RLA    
+tosumoda0                 001399  LA    tosumodax                 00139B RLA    
+tosumul0ax                000F6A RLA    tosumula0                 001180  LA    
+tosumulax                 00113B RLA    tosumuleax                000F70 RLA    
+udiv16                    00135B RLA    udiv32                    0010F6  LA    
+zerobss                   001442 RLA    
+
+
+Exports list by value:
+----------------------
+__CONSTRUCTOR_COUNT__     000000 REA    __CPUSTACK_FILEOFFS__     000000  EA    
+__DESTRUCTOR_COUNT__      000000 REA    __RAM_FILEOFFS__          000000  EA    
+__ROM_FILEOFFS__          000000  EA    __ZEROPAGE_LOAD__         000000  LA    
+__ZEROPAGE_RUN__          000000  LA    __ZP_FILEOFFS__           000000  EA    
+__ZP_START__              000000  LA    c_sp                      000000 RLZ    
+__STARTUP__               000001 REA    sreg                      000002 RLZ    
+regsave                   000004  LZ    ptr1                      000008 RLZ    
+ptr2                      00000A RLZ    __ONCE_SIZE__             00000C  EA    
+ptr3                      00000C RLZ    ptr4                      00000E RLZ    
+tmp1                      000010 RLZ    tmp2                      000011 RLZ    
+tmp3                      000012 RLZ    tmp4                      000013 RLZ    
+regbank                   000014 RLZ    __ZEROPAGE_SIZE__         00001A  EA    
+__ZP_LAST__               00001A  LA    __STARTUP_SIZE__          00001D  EA    
+__BSS_SIZE__              000030 REA    __DATA_SIZE__             00004E REA    
+__STACKSIZE__             000080 REA    __ZP_SIZE__               0000EE  EA    
+__CPUSTACK_LAST__         000100  LA    __CPUSTACK_SIZE__         000100  EA    
+__CPUSTACK_START__        000100  LA    __RAM_START__             000300 RLA    
+__STARTADDRESS__          000300  EA    __STARTUP_LOAD__          000300  LA    
+__STARTUP_RUN__           000300  LA    _init                     000300  LA    
+_exit                     00031A  LA    __CODE_LOAD__             00031D  LA    
+__CODE_RUN__              00031D  LA    __CONSTRUCTOR_TABLE__     00031D RLA    
+__DESTRUCTOR_TABLE__      00031D RLA    _time_function            00031D  LA    
+__RODATA_SIZE__           000332  EA    _delay_short              000351  LA    
+_test_function_1          000376  LA    _test_function_2          0003A7  LA    
+_test_uart_output         0003D8  LA    _run_timing_tests         0003E4  LA    
+_test_timer_accuracy      00060F  LA    _test_timer_delays        0006AF  LA    
+_test_basic_timer         000724  LA    _main                     0007AD RLA    
+_timer_start              0007D5 RLA    _timer_stop               0007DB RLA    
+_timer_read               0007E1 RLA    _timer_is_running         0007FD RLA    
+_timer_cpu_speed          00080A RLA    _timer_ticks_to_us        000810 RLA    
+_timer_ticks_to_ms        000833 RLA    _timer_delay_ticks        000863 RLA    
+_timer_delay_us           00088A RLA    _timer_delay_ms           000945 RLA    
+_timer_get_frequency_hz   0009B4 RLA    _timer_get_ticks_per_ms   0009D4  LA    
+_timer_get_ticks_per_us   0009EE  LA    __printf                  000AE2 RLA    
+___seterrno               000D93 RLA    addeq0sp                  000D9C RLA    
+addeqysp                  000D9E RLA    addysp1                   000DAD RLA    
+addysp                    000DAE RLA    axlong                    000DBB RLA    
+axulong                   000DC1 RLA    callax                    000DC8 RLA    
+donelib                   000DCF  LA    copydata                  000DDB RLA    
+ctypemask                 000E08  LA    ctypemaskdirect           000E0C RLA    
+decsp2                    000E26 RLA    decsp4                    000E33 RLA    
+decsp6                    000E40 RLA    decsp8                    000E4D RLA    
+tosdiva0                  000E5A RLA    tosdivax                  000E5C  LA    
+_fwrite                   000E6F RLA    incax1                    000EE8 RLA    
+incax6                    000EEF RLA    incax4                    000EF4 RLA    
+incaxy                    000EF6 RLA    incsp1                    000EFF RLA    
+popax                     000F06 RLA    incsp2                    000F0E RLA    
+incsp3                    000F1C RLA    incsp4                    000F21 RLA    
+incsp6                    000F26 RLA    incsp7                    000F2B RLA    
+incsp8                    000F30 RLA    ldaxi                     000F35 RLA    
+ldaxidx                   000F37  LA    ldax0sp                   000F42 RLA    
+ldaxysp                   000F44 RLA    ldeax0sp                  000F4B RLA    
+ldeaxysp                  000F4D RLA    leaa0sp                   000F5E  LA    
+leaaxsp                   000F60 RLA    tosmul0ax                 000F6A  LA    
+tosumul0ax                000F6A RLA    tosmuleax                 000F70  LA    
+tosumuleax                000F70 RLA    negeax                    000FC6 RLA    
+pushl0                    000FE4  LA    push0ax                   000FE7  LA    
+pusheax                   000FED RLA    __ROM_SIZE__              001000  EA    
+tossub0ax                 001005  LA    tossubeax                 00100B RLA    
+_ltoa                     001044 RLA    _ultoa                    001085 RLA    
+tosudiv0ax                0010C1  LA    tosudiveax                0010C7 RLA    
+getlop                    0010D2  LA    udiv32                    0010F6  LA    
+tosmulax                  00113B  LA    tosumulax                 00113B RLA    
+__CODE_SIZE__             001148  EA    tosmula0                  001180  LA    
+tosumula0                 001180  LA    mul8x16                   001182 RLA    
+mul8x16a                  00118C RLA    _abs                      0011BA  LA    
+negax                     0011BE RLA    popptr1                   0011CC RLA    
+_printf                   0011DA RLA    push1                     00120D RLA    
+pusha0sp                  001212  LA    pushaysp                  001214  LA    
+pusha                     001216 RLA    push0                     001228 RLA    
+pusha0                    00122A RLA    pushax                    00122C RLA    
+pushw                     001242 RLA    pushwidx                  001244  LA    
+pushptr1idx               001248  LA    pushw0sp                  001251  LA    
+pushwysp                  001253 RLA    popsargsudiv16            00126D RLA    
+stax0sp                   00128D RLA    staxysp                   00128F RLA    
+staxspidx                 001298 RLA    steax0sp                  0012B3 RLA    
+steaxysp                  0012B5 RLA    _strlen                   0012C8 RLA    
+_strlen_ptr4              0012CC  LA    _strlower                 0012DE RLA    
+_strlwr                   0012DE  LA    subysp                    001305 RLA    
+tosulong                  001312 RLA    toslong                   001330  LA    
+tosudiva0                 00134A  LA    tosudivax                 00134C RLA    
+udiv16                    00135B RLA    tosumoda0                 001399  LA    
+tosumodax                 00139B RLA    _vfprintf                 0013E2 RLA    
+_write                    00140B RLA    zerobss                   001442 RLA    
+__RODATA_LOAD__           001465  LA    __RODATA_RUN__            001465  LA    
+__hextab                  0016F0 RLA    __longminstr              001700 RLA    
+__ctype                   00170C RLA    __ctypeidx                001717 RLA    
+__ONCE_LOAD__             001797  LA    __ONCE_RUN__              001797  LA    
+initlib                   001797 RLA    __DATA_LOAD__             0017A3 RLA    
+__DATA_RUN__              0017A3 RLA    __filetab                 0017A3  LA    
+_stdin                    0017BB  LA    _stdout                   0017BD RLA    
+_stderr                   0017BF  LA    condes                    0017C4  LA    
+__BSS_LOAD__              0017F1  LA    __BSS_RUN__               0017F1 RLA    
+___errno                  00181C RLA    __RAM_LAST__              001821  LA    
+__RAM_SIZE__              00EC80 REA    __ROM_LAST__              00F000  LA    
+__ROM_START__             00F000  LA    
+
+
+Imports list:
+-------------
+__BSS_LOAD__ ([linker generated]):
+__BSS_RUN__ ([linker generated]):
+    zerobss.o                 common/zerobss.s:8
+__BSS_SIZE__ ([linker generated]):
+    zerobss.o                 common/zerobss.s:8
+__CODE_LOAD__ ([linker generated]):
+__CODE_RUN__ ([linker generated]):
+__CODE_SIZE__ ([linker generated]):
+__CONSTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s:18
+__CONSTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s:18
+__CPUSTACK_FILEOFFS__ ([linker generated]):
+__CPUSTACK_LAST__ ([linker generated]):
+__CPUSTACK_SIZE__ ([linker generated]):
+__CPUSTACK_START__ ([linker generated]):
+__DATA_LOAD__ ([linker generated]):
+    copydata.o                common/copydata.s:8
+__DATA_RUN__ ([linker generated]):
+    copydata.o                common/copydata.s:8
+__DATA_SIZE__ ([linker generated]):
+    copydata.o                common/copydata.s:8
+__DESTRUCTOR_COUNT__ ([linker generated]):
+    condes.o                  runtime/condes.s:19
+__DESTRUCTOR_TABLE__ ([linker generated]):
+    condes.o                  runtime/condes.s:19
+__ONCE_LOAD__ ([linker generated]):
+__ONCE_RUN__ ([linker generated]):
+__ONCE_SIZE__ ([linker generated]):
+__RAM_FILEOFFS__ ([linker generated]):
+__RAM_LAST__ ([linker generated]):
+__RAM_SIZE__ ([linker generated]):
+    crt0.o                    max6502/crt0.s:10
+__RAM_START__ ([linker generated]):
+    crt0.o                    max6502/crt0.s:10
+__RODATA_LOAD__ ([linker generated]):
+__RODATA_RUN__ ([linker generated]):
+__RODATA_SIZE__ ([linker generated]):
+__ROM_FILEOFFS__ ([linker generated]):
+__ROM_LAST__ ([linker generated]):
+__ROM_SIZE__ ([linker generated]):
+__ROM_START__ ([linker generated]):
+__STACKSIZE__ ([linker generated]):
+    [linker generated]        /usr/local/share/cc65/cfg/max6502.cfg:26
+__STARTADDRESS__ ([linker generated]):
+__STARTUP_LOAD__ ([linker generated]):
+__STARTUP_RUN__ ([linker generated]):
+__STARTUP_SIZE__ ([linker generated]):
+__STARTUP__ (crt0.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:13
+__ZEROPAGE_LOAD__ ([linker generated]):
+__ZEROPAGE_RUN__ ([linker generated]):
+__ZEROPAGE_SIZE__ ([linker generated]):
+__ZP_FILEOFFS__ ([linker generated]):
+__ZP_LAST__ ([linker generated]):
+__ZP_SIZE__ ([linker generated]):
+__ZP_START__ ([linker generated]):
+___errno (errno.o):
+    _seterrno.o               /home/didier/6502/tools/cc65/asminc/errno.inc:7
+___seterrno (_seterrno.o):
+    fwrite.o                  /home/didier/6502/tools/cc65/asminc/errno.inc:9
+__ctype (ctype.o):
+    ctypemask.o               common/ctypemask.s:23
+__ctypeidx (ctype.o):
+    ctypemask.o               common/ctypemask.s:24
+__filetab (_file.o):
+__hextab (_hextab.o):
+    ltoa.o                    common/ltoa.s:10
+__longminstr (_longminstr.o):
+    ltoa.o                    common/ltoa.s:10
+__printf (_printf.o):
+    vfprintf.o                common/vfprintf.s:10
+_abs (negabs.o):
+_delay_short (test-timer.c.3234.0.o):
+_exit (crt0.o):
+_fwrite (fwrite.o):
+    vfprintf.o                common/vfprintf.s:10
+_init (crt0.o):
+_ltoa (ltoa.o):
+    _printf.o                 common/_printf.s:12
+_main (test-timer.c.3234.0.o):
+    crt0.o                    max6502/crt0.s:8
+_printf (printf.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:14
+_run_timing_tests (test-timer.c.3234.0.o):
+_stderr (_file.o):
+_stdin (_file.o):
+_stdout (_file.o):
+    printf.o                  common/printf.s:8
+_strlen (strlen.o):
+    _printf.o                 common/_printf.s:13
+_strlen_ptr4 (strlen.o):
+_strlower (strlower.o):
+    _printf.o                 common/_printf.s:13
+_strlwr (strlower.o):
+_test_basic_timer (test-timer.c.3234.0.o):
+_test_function_1 (test-timer.c.3234.0.o):
+_test_function_2 (test-timer.c.3234.0.o):
+_test_timer_accuracy (test-timer.c.3234.0.o):
+_test_timer_delays (test-timer.c.3234.0.o):
+_test_uart_output (test-timer.c.3234.0.o):
+_time_function (test-timer.c.3234.0.o):
+_timer_cpu_speed (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:19
+_timer_delay_ms (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:24
+_timer_delay_ticks (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:22
+_timer_delay_us (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:23
+_timer_get_frequency_hz (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:25
+_timer_get_ticks_per_ms (timer.o):
+_timer_get_ticks_per_us (timer.o):
+_timer_is_running (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:18
+_timer_read (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:17
+_timer_start (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:15
+_timer_stop (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:16
+_timer_ticks_to_ms (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:21
+_timer_ticks_to_us (timer.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:20
+_ultoa (ltoa.o):
+    _printf.o                 common/_printf.s:12
+_vfprintf (vfprintf.o):
+    printf.o                  common/printf.s:8
+_write (write.o):
+    fwrite.o                  common/fwrite.s:10
+addeq0sp (addeqsp.o):
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+addeqysp (addeqsp.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+addysp (addysp.o):
+    fwrite.o                  common/fwrite.s:11
+    printf.o                  common/printf.s:8
+    incsp8.o                  runtime/incsp8.s:8
+    incsp7.o                  runtime/incsp7.s:8
+    incsp6.o                  runtime/incsp6.s:8
+    incsp4.o                  runtime/incsp4.s:8
+    incsp3.o                  runtime/incsp3.s:8
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+addysp1 (addysp.o):
+    ludiv.o                   runtime/ludiv.s:9
+    lsub.o                    runtime/lsub.s:11
+    lmul.o                    runtime/lmul.s:9
+axlong (axlong.o):
+    _printf.o                 common/_printf.s:11
+    timer.o                   timer.s:425
+axulong (axlong.o):
+    _printf.o                 common/_printf.s:11
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+c_sp (zeropage.o):
+    popptr1.o                 runtime/popptr1.s:9
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:11
+    vfprintf.o                common/vfprintf.s:11
+    toslong.o                 runtime/toslong.s:9
+    subysp.o                  runtime/subysp.s:9
+    steaxsp.o                 runtime/steaxsp.s:8
+    staxspi.o                 runtime/staxspi.s:10
+    staxsp.o                  runtime/staxsp.s:8
+    pushwsp.o                 runtime/pushwsp.s:8
+    pushax.o                  runtime/pushax.s:8
+    pusha.o                   runtime/pusha.s:8
+    printf.o                  common/printf.s:9
+    ludiv.o                   runtime/ludiv.s:10
+    lsub.o                    runtime/lsub.s:12
+    lpush.o                   runtime/lpush.s:13
+    lmul.o                    runtime/lmul.s:10
+    leaaxsp.o                 runtime/leaaxsp.s:8
+    ldeaxysp.o                runtime/ldeaxysp.s:12
+    ldaxsp.o                  runtime/ldaxsp.s:8
+    incsp2.o                  runtime/incsp2.s:8
+    incsp1.o                  runtime/incsp1.s:8
+    decsp8.o                  runtime/decsp8.s:8
+    decsp6.o                  runtime/decsp6.s:8
+    decsp4.o                  runtime/decsp4.s:8
+    decsp2.o                  runtime/decsp2.s:8
+    crt0.o                    /home/didier/6502/tools/cc65/asminc/zeropage.inc:11
+    addysp.o                  runtime/addysp.s:8
+    addeqsp.o                 runtime/addeqsp.s:8
+    timer.o                   timer.s:10
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:10
+callax (call.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+condes (condes.o):
+copydata (copydata.o):
+    crt0.o                    max6502/crt0.s:9
+ctypemask (ctypemask.o):
+ctypemaskdirect (ctypemask.o):
+    strlower.o                common/strlower.s:14
+decsp2 (decsp2.o):
+    toslong.o                 runtime/toslong.s:8
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+decsp4 (decsp4.o):
+    lpush.o                   runtime/lpush.s:12
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+decsp6 (decsp6.o):
+    _printf.o                 common/_printf.s:11
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+decsp8 (decsp8.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+donelib (condes.o):
+getlop (ludiv.o):
+incax1 (incax1.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+incax4 (incaxy.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+incax6 (incax6.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+incaxy (incaxy.o):
+    incax6.o                  runtime/incax6.s:8
+incsp1 (incsp1.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+incsp2 (incsp2.o):
+    popptr1.o                 runtime/popptr1.s:8
+    staxspi.o                 runtime/staxspi.s:9
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+incsp3 (incsp3.o):
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+incsp4 (incsp4.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+incsp6 (incsp6.o):
+    fwrite.o                  common/fwrite.s:11
+    vfprintf.o                common/vfprintf.s:9
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+incsp7 (incsp7.o):
+    timer.o                   timer.s:425
+incsp8 (incsp8.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+initlib (condes.o):
+    crt0.o                    max6502/crt0.s:9
+ldax0sp (ldaxsp.o):
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+ldaxi (ldaxi.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+ldaxidx (ldaxi.o):
+ldaxysp (ldaxsp.o):
+    fwrite.o                  common/fwrite.s:11
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+ldeax0sp (ldeaxysp.o):
+    timer.o                   timer.s:425
+ldeaxysp (ldeaxysp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+leaa0sp (leaaxsp.o):
+leaaxsp (leaaxsp.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+mul8x16 (mul8.o):
+    mul.o                     runtime/mul.s:8
+mul8x16a (mul8.o):
+    mul.o                     runtime/mul.s:8
+negax (negabs.o):
+    shelp.o                   runtime/shelp.s:11
+    div.o                     runtime/div.s:11
+negeax (lneg.o):
+    ltoa.o                    common/ltoa.s:9
+popax (incsp2.o):
+    write.o                   max6502/write.s:7
+    ltoa.o                    common/ltoa.s:9
+    _printf.o                 common/_printf.s:11
+    shelp.o                   runtime/shelp.s:11
+popptr1 (popptr1.o):
+    write.o                   max6502/write.s:7
+    mul8.o                    runtime/mul8.s:9
+    mul.o                     runtime/mul.s:9
+    ltoa.o                    common/ltoa.s:9
+    umod.o                    runtime/umod.s:8
+    udiv.o                    runtime/udiv.s:9
+popsargsudiv16 (shelp.o):
+    div.o                     runtime/div.s:11
+ptr1 (zeropage.o):
+    write.o                   max6502/write.s:8
+    strlower.o                common/strlower.s:13
+    popptr1.o                 runtime/popptr1.s:9
+    mul8.o                    runtime/mul8.s:10
+    mul.o                     runtime/mul.s:10
+    ltoa.o                    common/ltoa.s:11
+    fwrite.o                  common/fwrite.s:14
+    copydata.o                common/copydata.s:9
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:12
+    zerobss.o                 common/zerobss.s:9
+    vfprintf.o                common/vfprintf.s:11
+    udiv.o                    runtime/udiv.s:10
+    staxspi.o                 runtime/staxspi.s:10
+    shelp.o                   runtime/shelp.s:12
+    pushw.o                   runtime/pushw.s:9
+    printf.o                  common/printf.s:9
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+    ldaxi.o                   runtime/ldaxi.s:8
+    div.o                     runtime/div.s:12
+    call.o                    runtime/call.s:8
+ptr2 (zeropage.o):
+    write.o                   max6502/write.s:8
+    strlower.o                common/strlower.s:13
+    ltoa.o                    common/ltoa.s:11
+    copydata.o                common/copydata.s:9
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:12
+    ludiv.o                   runtime/ludiv.s:10
+ptr3 (zeropage.o):
+    write.o                   max6502/write.s:8
+    ltoa.o                    common/ltoa.s:11
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+ptr4 (zeropage.o):
+    strlen.o                  common/strlen.s:12
+    mul8.o                    runtime/mul8.s:10
+    mul.o                     runtime/mul.s:10
+    umod.o                    runtime/umod.s:9
+    udiv.o                    runtime/udiv.s:10
+    shelp.o                   runtime/shelp.s:12
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+push0 (pushax.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+push0ax (lpush.o):
+push1 (push1.o):
+    _printf.o                 common/_printf.s:11
+    vfprintf.o                common/vfprintf.s:9
+pusha (pusha.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+pusha0 (pushax.o):
+    push1.o                   runtime/push1.s:8
+    fwrite.o                  common/fwrite.s:11
+pusha0sp (pusha.o):
+pushax (pushax.o):
+    fwrite.o                  common/fwrite.s:11
+    _printf.o                 common/_printf.s:11
+    pushw.o                   runtime/pushw.s:8
+    printf.o                  common/printf.s:8
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+pushaysp (pusha.o):
+pusheax (lpush.o):
+    _printf.o                 common/_printf.s:11
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+pushl0 (lpush.o):
+pushptr1idx (pushw.o):
+pushw (pushw.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+pushw0sp (pushwsp.o):
+pushwidx (pushw.o):
+pushwysp (pushwsp.o):
+    fwrite.o                  common/fwrite.s:11
+    vfprintf.o                common/vfprintf.s:9
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+regbank (zeropage.o):
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:14
+regsave (zeropage.o):
+sreg (zeropage.o):
+    lneg.o                    runtime/lneg.s:11
+    ltoa.o                    common/ltoa.s:11
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:11
+    umod.o                    runtime/umod.s:9
+    udiv.o                    runtime/udiv.s:10
+    steaxsp.o                 runtime/steaxsp.s:8
+    ludiv.o                   runtime/ludiv.s:10
+    lsub.o                    runtime/lsub.s:12
+    lpush.o                   runtime/lpush.s:13
+    lmul.o                    runtime/lmul.s:10
+    ldeaxysp.o                runtime/ldeaxysp.s:12
+    axlong.o                  runtime/axlong.s:9
+    timer.o                   timer.s:10
+stax0sp (staxsp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+staxspidx (staxspi.o):
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+staxysp (staxsp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+steax0sp (steaxsp.o):
+    timer.o                   timer.s:425
+steaxysp (steaxsp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+subysp (subysp.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    test-timer.c.3234.0.o     test-timer.c.3234.0.s:779
+tmp1 (zeropage.o):
+    mul.o                     runtime/mul.s:10
+    ltoa.o                    common/ltoa.s:11
+    copydata.o                common/copydata.s:9
+    _printf.o                 /home/didier/6502/tools/cc65/asminc/zeropage.inc:13
+    staxspi.o                 runtime/staxspi.s:10
+    shelp.o                   runtime/shelp.s:12
+    incaxy.o                  runtime/incaxy.s:8
+    div.o                     runtime/div.s:12
+tmp2 (zeropage.o):
+    shelp.o                   runtime/shelp.s:12
+    lmul.o                    runtime/lmul.s:10
+    div.o                     runtime/div.s:12
+tmp3 (zeropage.o):
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+tmp4 (zeropage.o):
+    ludiv.o                   runtime/ludiv.s:10
+    lmul.o                    runtime/lmul.s:10
+tosdiva0 (div.o):
+    timer.o                   timer.s:425
+tosdivax (div.o):
+toslong (toslong.o):
+tosmul0ax (lmul.o):
+tosmula0 (mul8.o):
+tosmulax (mul.o):
+tosmuleax (lmul.o):
+tossub0ax (lsub.o):
+tossubeax (lsub.o):
+    timer.o                   timer.s:425
+tosudiv0ax (ludiv.o):
+tosudiva0 (udiv.o):
+tosudivax (udiv.o):
+    fwrite.o                  common/fwrite.s:12
+    timer.o                   timer.s:425
+tosudiveax (ludiv.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+tosulong (toslong.o):
+    timer.o                   timer.s:425
+tosumoda0 (umod.o):
+tosumodax (umod.o):
+    timer.o                   timer.s:425
+tosumul0ax (lmul.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+tosumula0 (mul8.o):
+tosumulax (mul.o):
+    fwrite.o                  common/fwrite.s:12
+tosumuleax (lmul.o):
+    timer.o                   timer.s:425
+    timer.o                   timer.s:425
+udiv16 (udiv.o):
+    umod.o                    runtime/umod.s:8
+    shelp.o                   runtime/shelp.s:11
+udiv32 (ludiv.o):
+zerobss (zerobss.o):
+    crt0.o                    max6502/crt0.s:9
+

@@ -1,0 +1,87 @@
+TIMER(3)                   Library Functions Manual                   TIMER(3)
+
+
+
+NNAAMMEE
+       timer - hardware timer library for embedded systems
+
+SSYYNNOOPPSSIISS
+       ##iinncclluuddee <<ttiimmeerr..hh>>
+
+       vvooiidd ttiimmeerr__ssttaarrtt((vvooiidd));;
+       vvooiidd ttiimmeerr__ssttoopp((vvooiidd));;
+       uuiinntt1166__tt ttiimmeerr__rreeaadd((vvooiidd));;
+       uuiinntt88__tt ttiimmeerr__iiss__rruunnnniinngg((vvooiidd));;
+       uuiinntt88__tt ttiimmeerr__ccppuu__ssppeeeedd((vvooiidd));;
+       uuiinntt3322__tt ttiimmeerr__ttiicckkss__ttoo__uuss((uunnssiiggnneedd iinntt ttiicckkss));;
+       uuiinntt1166__tt ttiimmeerr__ttiicckkss__ttoo__mmss((uunnssiiggnneedd iinntt ttiicckkss));;
+       vvooiidd ttiimmeerr__ddeellaayy__ttiicckkss((uunnssiiggnneedd iinntt ttiicckkss));;
+       vvooiidd ttiimmeerr__ddeellaayy__uuss((uunnssiiggnneedd iinntt mmiiccrroosseeccoonnddss));;
+       vvooiidd ttiimmeerr__ddeellaayy__mmss((uunnssiiggnneedd iinntt mmiilllliisseeccoonnddss));;
+       uuiinntt3322__tt ttiimmeerr__ggeett__ffrreeqquueennccyy__hhzz((vvooiidd));;
+       uuiinntt3322__tt ttiimmeerr__ggeett__ttiicckkss__ppeerr__mmss((vvooiidd));;
+       uuiinntt1166__tt ttiimmeerr__ggeett__ttiicckkss__ppeerr__uuss((vvooiidd));;
+
+DDEESSCCRRIIPPTTIIOONN
+       The  timer  library provides access to hardware timer functionality for
+       precise timing measurements and delays.
+
+       ttiimmeerr__ssttaarrtt(()) starts the hardware timer.
+
+       ttiimmeerr__ssttoopp(()) stops the hardware timer.
+
+       ttiimmeerr__rreeaadd(()) returns the current timer count as a 16-bit value.
+
+       ttiimmeerr__iiss__rruunnnniinngg(()) returns 1 if the timer is running, 0 otherwise.
+
+       ttiimmeerr__ccppuu__ssppeeeedd(()) returns the CPU speed in MHz.
+
+       ttiimmeerr__ttiicckkss__ttoo__uuss(()) converts timer ticks to microseconds.
+
+       ttiimmeerr__ttiicckkss__ttoo__mmss(()) converts timer ticks to milliseconds.
+
+       ttiimmeerr__ddeellaayy__ttiicckkss(()) blocks execution for the specified number of  timer
+       ticks.
+
+       ttiimmeerr__ddeellaayy__uuss(()) blocks execution for the specified number of microsec‐
+       onds.
+
+       ttiimmeerr__ddeellaayy__mmss(()) blocks execution for the specified number of millisec‐
+       onds.
+
+       ttiimmeerr__ggeett__ffrreeqquueennccyy__hhzz(()) returns the timer frequency in Hz.
+
+       ttiimmeerr__ggeett__ttiicckkss__ppeerr__mmss(())  returns  the  number  of timer ticks per mil‐
+       lisecond.
+
+       ttiimmeerr__ggeett__ttiicckkss__ppeerr__uuss(()) returns the number  of  timer  ticks  per  mi‐
+       crosecond.
+
+RREETTUURRNN VVAALLUUEESS
+       Functions  return  appropriate values as documented. Delay functions do
+       not return values.
+
+EEXXAAMMPPLLEESS
+       Basic timing:
+
+              timer_start();
+              start = timer_read();
+              do_work();
+              end = timer_read();
+              timer_stop();
+              elapsed = end - start;
+
+       Simple delay:
+
+              timer_delay_ms(1000);  // Wait 1 second
+
+NNOOTTEESS
+       Large delays are automatically split into chunks to  prevent  overflow.
+       Timer resolution depends on hardware frequency.
+
+SSEEEE AALLSSOO
+       pprriinnttff(3)
+
+
+
+Timer Library                        2025                             TIMER(3)

@@ -1,0 +1,3 @@
+didier@DESKTOP-OT21BPO:~/linux/projects/dos3-3 $ ./dos33 get aa.dsk HELLO hello
+Extracting 'HELLO' from aa.dsk to 'hello'...
+(Get function not yet implemented)

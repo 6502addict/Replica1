@@ -1,0 +1,100 @@
+.TH TIMER 3 "2025" "Timer Library" "Library Functions Manual"
+.SH NAME
+timer \- hardware timer library for embedded systems
+.SH SYNOPSIS
+.B #include <timer.h>
+.PP
+.B void timer_start(void);
+.br
+.B void timer_stop(void);
+.br
+.B uint16_t timer_read(void);
+.br
+.B uint8_t timer_is_running(void);
+.br
+.B uint8_t timer_cpu_speed(void);
+.br
+.B uint32_t timer_ticks_to_us(unsigned int ticks);
+.br
+.B uint16_t timer_ticks_to_ms(unsigned int ticks);
+.br
+.B void timer_delay_ticks(unsigned int ticks);
+.br
+.B void timer_delay_us(unsigned int microseconds);
+.br
+.B void timer_delay_ms(unsigned int milliseconds);
+.br
+.B uint32_t timer_get_frequency_hz(void);
+.br
+.B uint32_t timer_get_ticks_per_ms(void);
+.br
+.B uint16_t timer_get_ticks_per_us(void);
+.SH DESCRIPTION
+The timer library provides access to hardware timer functionality for precise timing measurements and delays.
+.PP
+.B timer_start()
+starts the hardware timer.
+.PP
+.B timer_stop()
+stops the hardware timer.
+.PP
+.B timer_read()
+returns the current timer count as a 16-bit value.
+.PP
+.B timer_is_running()
+returns 1 if the timer is running, 0 otherwise.
+.PP
+.B timer_cpu_speed()
+returns the CPU speed in MHz.
+.PP
+.B timer_ticks_to_us()
+converts timer ticks to microseconds.
+.PP
+.B timer_ticks_to_ms()
+converts timer ticks to milliseconds.
+.PP
+.B timer_delay_ticks()
+blocks execution for the specified number of timer ticks.
+.PP
+.B timer_delay_us()
+blocks execution for the specified number of microseconds.
+.PP
+.B timer_delay_ms()
+blocks execution for the specified number of milliseconds.
+.PP
+.B timer_get_frequency_hz()
+returns the timer frequency in Hz.
+.PP
+.B timer_get_ticks_per_ms()
+returns the number of timer ticks per millisecond.
+.PP
+.B timer_get_ticks_per_us()
+returns the number of timer ticks per microsecond.
+.SH RETURN VALUES
+Functions return appropriate values as documented. Delay functions do not return values.
+.SH EXAMPLES
+.PP
+Basic timing:
+.PP
+.RS
+.nf
+timer_start();
+start = timer_read();
+do_work();
+end = timer_read();
+timer_stop();
+elapsed = end - start;
+.fi
+.RE
+.PP
+Simple delay:
+.PP
+.RS
+.nf
+timer_delay_ms(1000);  // Wait 1 second
+.fi
+.RE
+.SH NOTES
+Large delays are automatically split into chunks to prevent overflow. Timer resolution depends on hardware frequency.
+.SH SEE ALSO
+.BR printf (3)

@@ -1,0 +1,82 @@
+SPI(3)                     Library Functions Manual                     SPI(3)
+
+
+
+NNAAMMEE
+       spi - hardware SPI library for embedded systems
+
+SSYYNNOOPPSSIISS
+       ##iinncclluuddee <<ssppii..hh>>
+
+       vvooiidd ssppii__iinniitt((uuiinntt88__tt ddiivviissoorr,, uuiinntt88__tt ccppooll,, uuiinntt88__tt ccpphhaa));;
+       vvooiidd ssppii__sseett__ddiivviissoorr((uuiinntt88__tt ddiivviissoorr));;
+       vvooiidd ssppii__sseett__mmooddee((uuiinntt88__tt ccppooll,, uuiinntt88__tt ccpphhaa));;
+       vvooiidd ssppii__ccss__llooww((vvooiidd));;
+       vvooiidd ssppii__ccss__hhiigghh((vvooiidd));;
+       uuiinntt88__tt ssppii__ccaallccuullaattee__ddiivviissoorr((uuiinntt1166__tt ffrreeqquueennccyy__kkhhzz));;
+       vvooiidd ssppii__sseett__ffrreeqquueennccyy__kkhhzz((uuiinntt1166__tt ffrreeqquueennccyy));;
+       uuiinntt88__tt ssppii__ttrraannssffeerr((uuiinntt88__tt ddaattaa));;
+
+DDEESSCCRRIIPPTTIIOONN
+       The  SPI  library  provides  hardware SPI (Serial Peripheral Interface)
+       functionality with configurable clock speed,  modes,  and  chip  select
+       control.
+
+       ssppii__iinniitt(()) initializes the SPI interface with the specified clock divi‐
+       sor, clock polarity (cpol), and clock phase (cpha).
+
+       ssppii__sseett__ddiivviissoorr(()) sets the SPI clock divisor directly.
+
+       ssppii__sseett__mmooddee(()) configures SPI mode using clock polarity and phase  set‐
+       tings.
+
+       ssppii__ccss__llooww(()) asserts the chip select signal (active low).
+
+       ssppii__ccss__hhiigghh(()) deasserts the chip select signal.
+
+       ssppii__ccaallccuullaattee__ddiivviissoorr(())  calculates  the  appropriate clock divisor for
+       the specified frequency in kHz.
+
+       ssppii__sseett__ffrreeqquueennccyy__kkhhzz(()) sets the SPI clock frequency in kHz.
+
+       ssppii__ttrraannssffeerr(()) performs a full-duplex SPI transfer,  sending  one  byte
+       and returning the received byte.
+
+RREETTUURRNN VVAALLUUEESS
+       ssppii__ttrraannssffeerr(()) returns the byte received during the transfer.
+
+       ssppii__ccaallccuullaattee__ddiivviissoorr(()) returns the calculated clock divisor value.
+
+       Other functions do not return values.
+
+SSPPII MMOODDEESS
+       The  SPI  mode  is  determined by clock polarity (cpol) and clock phase
+       (cpha):
+
+              Mode 0: cpol=0, cpha=0
+              Mode 1: cpol=0, cpha=1
+              Mode 2: cpol=1, cpha=0
+              Mode 3: cpol=1, cpha=1
+
+EEXXAAMMPPLLEESS
+       Basic SPI communication:
+
+              spi_init(8, 0, 0);     // Initialize, divisor=8, mode 0
+              spi_cs_low();          // Select device
+              data = spi_transfer(0xFF);  // Send/receive byte
+              spi_cs_high();         // Deselect device
+
+       Set frequency:
+
+              spi_set_frequency_khz(1000);  // Set to 1MHz
+
+NNOOTTEESS
+       SPI transfers are full-duplex. Always control chip select manually. Use
+       frequency functions for precise timing control.
+
+SSEEEE AALLSSOO
+       ttiimmeerr(3)
+
+
+
+SPI Library                          2025                               SPI(3)
